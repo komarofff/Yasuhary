@@ -1,38 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-html{
+
+html {
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size:24px;
+    font-size: 24px;
     background: #F5FAFF;
 }
-*{
+
+* {
     box-sizing: border-box;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
-*::before,*::after{
-    margin:0;
-    padding:0;
+
+*::before, *::after {
+    margin: 0;
+    padding: 0;
 
 }
-.container{
-    padding:0 10px;
+
+.container {
+    padding: 0 10px;
 }
-.active-link{
+
+.active-link {
     font-weight: bold;
     color: #3C8DE8;
 }
-.menu-links >ul>li{
-    -webkit-transition:all 250ms ease-in-out;
-    -moz-transition:all 250ms ease-in-out;
-    -ms-transition:all 250ms ease-in-out;
-    -o-transition:all 250ms ease-in-out;
-    transition:all 250ms ease-in-out;
+
+.menu-links > ul > li {
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
-.menu-links >ul>li>a:hover{
+
+.menu-links > ul > li > a:hover {
     color: #3C8DE8;
 
 }
-.menu-links >ul>li:hover{
+
+.menu-links > ul > li:hover {
     color: #3C8DE8;
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -41,39 +49,46 @@ html{
     transform: scale(1.1);
     text-shadow: none;
 }
-.language-switcher{
+
+.language-switcher {
     position: relative;
     padding-left: 15px;
-    padding-right:15px;
+    padding-right: 15px;
 }
-.language-switcher::before{
+
+.language-switcher::before {
     content: url("../images/language-icon.svg");
     position: absolute;
-    left:-15px;
-    top:3px;
-    cursor:pointer;
+    left: -15px;
+    top: 3px;
+    cursor: pointer;
 }
-.language-switcher::after{
+
+.language-switcher::after {
     content: url("../images/arrow-bottom.svg");
     position: absolute;
     right: -10px;
     top: -3px;
-    cursor:pointer;
+    cursor: pointer;
 }
-footer{
+
+footer {
     background: #E6EFFA;
 }
-.text-small{
+
+.text-small {
     font-size: 12px;
 }
-.tabs{
-    -webkit-transition:all 250ms ease-in-out;
-    -moz-transition:all 250ms ease-in-out;
-    -ms-transition:all 250ms ease-in-out;
-    -o-transition:all 250ms ease-in-out;
-    transition:all 250ms ease-in-out;
+
+.tabs {
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
-.tabs-active{
-    background:rgba(96,165,250,1);
+
+.tabs-active {
+    background: rgba(96, 165, 250, 1);
     color: #fff;
 }
