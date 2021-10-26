@@ -118,6 +118,20 @@ footer {
     -o-transform: translateY(-4px) scale(1.06);
     transform: translateY(-4px) scale(1.06);
 }
+.scale{
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+.scale:hover{
+    -webkit-transform: translateY(-4px) scale(1.06);
+    -moz-transform: translateY(-4px) scale(1.06);
+    -ms-transform: translateY(-4px) scale(1.06);
+    -o-transform: translateY(-4px) scale(1.06);
+    transform: translateY(-4px) scale(1.06);
+}
 
 @media(max-width: 1280px){
     html {
