@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import './arrow-animations.css';
+
 html {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 1.5em;
@@ -17,9 +18,11 @@ html {
     padding: 0;
 
 }
-.color-blue{
+
+.color-blue {
     color: #3C8DE8;
 }
+
 .container {
     padding: 0 10px;
 }
@@ -94,7 +97,8 @@ footer {
     background: rgba(96, 165, 250, 1);
     color: #fff;
 }
-.property-box{
+
+.property-box {
     cursor: pointer;
     -webkit-transition: all 250ms ease-in-out;
     -moz-transition: all 250ms ease-in-out;
@@ -102,9 +106,10 @@ footer {
     -o-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
 }
+
 .property-box:hover {
     background: #FFFFFF;
-
+    border-radius: 10px;
     box-shadow: 0px 0px 20px rgba(16, 46, 57, 0.1);
     border-radius: 10px;
     -webkit-transform: translateY(-4px) scale(1.06);
