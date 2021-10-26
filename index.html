@@ -9,25 +9,56 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="" style="border:1px solid red;">
+<body>
 <header class="container mx-auto flex justify-between items-center my-6 w-full">
     <a href="/"><img src="./images/logo.png" alt="logo"></a>
     <div class="flex justify-between">
-        <nav class="flex justify-start items-center">
+        <nav class="menu-links flex justify-start items-center">
             <ul class="flex justify-start items-center">
-                <li class="ml-5"><a class="active-link font-bold text-blue-400" href="/">Home</a></li>
+                <li class="ml-5"><a class="active-link" href="/">Home</a></li>
                 <li class="ml-5"><a href="/Properties">Properties</a></li>
                 <li class="ml-5"><a href="/Contact">Contact</a></li>
             </ul>
         </nav>
         <p class="language-switcher ml-9 font-bold text-black mr-4 cursor-pointer" >English</p>
     </div>
-
 </header>
-<main class="container mx-auto"> main</main>
+<main class="container mx-auto">
+<div class="header-banner relative w-full">
+    <img class="rounded-lg mb-12 mb-md-24" src="./images/top-banner.jpg" alt="banner">
+    <div class="absolute top-1/2 left-10 w-full flex-col justify-between items-start h-full">
+        <h1 class="text-3xl font-bold text-white mb-2">We are the smart choice</h1>
+        <p class="text-base  text-white mb-10">Finding property should be this easy</p>
+        <div class="tabs  w-3/12  bg-white rounded-t-lg">
+            dfbfbfbd
+        </div>
+    <div class="tabs-content  w-10/12 h-20 bg-white rounded-b-lg rounded-tr-lg">
+dfbfbfbd
+    </div>
+    </div>
+</div>
+</main>
 <footer class="rounded-t-lg py-14">
-    <div class="container mx-auto">
-        footer
+    <div class="container mx-auto ">
+        <div class="flex justify-between items-center flex-wrap flex-lg-nowrap">
+        <a href="/"><img src="./images/logo.png" alt="logo"></a>
+        <div class="flex justify-between">
+            <nav class="menu-links  flex justify-start items-center">
+                <ul class="flex justify-start items-center">
+                    <li class="ml-5"><a  href="/">Home</a></li>
+                    <li class="ml-5"><a href="/Properties">Properties</a></li>
+                    <li class="ml-5"><a href="/Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <p class="language-switcher ml-9 font-bold text-black mr-4 cursor-pointer" >English</p>
+        </div>
+        <div class=" ml-8 flex items-center justify-around">
+            <a class="ml-4" href="#"><img src="./images/twitter.svg" alt="twitter link"></a>
+            <a class="ml-4" href="#"><img src="./images/linkedin.svg" alt="linkedin link"></a>
+            <a class="ml-4" href="#"><img src="./images/facebook.svg" alt="facebook link"></a>
+        </div>
+        </div>
+        <p class="text-small mt-4">© Hiroshima Shouei Co., Ltd All Rights Reserved</p>
     </div>
 </footer>
 <script src="scripts/menu.js"></script>
