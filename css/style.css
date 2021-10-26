@@ -118,3 +118,14 @@ footer {
     -o-transform: translateY(-4px) scale(1.06);
     transform: translateY(-4px) scale(1.06);
 }
+
+@media(max-width: 1280px){
+    html {
+        font-size: 1.1em;
+    }
+}
+@media(max-width: 1024px){
+    html {
+        font-size: .9em;
+    }
+}
