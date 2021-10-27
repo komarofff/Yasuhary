@@ -13,6 +13,7 @@ html {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 1.5em;
     background: #F5FAFF;
+    overflow-x: hidden;
 }
 
 * {
@@ -26,7 +27,12 @@ html {
     padding: 0;
 
 }
-
+.prop-description-block{
+    min-height: 200px;
+}
+.prop-title{
+    line-height: 120% !important;
+}
 .color-blue {
     color: #3C8DE8;
 }
@@ -143,11 +149,14 @@ footer {
 
 @media(max-width: 1280px){
     html {
-        font-size: 1.1em;
+        font-size: 1.3em;
     }
 }
 @media(max-width: 1024px){
     html {
-        font-size: .9em;
+        font-size: 1.1em;
+    }
+    .prop-description-block{
+        min-height: 170px;
     }
 }
