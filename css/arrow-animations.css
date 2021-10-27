@@ -6,7 +6,11 @@
     text-decoration: none;
     display: flex;
 }
-
+@media(max-width: 767px){
+    .link{
+        display:none;
+    }
+}
 /* Hide extra text */
 .mask {
     position: relative;
