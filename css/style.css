@@ -146,7 +146,9 @@ footer {
     -o-transform: translateY(-4px) scale(1.06);
     transform: translateY(-4px) scale(1.06);
 }
-
+.image-center-block{
+    margin-top:-48%;
+}
 @media(max-width: 1280px){
     html {
         font-size: 1.3em;

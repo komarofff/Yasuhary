@@ -6,9 +6,15 @@
     text-decoration: none;
     display: flex;
 }
+.link-visible{
+    display: flex;
+}
 @media(max-width: 767px){
     .link{
         display:none;
+    }
+    .link-visible{
+        display: flex;
     }
 }
 /* Hide extra text */
