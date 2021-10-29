@@ -13,7 +13,7 @@
 <header class="container mx-auto flex justify-between items-center my-6 w-full">
     <a href="/"><img src="./images/logo.png" alt="logo"></a>
     <img class="md:hidden mobile-menu-switcher cursor-pointer" src="./images/mobile-menu.svg" alt="mobile-menu">
-    <div class=" md:justify-between justify-start items-start md:items-center md:flex flex-col md:flex-row hidden">
+    <div class=" md:justify-between justify-start items-start md:items-center md:flex flex-col md:flex-row hidden mobile-menu">
         <img class="md:hidden mobile-menu-close cursor-pointer" src="./images/close.svg" alt="mobile-menu-close">
         <nav class="menu-links flex justify-start items-center">
             <ul class="md:justify-between justify-start items-start md:items-center flex flex-col md:flex-row">
@@ -22,7 +22,13 @@
                 <li class="ml-5"><a class="hover:text-blue-400 " href="/Contact">Contact</a></li>
             </ul>
         </nav>
-        <p class="language-switcher ml-9 font-bold text-black mr-4 cursor-pointer">English</p>
+        <div class="relative">
+            <p class="language-switcher ml-9 font-bold text-black mr-4 cursor-pointer ">English</p>
+            <div class="language-popup absolute -bottom-16 right-3  bg-hover rounded-lg shadow-md flex flex-col justify-start items-start  z-10 hidden">
+                <p class="w-full py-2 px-4 text-xs cursor-pointer hover:text-blue-400 hover:bg-white">Japanese</p>
+                <p  class="w-full py-2 px-4 text-xs cursor-pointer hover:text-blue-400 hover:bg-white rounded-b-lg">English</p>
+            </div>
+        </div>
 
     </div>
     <div class="hidden mt-4 flex items-center justify-center  w-full ">
@@ -147,10 +153,10 @@
 
     <div class=" w-12/12 md:hidden mt-8 mb-0"><img  src="./images/house.jpg" alt="image">
     </div>
-    <section class="my-0 md:my-8 lg:my-14 xl:my-26 2xl:my-36 w-screen bg-blue-400  py-4 md:py-6 lg:py-8 xl:py-10 2xl:py-16  ">
+    <section class="my-0 md:my-10 lg:my-14 xl:my-26 2xl:my-36 w-screen bg-blue-400  py-4 md:py-6 lg:py-8 xl:py-10 2xl:py-16  ">
         <div class="container mx-auto flex flex-col md:flex-row justify-start md:justify-center items-start md:items-center w-full md:flex-nowrap flex-wrap ">
             <div class="hidden md:block w-1/2 mr-12 relative">
-                <div class="w-full absolute right-0   image-center-block"><img class="rounded-lg"
+                <div class="w-full absolute 2xl:right-8 xl:right-6 lg:right-3 right-0  image-center-block"><img class="rounded-lg"
                                                                                src="./images/house.jpg" alt="image">
                 </div>
             </div>
@@ -257,7 +263,13 @@
                         <li class="ml-5 mt-2 md:mt-0 "><a class="hover:text-blue-400" href="/Contact">Contact</a></li>
                     </ul>
                 </nav>
-                <p class="language-switcher ml-9 font-bold text-black mr-4 cursor-pointer">English</p>
+                <div class="relative">
+                    <p class="language-switcher ml-9 font-bold text-black mr-4 cursor-pointer ">English</p>
+                    <div class="language-popup absolute -bottom-16 right-3  bg-hover rounded-lg shadow-md flex flex-col justify-start items-start  z-10 hidden">
+                        <p class="w-full py-2 px-4 text-xs cursor-pointer hover:text-blue-400 hover:bg-white">Japanese</p>
+                        <p  class="w-full py-2 px-4 text-xs cursor-pointer hover:text-blue-400 hover:bg-white rounded-b-lg">English</p>
+                    </div>
+                </div>
             </div>
             <div class="ml-0 lg:ml-8 mt-4 lg:mt-0 flex items-center justify-start md:justify-around w-full md:w-4/12 lg:w-2/12">
                 <a class="ml-4 scale" href="#"><img src="./images/twitter.svg" alt="twitter link"></a>

@@ -9,6 +9,9 @@
 .hover\:bg-blue-400:hover{
     background: #3C8DE8 !important;
 }
+.bg-hover{
+    background: #F5FAFF;
+}
 html {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 1.5em;
