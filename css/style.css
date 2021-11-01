@@ -218,7 +218,7 @@ footer {
         margin: 15px;
     }
 
-    .language-switcher {
+    .top-switcher {
         margin-top: 75px;
         margin-left: 15px;
     }
@@ -240,13 +240,13 @@ footer {
         display: block;
     }
 
-    .menu-links, .flex-768 {
+    .menu-links-top, .flex-768 {
         flex-direction: column !important;
         justify-content: start !important;
         align-items: center !important;
     }
 
-    .menu-links {
+    .menu-links-top {
         order: 2;
     }
 
