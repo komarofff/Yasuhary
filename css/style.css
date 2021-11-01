@@ -204,7 +204,7 @@ footer {
 @media (max-width: 769px) {
     header {
         min-width: 100vw;
-        padding: 0 !important;
+        /*padding: 0 !important;*/
     }
     .py-6 {
         padding-top: 1.5rem !important;
