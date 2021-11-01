@@ -43,22 +43,23 @@
 </header>
 <main class="">
     <section class="md:container mx-auto header-banner relative w-full">
-        <img class="md:rounded-lg mb-12 mb-md-24" src="./images/top-banner.jpg" alt="banner">
-        <div class="absolute top-3/4 transform -translate-y-3/4 left-10 w-full flex-col justify-between items-start ">
-            <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2">We are the smart choice</h1>
+        <img class="md:rounded-lg mb-12 mb-md-24 top-banner-image" src="./images/top-banner.jpg" alt="banner">
+        <div class="absolute top-3/4 transform -translate-y-3/4 left-5 sm:left-10 w-10/12 flex-col justify-between items-start ">
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2">We are the smart choice</h1>
             <p class="text-base  text-white mb-10">Finding property should be this easy</p>
-            <div class=" w-3/12 -mb-px flex justify-start items-center ">
+            <div class="hidden md:flex w-3/12 -mb-px  justify-start items-center ">
                 <p class="tabs tabs-active cursor-pointer bg-white rounded-tl-lg p-3 inline hover:bg-blue-400 hover:text-white">
-                    Build</p>
-                <p class="tabs cursor-pointer bg-white p-3 inline hover:bg-blue-400 hover:text-white">Rental</p>
+                    Buildings</p>
+                <p class="tabs cursor-pointer bg-white p-3 inline hover:bg-blue-400 hover:text-white">Condos</p>
+                <p class="tabs cursor-pointer bg-white p-3 inline hover:bg-blue-400 hover:text-white">Hotels</p>
                 <p class="tabs cursor-pointer bg-white rounded-tr-lg p-3 inline hover:bg-blue-400 hover:text-white">
-                    Plant</p>
+                    Other</p>
             </div>
-            <div class="tabs-content  w-10/12  bg-white rounded-b-lg rounded-tr-lg p-3 flex flex-nowrap justify-between items-center">
-                <p>Location</p>
-                <p>Price range</p>
-                <p>Age</p>
-                <p>ROI</p>
+            <div class="tabs-content hidden md:flex w-10/12  bg-white  md:rounded-b-lg md:rounded-tr-lg p-3  flex-nowrap justify-between items-center">
+                <p class="text-lg md:text-xs text-gray-400">Location</p>
+                <p class="text-lg md:text-xs text-gray-400">Price range</p>
+                <p class="text-lg md:text-xs text-gray-400">Age</p>
+                <p class="text-lg md:text-xs text-gray-400">ROI</p>
                 <a class="  my-4 text-white text-base text-center " href="#">
                     <p class="py-2 w-28 bg-blue-400 rounded-lg">Search</p>
                 </a>
@@ -66,6 +67,17 @@
         </div>
     </section>
     <section class="mb-4 container mx-auto">
+        <div class="tabs-content2 md:hidden w-full  bg-white rounded-lg  p-3 grid grid-cols-2 justify-between items-center relative -mt-24 mb-10">
+            <p class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">Category</p>
+            <p class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">Location</p>
+            <p class="text-sm mb-4 md:text-xs text-gray-400 row-span-2">Min price, ¥</p>
+            <p class="text-sm mb-4 md:text-xs text-gray-400 row-span-2">Max price, ¥</p>
+            <p class="text-sm mb-4 md:text-xs text-gray-400 row-span-3">Age</p>
+            <p class="text-sm mb-4 md:text-xs text-gray-400 row-span-3">ROI</p>
+            <a class="  my-4 text-white text-base text-center row-span-4  search-button" href="#">
+                <p class="py-2 w-full bg-blue-400 rounded-lg ">Search</p>
+            </a>
+        </div>
         <div class="flex justify-between items-center mb-6">
             <h2 class="text-3xl font-bold text-black ">New listed properties</h2>
 
