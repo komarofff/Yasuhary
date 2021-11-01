@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import './arrow-animations.css';
-.text-blue-400{
-    color:#3C8DE8 !important;
+
+.text-blue-400 {
+    color: #3C8DE8 !important;
 }
-.bg-blue-400{
+
+.bg-blue-400 {
     background: #3C8DE8 !important;
 }
-.hover\:bg-blue-400:hover{
+
+.hover\:bg-blue-400:hover {
     background: #3C8DE8 !important;
 }
-.bg-hover{
+
+.bg-hover {
     background: #E6EFFA;
 }
+
 html {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 1.5em;
@@ -19,6 +24,18 @@ html {
     overflow-x: hidden;
 }
 
+header {
+    padding: 20px 0 !important;
+       background: #F5FAFF;
+    position: fixed;
+    z-index: 9;
+    right: 0;
+    top: 0;
+    left: 0;
+}
+main {
+    padding-top: 87px;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -30,12 +47,15 @@ html {
     padding: 0;
 
 }
-.prop-description-block{
+
+.prop-description-block {
     min-height: 200px;
 }
-.prop-title{
+
+.prop-title {
     line-height: 120% !important;
 }
+
 .color-blue {
     color: #3C8DE8;
 }
@@ -135,33 +155,128 @@ footer {
     -o-transform: translateY(-4px) scale(1.06);
     transform: translateY(-4px) scale(1.06);
 }
-.scale{
+
+.scale {
     -webkit-transition: all 250ms ease-in-out;
     -moz-transition: all 250ms ease-in-out;
     -ms-transition: all 250ms ease-in-out;
     -o-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
 }
-.scale:hover{
+
+.scale:hover {
     -webkit-transform: translateY(-4px) scale(1.06);
     -moz-transform: translateY(-4px) scale(1.06);
     -ms-transform: translateY(-4px) scale(1.06);
     -o-transform: translateY(-4px) scale(1.06);
     transform: translateY(-4px) scale(1.06);
 }
-.image-center-block{
-    margin-top:-48%;
+
+.image-center-block {
+    margin-top: -48%;
 }
-@media(max-width: 1280px){
+.padding-mobile-big {
+    display: none;
+}
+@media (max-width: 1280px) {
     html {
         font-size: 1.3em;
     }
 }
-@media(max-width: 1024px){
+
+@media (max-width: 1024px) {
     html {
         font-size: 1.1em;
     }
-    .prop-description-block{
+
+    .prop-description-block {
         min-height: 170px;
+    }
+}
+
+@media (min-width: 769px) {
+
+    .mobile-menu-switcher {
+        display: none !important;
+    }
+}
+
+@media (max-width: 769px) {
+    header {
+        min-width: 100vw;
+
+    }
+    .py-6 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+    .top-popup  {
+        bottom: -68px;
+        width: 130px;
+    }
+    .menu-links > ul > li {
+        margin: 15px;
+    }
+
+    .language-switcher {
+        margin-top: 75px;
+        margin-left: 15px;
+    }
+
+    .padding-mobile-big {
+        display:block;
+        margin: 32px 5px 28px 5px;
+        background: #9FA3A8;
+        height: 2px;
+        width: 100%;
+        opacity: 0.2;
+    }
+
+    .mobile-menu-switcher {
+        display: block !important;
+    }
+
+    .mobile-menu-close {
+        display: block;
+    }
+
+    .menu-links, .flex-768 {
+        flex-direction: column !important;
+        justify-content: start !important;
+        align-items: center !important;
+    }
+
+    .menu-links {
+        order: 2;
+    }
+
+    .block-menu {
+        padding: 30px;
+        font-size: 25px;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: start !important;
+        align-items: center !important;
+        z-index: 999 !important;
+        top: 0;
+        width: 100vw;
+        height: 600px;
+        background: #F5FAFF;
+        position: fixed;
+        -webkit-transform: translateX(-110vw);
+        -moz-transform: translateX(-110vw);
+        -ms-transform: translateX(-110vw);
+        -o-transform: translateX(-110vw);
+        transform: translateX(-110vw);
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+
+    }
+
+    .mobile-menu-close {
+        align-self: end;
     }
 }
