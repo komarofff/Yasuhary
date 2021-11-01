@@ -1,6 +1,3 @@
-window.onresize = () => {
-    size_of_screen = document.documentElement.clientWidth
-}
 const tabs = document.querySelectorAll('.tabs')
 const tabsContent = document.querySelectorAll('.tabs-content')
 const tabsContent2 = document.querySelectorAll('.tabs-content2')

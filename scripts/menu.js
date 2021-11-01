@@ -42,3 +42,24 @@ document.addEventListener('scroll', () => {
     }
 })
 
+window.onresize = () => {
+    let size_of_screen = document.documentElement.clientWidth
+    if( size_of_screen >768){
+
+        document.querySelector('.block-menu').style.cssText = `
+         -webkit-transform: translateX(0vw);
+        -moz-transform: translateX(0vw);
+        -ms-transform: translateX(0vw);
+        -o-transform: translateX(0vw);
+        transform: translateX(0vw);
+        right: 0;`
+    }else{
+        document.querySelector('.block-menu').style.cssText = `
+         -webkit-transform: translateX(-110vw);
+        -moz-transform: translateX(-110vw);
+        -ms-transform: translateX(-110vw);
+        -o-transform: translateX(-110vw);
+        transform: translateX(-110vw);
+        right: 0;`
+    }
+}
