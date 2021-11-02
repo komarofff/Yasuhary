@@ -124,7 +124,7 @@
     <section class="mb-4 container mx-auto">
         <div class="tabs-content2 md:hidden w-full  bg-white rounded-lg  p-4 grid grid-cols-2 gap-4 justify-between items-start relative -mt-24 mb-10">
             <div class="relative mt-3 category">
-         <p class="input-header  absolute text-sm mb-4 text-black -top-4 left-1 ">Category</p>
+         <p class="input-header  absolute text-sm  text-black -top-4  ">Category</p>
                 <select id="category" class="select-popup text-sm   text-gray-400  ">
                     <option value="" selected disabled></option>
                     <option value="Buildings">Buildings</option>
@@ -134,7 +134,7 @@
                 </select>
             </div>
             <div class="relative mt-3">
-                <p class="input-header  absolute text-sm mb-4 text-black -top-4  ">Location</p>
+                <p class="input-header  absolute text-sm  text-black -top-4  ">Location</p>
                 <select id="location" class="select-popup text-sm  text-gray-400  w-full">
                     <option value="" selected disabled></option>
                     <option value="Hiroshima">Hiroshima</option>
@@ -142,21 +142,21 @@
                     <option value="Osaka">Osaka</option>
                 </select>
             </div>
-            <div class="relative mt-3">
+            <div class="relative ">
                 <p class="text-sm  text-black" >Min price, ¥</p>
-                <input id="minPrice" type="number" min="1000" max="100000000" step="1000" placeholder="1000"
+                <input id="minPrice" type="number" min="1000" max="100000000" step="1000" placeholder="0"
                        class="text-sm  md:text-xs text-gray-400 row-span-2">
             </div>
-            <div class="relative mt-3">
+            <div class="relative ">
                 <p class="text-sm  text-black">Max price, ¥</p>
-                <input type="number" id="maxPrice" min="1000" max="100000000" step="1000" placeholder="100000000"
+                <input type="number" id="maxPrice" min="1000" max="100000000" step="1000" placeholder="0"
                        class="text-sm md:text-xs text-gray-400 row-span-2">
 
             </div>
             <div class="relative mt-3">
-                <p class="input-header  absolute text-sm mb-4  text-black -top-4 left-1 ">Age</p>
+                <p class="input-header  absolute text-sm   text-black -top-4  ">Age</p>
                 <select id="age" class="select-popup text-sm  text-gray-400">
-                    <option value="" selected disabled>Age</option>
+                    <option value="" selected disabled></option>
                     <option value="1">1 year</option>
                     <option value="2">2 years</option>
                     <option value="3">3 years</option>
@@ -164,9 +164,9 @@
                 </select>
             </div>
             <div class="relative mt-3">
-                <p class="input-header  absolute text-sm mb-4 text-black -top-4 left-1 ">ROI</p>
+                <p class="input-header  absolute text-sm  text-black -top-4  ">ROI</p>
                 <select id="roi" class="select-popup text-sm  text-gray-400">
-                    <option value="" selected disabled>ROI</option>
+                    <option value="" selected disabled></option>
                     <option value="1">1%</option>
                     <option value="2">2%</option>
                     <option value="3">3%</option>
@@ -423,20 +423,14 @@
 <script>
    const  firstlevel = document.querySelectorAll('.input-header')
    firstlevel.forEach((val)=>{
-
-
-
-       val.onclick = ()=> {
-
+       val.addEventListener('click', ()=> {
            lastlevel = val.parentNode.querySelector('.select-popup')
-           lastlevel.size = lastlevel.length;
-           lastlevel.focus();
-
-
+           lastlevel.size = lastlevel.length
+           lastlevel.focus()
            lastlevel.onchange = lastlevel.onclick = lastlevel.onblur = () => {
-               lastlevel.size = 1;
-           };
-       }
+               lastlevel.size = 1
+           }
+       })
 
    })
 
