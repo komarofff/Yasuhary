@@ -9,10 +9,10 @@ tabs.forEach((val, key) => {
         val.classList.add('tabs-active')
         for (let i = 0; i < tabsContent.length; i++) {
             tabsContent[i].classList.add('hidden')
-            tabsContent[i].classList.remove('md:flex')
+            tabsContent[i].classList.remove('md:grid')
 
         }
-        tabsContent[key].classList.add('md:flex')
+        tabsContent[key].classList.add('md:grid')
 
     })
 })

@@ -32,38 +32,6 @@
     transform-origin: top center;
 }
 
-.active-tab {
-    background: #3b82f6;
-    color: #fff;
-}
-.tabs-active {
-    background: #3b82f6;
-    color: #fff;
-}
-.tabs-active:hover {
-    background: #3b82f6;
-    color: #fff;
-}
-/*.text-blue-400 {*/
-/*    color: #3C8DE8 !important;*/
-/*}*/
-
-/*.bg-blue-400 {*/
-/*    background: #3C8DE8 !important;*/
-/*}*/
-
-/*.hover\:bg-blue-400:hover {*/
-/*    background: #3C8DE8 !important;*/
-/*}*/
-/*.hover\:bg-white:hover {*/
-/*    background: #fff !important;*/
-/*}*/
-/*.bg-hover {*/
-/*    background: #E6EFFA;*/
-/*}*/
-/*hover\:bg-hover{*/
-/*    background: #E6EFFA;*/
-/*}*/
 html {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 1.5em;
@@ -96,7 +64,65 @@ main {
     padding: 0;
 
 }
+.fon-color{
+    background: #F5FAFF;
+}
+.active-tab {
+    background: #3b82f6;
+    color: #fff;
+}
+.tabs-active {
+    background: #3b82f6;
+    color: #fff;
+}
+.tabs-active:hover {
+    background: #3b82f6;
+    color: #fff;
+}
+.tab-popup{
+    min-width: 100%;
+}
+.tabs-range-popup{
+    z-index: 99;
+    position: absolute;
+    min-width: 25vw;
+    left: -45%;
+    -webkit-transform: translateX(45%);
+    -moz-transform: translateX(45%);
+    -ms-transform: translateX(45%);
+    -o-transform: translateX(45%);
+    transform: translateX(45%);
+}
+.arrow-gray{
+    cursor: pointer;
+    position: relative;
+}
+.arrow-gray::after{
+    content: url("../images/arrow-bottom-gray.svg");
+    position: absolute;
+    top:-2px;
+    right:-20px;
+}
+/*.text-blue-400 {*/
+/*    color: #3C8DE8 !important;*/
+/*}*/
 
+/*.bg-blue-400 {*/
+/*    background: #3C8DE8 !important;*/
+/*}*/
+
+/*.hover\:bg-blue-400:hover {*/
+/*    background: #3C8DE8 !important;*/
+/*}*/
+/*.hover\:bg-white:hover {*/
+/*    background: #fff !important;*/
+/*}*/
+/*.bg-hover {*/
+/*    background: #E6EFFA;*/
+/*}*/
+/*hover\:bg-hover{*/
+/*    background: #E6EFFA;*/
+/*}*/
 .prop-description-block {
     min-height: 200px;
 }
