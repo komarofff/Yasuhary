@@ -420,31 +420,5 @@
 <script src="scripts/menu.js"></script>
 <script src="scripts/tabs.js"></script>
 <script src="scripts/range-for-index-file.js"></script>
-<script>
-   const  firstlevel = document.querySelectorAll('.input-header')
-   firstlevel.forEach((val)=>{
-       val.addEventListener('click', ()=> {
-           lastlevel = val.parentNode.querySelector('.select-popup')
-           lastlevel.size = lastlevel.length
-           lastlevel.focus()
-           lastlevel.onchange = lastlevel.onclick = lastlevel.onblur = () => {
-               lastlevel.size = 1
-           }
-       })
-
-   })
-
-   // let firstlevel = document.querySelector('.location')
-    // let lastlevel = document.querySelector('#location')
-    //
-    // firstlevel.onclick = ()=>{
-    //     lastlevel.size = lastlevel.length;
-    //     lastlevel.focus();
-    // };
-    //
-    // lastlevel.onchange = lastlevel.onclick = lastlevel.onblur = ()=>{
-    //     lastlevel.size = 1;
-    // };
-</script>
 </body>
 </html>
