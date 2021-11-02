@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import './arrow-animations.css';
+
 @keyframes growDown {
     0% {
         -webkit-transform: scaleY(0);
@@ -25,30 +26,44 @@
         transform: scaleY(1);
     }
 }
-.animation-popup{
+
+.animation-popup {
     animation: growDown 300ms ease-in-out forwards;
     transform-origin: top center;
 }
-.text-blue-400 {
-    color: #3C8DE8 !important;
-}
 
-.bg-blue-400 {
-    background: #3C8DE8 !important;
+.active-tab {
+    background: #3b82f6;
+    color: #fff;
 }
+.tabs-active {
+    background: #3b82f6;
+    color: #fff;
+}
+.tabs-active:hover {
+    background: #3b82f6;
+    color: #fff;
+}
+/*.text-blue-400 {*/
+/*    color: #3C8DE8 !important;*/
+/*}*/
 
-.hover\:bg-blue-400:hover {
-    background: #3C8DE8 !important;
-}
-.hover\:bg-white:hover {
-    background: #fff !important;
-}
-.bg-hover {
-    background: #E6EFFA;
-}
-hover\:bg-hover{
-    background: #E6EFFA;
-}
+/*.bg-blue-400 {*/
+/*    background: #3C8DE8 !important;*/
+/*}*/
+
+/*.hover\:bg-blue-400:hover {*/
+/*    background: #3C8DE8 !important;*/
+/*}*/
+/*.hover\:bg-white:hover {*/
+/*    background: #fff !important;*/
+/*}*/
+/*.bg-hover {*/
+/*    background: #E6EFFA;*/
+/*}*/
+/*hover\:bg-hover{*/
+/*    background: #E6EFFA;*/
+/*}*/
 html {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 1.5em;
@@ -58,16 +73,18 @@ html {
 
 header {
     padding: 20px 0 !important;
-       background: #F5FAFF;
+    background: #F5FAFF;
     position: fixed;
     z-index: 9;
     right: 0;
     top: 0;
     left: 0;
 }
+
 main {
     padding-top: 87px;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -122,14 +139,16 @@ main {
     transform: scale(1.1);
     text-shadow: none;
 }
-.language-switcher{
+
+.language-switcher {
     -webkit-transition: all 250ms ease-in-out;
     -moz-transition: all 250ms ease-in-out;
     -ms-transition: all 250ms ease-in-out;
     -o-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
 }
-.language-switcher:hover{
+
+.language-switcher:hover {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -176,10 +195,7 @@ footer {
     transition: all 250ms ease-in-out;
 }
 
-.tabs-active {
-    background: #3C8DE8;
-    color: #fff;
-}
+
 
 .property-box {
     cursor: pointer;
@@ -221,9 +237,11 @@ footer {
 .image-center-block {
     margin-top: -48%;
 }
+
 .padding-mobile-big {
     display: none;
 }
+
 @media (max-width: 1280px) {
     html {
         font-size: 1.3em;
@@ -239,11 +257,13 @@ footer {
         min-height: 170px;
     }
 }
-@media(max-width: 930px){
-    .footer-box{
-        max-width:83vw;
+
+@media (max-width: 930px) {
+    .footer-box {
+        max-width: 83vw;
     }
 }
+
 @media (min-width: 769px) {
 
     .mobile-menu-switcher {
@@ -252,25 +272,30 @@ footer {
 }
 
 @media (max-width: 769px) {
-    .footer-box{
-        max-width:93vw;
+    .footer-box {
+        max-width: 93vw;
     }
-    .social-top{
-        display:flex !important;
+
+    .social-top {
+        display: flex !important;
     }
+
     header {
         min-width: 100vw;
         /*padding: 0 !important;*/
     }
+
     .py-6 {
         padding-top: 1.5rem !important;
         padding-bottom: 1.5rem !important;
     }
-    .top-popup  {
+
+    .top-popup {
         bottom: -68px;
         width: 130px;
     }
-    .menu-links-top  > ul > li {
+
+    .menu-links-top > ul > li {
         margin: 15px;
     }
 
@@ -280,7 +305,7 @@ footer {
     }
 
     .padding-mobile-big {
-        display:block;
+        display: block;
         margin: 32px 5px 28px 5px;
         background: #9FA3A8;
         height: 2px;
@@ -335,22 +360,26 @@ footer {
     .mobile-menu-close {
         align-self: end;
     }
-    .search-button{
+
+    .search-button {
         grid-column: 1/span 2;
     }
+
     .top-banner-image {
         height: 480px;
         object-fit: cover;
         object-position: center;
     }
 }
-@media(width: 768px){
+
+@media (width: 768px) {
     .top-popup {
         bottom: -140px;
         width: 130px;
     }
 }
-@media(max-width: 639px){
+
+@media (max-width: 639px) {
     header {
         padding: 15px 0 !important;
     }
