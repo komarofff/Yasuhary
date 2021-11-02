@@ -63,20 +63,23 @@
             <!--1 tabs content -->
             <div class="tabs-content hidden md:grid  w-11/12  fon-color  md:rounded-b-lg md:rounded-tr-lg p-5  grid-cols-5 items-center">
                 <div class="relative ">
-                    <div class="popup-switcher text-lg md:text-xs text-gray-400 "><span class="arrow-gray">Location</span></div>
+                    <div class="popup-switcher text-lg md:text-xs text-gray-400 "><span
+                            class="arrow-gray">Location</span></div>
                     <div class="animation-popup tab-popup  absolute   mb-0 md:mb-16 text-black right-1  bg-white rounded-b-lg shadow-md flex flex-col justify-start items-start  z-10 hidden">
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50">Hiroshima</p>
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 ">Tokyo</p>
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg">Osaka</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg">
+                            Osaka</p>
                     </div>
                 </div>
                 <div class="relative ">
-                    <p class="popup-switcher text-lg md:text-xs text-gray-400"><span class="arrow-gray">Price range</span></p>
+                    <p class="popup-switcher text-lg md:text-xs text-gray-400"><span
+                            class="arrow-gray">Price range</span></p>
                     <div class="animation-popup tabs-range-popup tab-popup   mb-0 md:mb-16 text-black  bg-white rounded-b-lg shadow-md flex flex-col justify-start items-start  z-10 hidden">
                         <div class="w-full py-4 px-4 text-xs cursor-pointer   rounded-b-lg">
                             <p id="slider-range1"></p>
                             <p class="mt-4 flex justify-center">
-<!--                                <input type="text" id="amount" readonly style="border:0; color:#000; font-weight:bold;">-->
+                                <!--                                <input type="text" id="amount" readonly style="border:0; color:#000; font-weight:bold;">-->
                                 <span id="amount1" class="font-bold"></span>
                             </p>
                         </div>
@@ -90,7 +93,8 @@
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 ">3 years</p>
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 ">4 years</p>
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 ">10 years</p>
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg">15 years</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg">15
+                            years</p>
                     </div>
                 </div>
                 <div class="relative ">
@@ -102,7 +106,8 @@
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 ">30%</p>
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 ">40%</p>
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 ">50%</p>
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg">100%</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg">
+                            100%</p>
                     </div>
                 </div>
                 <div class="">
@@ -118,50 +123,48 @@
     </section>
     <section class="mb-4 container mx-auto">
         <div class="tabs-content2 md:hidden w-full  bg-white rounded-lg  p-3 grid grid-cols-2 gap-4 justify-between items-center relative -mt-24 mb-10">
-            <div>
-            <p class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">Category</p>
-            <select id="category" class="text-base   text-black ">
-                <option value="" selected> </option>
-                <option value="Buildings">Buildings</option>
-                <option value="Condos">Condos</option>
-                <option value="Hotels">Hotels</option>
-                <option value="Other">Other</option>
-            </select>
+            <div class="relative">
+                <select id="category" class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">
+                    <option value="" selected disabled>Category</option>
+                    <option value="Buildings">Buildings</option>
+                    <option value="Condos">Condos</option>
+                    <option value="Hotels">Hotels</option>
+                    <option value="Other">Other</option>
+                </select>
             </div>
-            <div>
-                <p  class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">Location</p>
-                <select id="location" class="text-base   text-black ">
-                    <option value="" selected> </option>
+            <div class="relative">
+                <select id="location" class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">
+                    <option value="" selected disabled>Location</option>
                     <option value="Hiroshima">Hiroshima</option>
                     <option value="Tokyo">Tokyo</option>
                     <option value="Osaka">Osaka</option>
                 </select>
             </div>
-            <div>
+            <div class="relative">
                 <p>Min price, ¥</p>
-                <input id="minPrice" type="number" value="0" class="text-sm mb-4 md:text-xs text-gray-400 row-span-2">
+                <input id="minPrice" type="number" min="1000" max="100000000" step="1000" placeholder="1000"
+                       class="text-sm mb-4 md:text-xs text-gray-400 row-span-2">
             </div>
-            <div>
+            <div class="relative">
                 <p>Max price, ¥</p>
-                <input type="number"  id="maxPrice" value="100000000" class="text-sm mb-4 md:text-xs text-gray-400 row-span-2">
-                
+                <input type="number" id="maxPrice" min="1000" max="100000000" step="1000" placeholder="100000000"
+                       class="text-sm mb-4 md:text-xs text-gray-400 row-span-2">
+
             </div>
-                <div>
-                <label for="age" class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">Age</label>
-                <select id="age" class="text-base   text-black ">
-                    <option value="" selected> </option>
+            <div class="relative">
+                <select id="age" class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">
+                    <option value="" selected disabled>Age</option>
                     <option value="1">1 year</option>
-                    <option value=2">2 years</option>
+                    <option value="2">2 years</option>
                     <option value="3">3 years</option>
                     <option value="20">20 years</option>
                 </select>
             </div>
-            <div>
-                <label for="roi" class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">ROI</label>
-                <select id="roi" class="text-base   text-black ">
-                    <option value="" selected> </option>
+            <div class="relative">
+                <select id="roi" class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">
+                    <option value="" selected disabled>ROI</option>
                     <option value="1">1%</option>
-                    <option value=2">2%</option>
+                    <option value="2">2%</option>
                     <option value="3">3%</option>
                     <option value="20">20%</option>
                 </select>

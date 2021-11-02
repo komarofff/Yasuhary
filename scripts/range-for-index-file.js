@@ -127,8 +127,26 @@ function  desktopSearch() {
 }
 
 function mobileSearch() {
+    document.getElementById('category').addEventListener('change', function() {
+        categoryProperty =  this.value;
+    })
+    document.getElementById('location').addEventListener('change', function() {
+        propertyLocation =  this.value;
+    })
+    document.getElementById('age').addEventListener('change', function() {
+        propertyAge =  this.value;
+    })
+    document.getElementById('roi').addEventListener('change', function() {
+        propertyRoi =  this.value;
+    })
+    document.getElementById('minPrice').addEventListener('change', function() {
+        propertyPriceMin =  this.value;
+    })
+    document.getElementById('maxPrice').addEventListener('change', function() {
+        propertyPriceMax =  this.value;
+    })
+
         document.querySelector('.search-mobile').addEventListener('click', () => {
-            categoryProperty = document.getElementById('category').value
             console.log('category=', categoryProperty)
             console.log('propertyLocation=', propertyLocation)
             console.log('propertyAge=', propertyAge)
