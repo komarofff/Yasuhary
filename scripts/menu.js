@@ -7,7 +7,10 @@ language_switchers.forEach((val) => {
         let isArrow = val.querySelector('.arrow-gray')
         if(isArrow){
             isArrow.classList.toggle('arrow-rotate')
+        }
 
+        if(val.classList.contains('language-switcher')){
+            val.classList.toggle('arrow-rotate')
         }
     })
 
