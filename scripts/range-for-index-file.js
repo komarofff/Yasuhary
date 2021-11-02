@@ -76,3 +76,16 @@ $( function() {
     $( "#amount4" ).html( "¥" + prettify($( "#slider-range4" ).slider( "values", 0 )) +
         " - ¥" + prettify($( "#slider-range4" ).slider( "values", 1 )) );
 } );
+
+
+const popupBlocks = document.querySelectorAll('.tab-popup')
+popupBlocks.forEach((val)=>{
+    const popupDatas = val.querySelectorAll('.popup-data')
+    popupDatas.forEach((data)=>{
+        data.addEventListener('click',()=>{
+            let location = val.parentNode.querySelector('.arrow-gray').innerHTML
+            let text = data.innerHTML
+            console.log('istochnik='+location + ' | data = ' +text )
+        })
+    })
+})
