@@ -44,7 +44,9 @@
 .bg-hover {
     background: #E6EFFA;
 }
-
+hover\:bg-hover{
+    background: #E6EFFA;
+}
 html {
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 1.5em;
