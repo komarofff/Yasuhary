@@ -40,7 +40,9 @@
 .hover\:bg-blue-400:hover {
     background: #3C8DE8 !important;
 }
-
+.hover\:bg-white:hover {
+    background: #fff !important;
+}
 .bg-hover {
     background: #E6EFFA;
 }
