@@ -26,66 +26,98 @@ $( function() {
         values: [ 25000, 32000000 ],
         slide: function( event, ui ) {
             $( "#amount1" ).html( "¥ " + prettify(ui.values[ 0 ]) + " - ¥ " + prettify(ui.values[ 1 ]) );
+            propertyPriceMin = prettify(ui.values[ 0 ])
+            propertyPriceMax = prettify(ui.values[ 1 ])
         }
     });
     $( "#amount1" ).html( "¥ " + prettify($( "#slider-range1" ).slider( "values", 0 )) +
         " - ¥ " + prettify($( "#slider-range1" ).slider( "values", 1 )) );
 } );
+//
+// $( function() {
+//     $( "#slider-range2" ).slider({
+//         step: 1000,
+//         range: true,
+//         min: 1000,
+//         max: 100000000,
+//         values: [ 25000, 32000000 ],
+//         slide: function( event, ui ) {
+//             $( "#amount2" ).html( "¥ " + prettify(ui.values[ 0 ]) + " - ¥ " + prettify(ui.values[ 1 ]) );
+//         }
+//     });
+//     $( "#amount2" ).html( "¥" + prettify($( "#slider-range2" ).slider( "values", 0 )) +
+//         " - ¥" + prettify($( "#slider-range2" ).slider( "values", 1 )) );
+// } );
+//
+// $( function() {
+//     $( "#slider-range3" ).slider({
+//         step: 1000,
+//         range: true,
+//         min: 1000,
+//         max: 100000000,
+//         values: [ 25000, 32000000 ],
+//         slide: function( event, ui ) {
+//             $( "#amount3" ).html( "¥ " + prettify(ui.values[ 0 ]) + " - ¥ " + prettify(ui.values[ 1 ]) );
+//         }
+//     });
+//     $( "#amount3" ).html( "¥" + prettify($( "#slider-range3" ).slider( "values", 0 )) +
+//         " - ¥" + prettify($( "#slider-range3" ).slider( "values", 1 )) );
+// } );
+//
+// $( function() {
+//     $( "#slider-range4" ).slider({
+//         step: 1000,
+//         range: true,
+//         min: 1000,
+//         max: 100000000,
+//         values: [ 25000, 32000000 ],
+//         slide: function( event, ui ) {
+//             $( "#amount4" ).html( "¥ " + prettify(ui.values[ 0 ]) + " - ¥ " + prettify(ui.values[ 1 ]) );
+//         }
+//     });
+//     $( "#amount4" ).html( "¥" + prettify($( "#slider-range4" ).slider( "values", 0 )) +
+//         " - ¥" + prettify($( "#slider-range4" ).slider( "values", 1 )) );
+// } );
 
-$( function() {
-    $( "#slider-range2" ).slider({
-        step: 1000,
-        range: true,
-        min: 1000,
-        max: 100000000,
-        values: [ 25000, 32000000 ],
-        slide: function( event, ui ) {
-            $( "#amount2" ).html( "¥ " + prettify(ui.values[ 0 ]) + " - ¥ " + prettify(ui.values[ 1 ]) );
-        }
-    });
-    $( "#amount2" ).html( "¥" + prettify($( "#slider-range2" ).slider( "values", 0 )) +
-        " - ¥" + prettify($( "#slider-range2" ).slider( "values", 1 )) );
-} );
-
-$( function() {
-    $( "#slider-range3" ).slider({
-        step: 1000,
-        range: true,
-        min: 1000,
-        max: 100000000,
-        values: [ 25000, 32000000 ],
-        slide: function( event, ui ) {
-            $( "#amount3" ).html( "¥ " + prettify(ui.values[ 0 ]) + " - ¥ " + prettify(ui.values[ 1 ]) );
-        }
-    });
-    $( "#amount3" ).html( "¥" + prettify($( "#slider-range3" ).slider( "values", 0 )) +
-        " - ¥" + prettify($( "#slider-range3" ).slider( "values", 1 )) );
-} );
-
-$( function() {
-    $( "#slider-range4" ).slider({
-        step: 1000,
-        range: true,
-        min: 1000,
-        max: 100000000,
-        values: [ 25000, 32000000 ],
-        slide: function( event, ui ) {
-            $( "#amount4" ).html( "¥ " + prettify(ui.values[ 0 ]) + " - ¥ " + prettify(ui.values[ 1 ]) );
-        }
-    });
-    $( "#amount4" ).html( "¥" + prettify($( "#slider-range4" ).slider( "values", 0 )) +
-        " - ¥" + prettify($( "#slider-range4" ).slider( "values", 1 )) );
-} );
-
+let propertyLocation = ''
+let propertyAge= '1'
+let propertyRoi = '1%'
 
 const popupBlocks = document.querySelectorAll('.tab-popup')
 popupBlocks.forEach((val)=>{
     const popupDatas = val.querySelectorAll('.popup-data')
     popupDatas.forEach((data)=>{
         data.addEventListener('click',()=>{
-            let location = val.parentNode.querySelector('.arrow-gray').innerHTML
-            let text = data.innerHTML
-            console.log('istochnik='+location + ' | data = ' +text )
+            for(let i=0;i<popupDatas.length;i++){
+                popupDatas[i].classList.remove('text-blue-500')
+            }
+            data.classList.add('text-blue-500')
+
+
+             locationProperty = val.parentNode.querySelector('.arrow-gray').innerHTML
+            if(locationProperty==='Location'){
+                propertyLocation = data.innerHTML
+            }
+            if(locationProperty==='Age'){
+                propertyAge = data.innerHTML
+            }
+            if(locationProperty==='ROI'){
+                propertyRoi = data.innerHTML
+            }
+             //textProperty = data.innerHTML
+
+            // console.log('category=',categoryProperty)
+            // console.log('istochnik='+ locationProperty + ' | data = ' +textProperty )
         })
     })
+})
+
+document.querySelector('.search-desktop').addEventListener('click',()=>{
+    console.log('category=',categoryProperty)
+    console.log('propertyLocation=',propertyLocation)
+    console.log('propertyAge=',propertyAge)
+    console.log('propertyRoi=',propertyRoi)
+    console.log('propertyPriceMin=',propertyPriceMin)
+    console.log('propertyPriceMax=',propertyPriceMax)
+
 })
