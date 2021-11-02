@@ -132,12 +132,15 @@ function mobileSearch() {
             categoryProperty =  this.value;
     })
     document.getElementById('location').addEventListener('change', function() {
+        this.parentNode.querySelector('.input-header').classList.remove('hidden')
         propertyLocation =  this.value;
     })
     document.getElementById('age').addEventListener('change', function() {
+        this.parentNode.querySelector('.input-header').classList.remove('hidden')
         propertyAge =  this.value;
     })
     document.getElementById('roi').addEventListener('change', function() {
+        this.parentNode.querySelector('.input-header').classList.remove('hidden')
         propertyRoi =  this.value;
     })
     document.getElementById('minPrice').addEventListener('change', function() {
