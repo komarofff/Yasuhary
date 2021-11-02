@@ -1,0 +1,29 @@
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3b82f6;
+    font-weight: normal;
+    outline: none;
+    cursor:pointer;
+    border:none;
+}
+.ui-widget-content {
+   border: none;
+    background: #f5e9e9;
+    color: #333333;
+}
+.ui-widget.ui-widget-content {
+    border: none;
+}
+.ui-widget-header {
+    border: none;
+    background: #3b82f6;
+}
+.ui-widget {
+    font-size: .1em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -5.3em;
+    margin-left: -0.6em;
+}
