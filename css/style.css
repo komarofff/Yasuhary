@@ -81,7 +81,23 @@ main {
 }
 .tab-popup{
     min-width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
 }
+.tab-popup::-webkit-scrollbar {
+    width: 3px;
+    /*background: darkred;*/
+}
+
+.tab-popup::-webkit-scrollbar-track {
+    box-shadow: inset 0px 0 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.tab-popup::-webkit-scrollbar-thumb {
+    background-color: #3b82f6;
+}
+
 .tabs-range-popup{
     z-index: 99;
     position: absolute;
