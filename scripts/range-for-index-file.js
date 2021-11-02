@@ -107,10 +107,7 @@ popupBlocks.forEach((val)=>{
             if(locationProperty==='ROI'){
                 propertyRoi = data.innerHTML
             }
-             //textProperty = data.innerHTML
 
-            // console.log('category=',categoryProperty)
-            // console.log('istochnik='+ locationProperty + ' | data = ' +textProperty )
         })
     })
 })
@@ -176,3 +173,17 @@ window.onresize = () => {
     }
 
 }
+
+// on-off select areas
+const  firstlevel = document.querySelectorAll('.input-header')
+firstlevel.forEach((val)=>{
+    val.addEventListener('click', ()=> {
+        lastlevel = val.parentNode.querySelector('.select-popup')
+        lastlevel.size = lastlevel.length
+        lastlevel.focus()
+        lastlevel.onchange = lastlevel.onclick = lastlevel.onblur = () => {
+            lastlevel.size = 1
+        }
+    })
+
+})
