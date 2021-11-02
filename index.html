@@ -119,7 +119,7 @@
     <section class="mb-4 container mx-auto">
         <div class="tabs-content2 md:hidden w-full  bg-white rounded-lg  p-3 grid grid-cols-2 gap-4 justify-between items-center relative -mt-24 mb-10">
             <div>
-            <label for="category" class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">Category</label>
+            <p class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">Category</p>
             <select id="category" class="text-base   text-black ">
                 <option value="" selected> </option>
                 <option value="Buildings">Buildings</option>
@@ -128,12 +128,25 @@
                 <option value="Other">Other</option>
             </select>
             </div>
-            <select class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">
-                <option value="Location" selected>Location</option>
-            </select>
-            <label><input id="minPrice" type="number" class="text-sm mb-4 md:text-xs text-gray-400 row-span-2">Min price, ¥</label>
-            <label><input type="number"  id="maxPrice" class="text-sm mb-4 md:text-xs text-gray-400 row-span-2">Max price, ¥<</label>
             <div>
+                <p  class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">Location</p>
+                <select id="location" class="text-base   text-black ">
+                    <option value="" selected> </option>
+                    <option value="Hiroshima">Hiroshima</option>
+                    <option value="Tokyo">Tokyo</option>
+                    <option value="Osaka">Osaka</option>
+                </select>
+            </div>
+            <div>
+                <p>Min price, ¥</p>
+                <input id="minPrice" type="number" value="0" class="text-sm mb-4 md:text-xs text-gray-400 row-span-2">
+            </div>
+            <div>
+                <p>Max price, ¥</p>
+                <input type="number"  id="maxPrice" value="100000000" class="text-sm mb-4 md:text-xs text-gray-400 row-span-2">
+                
+            </div>
+                <div>
                 <label for="age" class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">Age</label>
                 <select id="age" class="text-base   text-black ">
                     <option value="" selected> </option>

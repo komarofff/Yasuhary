@@ -128,6 +128,7 @@ function  desktopSearch() {
 
 function mobileSearch() {
         document.querySelector('.search-mobile').addEventListener('click', () => {
+            categoryProperty = document.getElementById('category').value
             console.log('category=', categoryProperty)
             console.log('propertyLocation=', propertyLocation)
             console.log('propertyAge=', propertyAge)
