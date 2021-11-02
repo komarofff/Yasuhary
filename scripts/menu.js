@@ -4,6 +4,11 @@ const language_switchers = document.querySelectorAll(".popup-switcher")
 language_switchers.forEach((val) => {
     val.addEventListener('click', () => {
         val.parentNode.querySelector('.animation-popup').classList.toggle('hidden')
+        let isArrow = val.querySelector('.arrow-gray')
+        if(isArrow){
+            isArrow.classList.toggle('arrow-rotate')
+
+        }
     })
 
 })

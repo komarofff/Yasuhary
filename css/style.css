@@ -103,6 +103,14 @@ main {
     top:-2px;
     right:-20px;
 }
+.arrow-rotate.arrow-gray::after {
+    top: 2px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
 /*.text-blue-400 {*/
 /*    color: #3C8DE8 !important;*/
 /*}*/

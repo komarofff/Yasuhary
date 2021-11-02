@@ -1,6 +1,6 @@
 const tabs = document.querySelectorAll('.tabs')
 const tabsContent = document.querySelectorAll('.tabs-content')
-const tabsContent2 = document.querySelectorAll('.tabs-content2')
+
 tabs.forEach((val, key) => {
     val.addEventListener('click', () => {
         for (let i = 0; i < tabs.length; i++) {
