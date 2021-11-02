@@ -3,6 +3,7 @@
 @import './range-block.css';
 /*@import './type-number.css';*/
 
+
 @keyframes growDown {
     0% {
         -webkit-transform: scaleY(0);
@@ -66,7 +67,33 @@ main {
     padding: 0;
 
 }
+.category{
+    position: relative;
 
+}
+.category select{
+    border:1px solid red;
+    display: block;
+    appearance: none;
+    outline: none;
+}
+.category::before{
+    content: "Category";
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    top: -15px;
+   left:0;
+    z-index: 1;
+    margin-top: -3px;
+}
+.category::after{
+
+    position:absolute;
+    top: -18px;
+    left:90px;
+    content: url("../images/arrow-bottom.svg");
+}
 .fon-color{
     background: #F5FAFF;
 }
