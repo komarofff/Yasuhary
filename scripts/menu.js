@@ -1,7 +1,9 @@
-const language_switchers = document.querySelectorAll(".language-switcher")
+// selector .popup-switcher - popups switchers on-off
+// selector .animation-popup - popups animation
+const language_switchers = document.querySelectorAll(".popup-switcher")
 language_switchers.forEach((val) => {
     val.addEventListener('click', () => {
-        val.parentNode.querySelector('.language-popup').classList.toggle('hidden')
+        val.parentNode.querySelector('.animation-popup').classList.toggle('hidden')
     })
 
 })
