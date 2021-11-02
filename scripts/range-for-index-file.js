@@ -32,6 +32,9 @@ $( function() {
     });
     $( "#amount1" ).html( "¥ " + prettify($( "#slider-range1" ).slider( "values", 0 )) +
         " - ¥ " + prettify($( "#slider-range1" ).slider( "values", 1 )) );
+    propertyPriceMin =$( "#slider-range1" ).slider( "values", 0 )
+    propertyPriceMax =$( "#slider-range1" ).slider( "values", 1 )
+
 } );
 //
 // $( function() {
@@ -79,7 +82,7 @@ $( function() {
 //         " - ¥" + prettify($( "#slider-range4" ).slider( "values", 1 )) );
 // } );
 
-let propertyLocation = ''
+let propertyLocation = 'Hirosima'
 let propertyAge= '1'
 let propertyRoi = '1%'
 
@@ -111,13 +114,42 @@ popupBlocks.forEach((val)=>{
         })
     })
 })
+function  desktopSearch() {
+    document.querySelector('.search-desktop').addEventListener('click', () => {
+        console.log('category=', categoryProperty)
+        console.log('propertyLocation=', propertyLocation)
+        console.log('propertyAge=', propertyAge)
+        console.log('propertyRoi=', propertyRoi)
+        console.log('propertyPriceMin=', propertyPriceMin)
+        console.log('propertyPriceMax=', propertyPriceMax)
 
-document.querySelector('.search-desktop').addEventListener('click',()=>{
-    console.log('category=',categoryProperty)
-    console.log('propertyLocation=',propertyLocation)
-    console.log('propertyAge=',propertyAge)
-    console.log('propertyRoi=',propertyRoi)
-    console.log('propertyPriceMin=',propertyPriceMin)
-    console.log('propertyPriceMax=',propertyPriceMax)
+    })
+}
 
-})
+function mobileSearch() {
+        document.querySelector('.search-mobile').addEventListener('click', () => {
+            console.log('category=', categoryProperty)
+            console.log('propertyLocation=', propertyLocation)
+            console.log('propertyAge=', propertyAge)
+            console.log('propertyRoi=', propertyRoi)
+            console.log('propertyPriceMin=', propertyPriceMin)
+            console.log('propertyPriceMax=', propertyPriceMax)
+
+        })
+}
+
+var size_of_screen2 = document.documentElement.clientWidth
+if (size_of_screen2 <= 768) {
+mobileSearch()
+}else{
+    desktopSearch()
+}
+window.onresize = () => {
+    var size_of_screen2 = document.documentElement.clientWidth
+    if (size_of_screen2 <= 768) {
+        mobileSearch()
+    }else{
+        desktopSearch()
+    }
+
+}

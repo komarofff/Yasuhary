@@ -65,7 +65,7 @@
                 <div class="relative ">
                     <div class="popup-switcher text-lg md:text-xs text-gray-400 "><span class="arrow-gray">Location</span></div>
                     <div class="animation-popup tab-popup  absolute   mb-0 md:mb-16 text-black right-1  bg-white rounded-b-lg shadow-md flex flex-col justify-start items-start  z-10 hidden">
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer text-blue-500 hover:bg-blue-50">Hiroshima</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50">Hiroshima</p>
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 ">Tokyo</p>
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg">Osaka</p>
                     </div>
@@ -85,7 +85,7 @@
                 <div class="relative">
                     <p class="popup-switcher text-lg md:text-xs text-gray-400"><span class="arrow-gray">Age</span></p>
                     <div class="animation-popup tab-popup  absolute  -r-6 mb-0 md:mb-16 text-black right-1  bg-white rounded-b-lg shadow-md flex flex-col justify-start items-start  z-10 hidden">
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer text-blue-500 hover:bg-blue-50">1 year</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50">1 year</p>
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 ">2 years</p>
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 ">3 years</p>
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 ">4 years</p>
@@ -96,7 +96,7 @@
                 <div class="relative ">
                     <p class="popup-switcher text-lg md:text-xs text-gray-400"><span class="arrow-gray">ROI</span></p>
                     <div class="animation-popup tab-popup  absolute  -r-6 mb-0 md:mb-16 text-black right-1  bg-white rounded-b-lg shadow-md flex flex-col justify-start items-start  z-10 hidden">
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer text-blue-500 hover:bg-blue-50">1%</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50">1%</p>
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 ">2%</p>
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 ">6%</p>
                         <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 ">30%</p>
@@ -120,7 +120,7 @@
         <div class="tabs-content2 md:hidden w-full  bg-white rounded-lg  p-3 grid grid-cols-2 gap-4 justify-between items-center relative -mt-24 mb-10">
             <div>
             <label for="category" class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">Category</label>
-            <select id="category" class="text-base  s text-black ">
+            <select id="category" class="text-base   text-black ">
                 <option value="" selected> </option>
                 <option value="Buildings">Buildings</option>
                 <option value="Condos">Condos</option>
@@ -131,12 +131,30 @@
             <select class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">
                 <option value="Location" selected>Location</option>
             </select>
-            <p class="text-sm mb-4 md:text-xs text-gray-400 row-span-2">Min price, ¥</p>
-            <p class="text-sm mb-4 md:text-xs text-gray-400 row-span-2">Max price, ¥</p>
-            <p class="text-sm mb-4 md:text-xs text-gray-400 row-span-3">Age</p>
-            <p class="text-sm mb-4 md:text-xs text-gray-400 row-span-3">ROI</p>
+            <label><input id="minPrice" type="number" class="text-sm mb-4 md:text-xs text-gray-400 row-span-2">Min price, ¥</label>
+            <label><input type="number"  id="maxPrice" class="text-sm mb-4 md:text-xs text-gray-400 row-span-2">Max price, ¥<</label>
+            <div>
+                <label for="age" class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">Age</label>
+                <select id="age" class="text-base   text-black ">
+                    <option value="" selected> </option>
+                    <option value="1">1 year</option>
+                    <option value=2">2 years</option>
+                    <option value="3">3 years</option>
+                    <option value="20">20 years</option>
+                </select>
+            </div>
+            <div>
+                <label for="roi" class="text-sm mb-4 md:text-xs text-gray-400 row-span-1">ROI</label>
+                <select id="roi" class="text-base   text-black ">
+                    <option value="" selected> </option>
+                    <option value="1">1%</option>
+                    <option value=2">2%</option>
+                    <option value="3">3%</option>
+                    <option value="20">20%</option>
+                </select>
+            </div>
             <a class="  my-4 text-white text-base text-center row-span-4  search-button" href="#">
-                <p class="py-2 w-full bg-blue-500 hover:bg-blue-50 hover:shadow-lg rounded-lg   hover:text-blue-500  transition ease-in-out duration-300">
+                <p class="search-mobile py-2 w-full bg-blue-500 hover:bg-blue-50 hover:shadow-lg rounded-lg   hover:text-blue-500  transition ease-in-out duration-300">
                     Search</p>
             </a>
         </div>
