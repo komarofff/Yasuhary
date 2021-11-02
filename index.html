@@ -122,10 +122,10 @@
         </div>
     </section>
     <section class="mb-4 container mx-auto">
-        <div class="tabs-content2 md:hidden w-full  bg-white rounded-lg  p-4 grid grid-cols-2 gap-4 justify-between items-center relative -mt-24 mb-10">
+        <div class="tabs-content2 md:hidden w-full  bg-white rounded-lg  p-4 grid grid-cols-2 gap-4 justify-between items-start relative -mt-24 mb-10">
             <div class="relative mt-3 category">
-<!--                <p class="input-header hidden absolute text-sm mb-4 text-black -top-4 left-1 ">Category</p>-->
-                <select id="category" class="text-sm   text-gray-400 ">
+         <p class="input-header  absolute text-sm mb-4 text-black -top-4 left-1 ">Category</p>
+                <select id="category" class="text-sm   text-gray-400  ">
                     <option value="" selected disabled></option>
                     <option value="Buildings">Buildings</option>
                     <option value="Condos">Condos</option>
@@ -134,9 +134,9 @@
                 </select>
             </div>
             <div class="relative mt-3">
-                <p class="input-header hidden absolute text-sm mb-4 text-black -top-4 left-1 ">Location</p>
-                <select id="location" class="text-sm  text-gray-400">
-                    <option value="" selected disabled>Location</option>
+                <p class="input-header location absolute text-sm mb-4 text-black -top-4  ">Location</p>
+                <select id="location" class="text-sm  text-gray-400  w-full">
+                    <option value="" selected disabled></option>
                     <option value="Hiroshima">Hiroshima</option>
                     <option value="Tokyo">Tokyo</option>
                     <option value="Osaka">Osaka</option>
@@ -420,6 +420,19 @@
 <script src="scripts/menu.js"></script>
 <script src="scripts/tabs.js"></script>
 <script src="scripts/range-for-index-file.js"></script>
+<script>
+    let firstlevel = document.querySelector('.location')
 
+    let lastlevel = document.querySelector('#location')
+
+    firstlevel.onclick = ()=>{
+        lastlevel.size = lastlevel.length;
+        lastlevel.focus();
+    };
+
+    lastlevel.onchange = lastlevel.onclick = lastlevel.onblur = ()=>{
+        lastlevel.size = 1;
+    };
+</script>
 </body>
 </html>

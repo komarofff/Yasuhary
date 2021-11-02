@@ -132,7 +132,7 @@ function mobileSearch() {
             categoryProperty =  this.value;
     })
     document.getElementById('location').addEventListener('change', function() {
-        this.parentNode.querySelector('.input-header').classList.remove('hidden')
+        // this.parentNode.querySelector('.input-header').classList.remove('hidden')
         propertyLocation =  this.value;
     })
     document.getElementById('age').addEventListener('change', function() {
