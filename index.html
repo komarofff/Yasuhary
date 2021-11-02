@@ -125,7 +125,7 @@
         <div class="tabs-content2 md:hidden w-full  bg-white rounded-lg  p-4 grid grid-cols-2 gap-4 justify-between items-start relative -mt-24 mb-10">
             <div class="relative mt-3 category">
          <p class="input-header  absolute text-sm mb-4 text-black -top-4 left-1 ">Category</p>
-                <select id="category" class="text-sm   text-gray-400  ">
+                <select id="category" class="select-popup text-sm   text-gray-400  ">
                     <option value="" selected disabled></option>
                     <option value="Buildings">Buildings</option>
                     <option value="Condos">Condos</option>
@@ -134,8 +134,8 @@
                 </select>
             </div>
             <div class="relative mt-3">
-                <p class="input-header location absolute text-sm mb-4 text-black -top-4  ">Location</p>
-                <select id="location" class="text-sm  text-gray-400  w-full">
+                <p class="input-header  absolute text-sm mb-4 text-black -top-4  ">Location</p>
+                <select id="location" class="select-popup text-sm  text-gray-400  w-full">
                     <option value="" selected disabled></option>
                     <option value="Hiroshima">Hiroshima</option>
                     <option value="Tokyo">Tokyo</option>
@@ -154,8 +154,8 @@
 
             </div>
             <div class="relative mt-3">
-                <p class="input-header hidden absolute text-sm mb-4  text-black -top-4 left-1 ">Age</p>
-                <select id="age" class="text-sm  text-gray-400">
+                <p class="input-header  absolute text-sm mb-4  text-black -top-4 left-1 ">Age</p>
+                <select id="age" class="select-popup text-sm  text-gray-400">
                     <option value="" selected disabled>Age</option>
                     <option value="1">1 year</option>
                     <option value="2">2 years</option>
@@ -164,8 +164,8 @@
                 </select>
             </div>
             <div class="relative mt-3">
-                <p class="input-header hidden absolute text-sm mb-4 text-black -top-4 left-1 ">ROI</p>
-                <select id="roi" class="text-sm  text-gray-400">
+                <p class="input-header  absolute text-sm mb-4 text-black -top-4 left-1 ">ROI</p>
+                <select id="roi" class="select-popup text-sm  text-gray-400">
                     <option value="" selected disabled>ROI</option>
                     <option value="1">1%</option>
                     <option value="2">2%</option>
@@ -421,18 +421,36 @@
 <script src="scripts/tabs.js"></script>
 <script src="scripts/range-for-index-file.js"></script>
 <script>
-    let firstlevel = document.querySelector('.location')
+   const  firstlevel = document.querySelectorAll('.input-header')
+   firstlevel.forEach((val)=>{
 
-    let lastlevel = document.querySelector('#location')
 
-    firstlevel.onclick = ()=>{
-        lastlevel.size = lastlevel.length;
-        lastlevel.focus();
-    };
 
-    lastlevel.onchange = lastlevel.onclick = lastlevel.onblur = ()=>{
-        lastlevel.size = 1;
-    };
+       val.onclick = ()=> {
+
+           lastlevel = val.parentNode.querySelector('.select-popup')
+           lastlevel.size = lastlevel.length;
+           lastlevel.focus();
+
+
+           lastlevel.onchange = lastlevel.onclick = lastlevel.onblur = () => {
+               lastlevel.size = 1;
+           };
+       }
+
+   })
+
+   // let firstlevel = document.querySelector('.location')
+    // let lastlevel = document.querySelector('#location')
+    //
+    // firstlevel.onclick = ()=>{
+    //     lastlevel.size = lastlevel.length;
+    //     lastlevel.focus();
+    // };
+    //
+    // lastlevel.onchange = lastlevel.onclick = lastlevel.onblur = ()=>{
+    //     lastlevel.size = 1;
+    // };
 </script>
 </body>
 </html>

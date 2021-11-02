@@ -68,13 +68,13 @@ main {
 
 }
 
-#location{
+.select-popup{
     display: block;
     appearance: none;
     outline: none;
 }
 
-.location::after{
+.input-header::after{
     cursor:pointer;
     position:absolute;
     top: -2px;
