@@ -127,8 +127,9 @@ function  desktopSearch() {
 }
 
 function mobileSearch() {
-    document.getElementById('category').addEventListener('change', function() {
-        categoryProperty =  this.value;
+    document.getElementById('category').addEventListener('change', function(e) {
+        this.parentNode.querySelector('.input-header').classList.remove('hidden')
+            categoryProperty =  this.value;
     })
     document.getElementById('location').addEventListener('change', function() {
         propertyLocation =  this.value;
