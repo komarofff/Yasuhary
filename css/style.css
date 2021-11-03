@@ -73,8 +73,11 @@ main {
     appearance: none;
     outline: none;
 }
-
+.input-header{
+    z-index:9;
+}
 .input-header::after{
+    z-index:9;
     cursor:pointer;
     position:absolute;
     top: -2px;
@@ -355,6 +358,7 @@ footer {
     }
 
     header {
+        z-index:99999;
         min-width: 100vw;
         /*padding: 0 !important;*/
     }
