@@ -177,13 +177,22 @@ window.onresize = () => {
 // on-off select areas
 const  firstlevel = document.querySelectorAll('.input-header')
 firstlevel.forEach((val)=>{
-    val.addEventListener('click', ()=> {
+
+    val.onclick= ()=> {
         lastlevel = val.parentNode.querySelector('.select-popup')
         lastlevel.size = lastlevel.length
         lastlevel.focus()
         lastlevel.onchange = lastlevel.onclick = lastlevel.onblur = () => {
             lastlevel.size = 1
         }
-    })
+    }
+    val.ontouchstart = () =>{
+        lastlevel = val.parentNode.querySelector('.select-popup')
+        lastlevel.size = lastlevel.length
+        lastlevel.focus()
+        lastlevel.onchange = lastlevel.onclick = lastlevel.onblur = () => {
+            lastlevel.size = 1
+        }
+    }
 
 })
