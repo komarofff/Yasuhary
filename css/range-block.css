@@ -1,6 +1,6 @@
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
-    width: 20px;
-    height: 20px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: #3b82f6;
     font-weight: normal;
@@ -24,6 +24,6 @@
     font-size: .1em;
 }
 .ui-slider-horizontal .ui-slider-handle {
-    top: -5.3em;
+    top: -2em;
     margin-left: -0.6em;
 }

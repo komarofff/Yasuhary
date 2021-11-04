@@ -182,7 +182,8 @@ firstlevel.forEach((val)=>{
         lastlevel = val.parentNode.querySelector('.select-popup')
         lastlevel.size = lastlevel.length
         lastlevel.focus()
-        lastlevel.onchange = lastlevel.ontouchstart = lastlevel.onclick = lastlevel.onblur = () => {
+        //lastlevel.onchange = lastlevel.ontouchstart = lastlevel.onclick = lastlevel.onblur = () => {
+        lastlevel.onchange =  lastlevel.onblur = () => {
             lastlevel.size = 1
         }
     }
@@ -190,7 +191,8 @@ firstlevel.forEach((val)=>{
         lastlevel = val.parentNode.querySelector('.select-popup')
         lastlevel.size = lastlevel.length
         lastlevel.focus()
-        lastlevel.onchange = lastlevel.ontouchstart = lastlevel.onclick = lastlevel.onblur = () => {
+        //lastlevel.onchange = lastlevel.ontouchstart = lastlevel.onclick = lastlevel.onblur = () => {
+        lastlevel.onchange =  lastlevel.onblur = () => {
             lastlevel.size = 1
         }
     }
