@@ -250,6 +250,7 @@ main {
     left: -15px;
     top: 3px;
     cursor: pointer;
+
 }
 
 .language-switcher::after {
@@ -258,8 +259,18 @@ main {
     right: -10px;
     top: -3px;
     cursor: pointer;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 .arrow-rotate.language-switcher::after {
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
     top: 3px;
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
