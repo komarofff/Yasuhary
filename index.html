@@ -418,7 +418,7 @@
 <script src="scripts/tabs.js"></script>
 <!--<script src="scripts/range-for-index-file.js"></script>-->
 <script type="text/javascript">
-    $("#start_category").on('click touchstart', function() {
+    $("#start_category").on('touchstart', function() {
         var target = $("#category"),clone = target.clone().removeAttr('id');
         clone.val(target.val()).css({
             overflow: "auto",
