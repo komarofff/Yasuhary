@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript" src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+<span class=select_show id="click">Menu</span><br>
+
+<select class=select id="ts">
+  <option val=1>Page1</option>
+  <option val=2>Page2</option>
+  <option val=3>Page3</option>
+</select>
+<script type="text/javascript">
+  $("#click").on('click', function() {
+    var target = $("#ts"),clone = target.clone().removeAttr('id');
+    clone.val(target.val()).css({
+      overflow: "auto",
+      position: 'absolute',
+      'z-index': 999,
+      left: target.offset().left,
+      top: target.offset().top + target.outerHeight(),
+      width: target.outerWidth()
+    }).attr('size', clone.find('option').length > 10 ? 10 : clone.find('option').length).change(function() {
+      target.val(clone.val());
+    }).on('click blur',function() {
+      $(this).remove();
+    });
+    $('body').append(clone);
+    clone.focus();
+  });
+</script>
+</body>
+</html>

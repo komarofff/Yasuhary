@@ -124,7 +124,7 @@
     <section class="mb-4 container mx-auto">
         <div class="tabs-content2 md:hidden w-full  bg-white rounded-lg  p-4 grid grid-cols-2 gap-4 justify-between items-start relative -mt-24 mb-10">
             <div class="relative mt-3 category">
-         <p class="input-header  absolute text-sm  text-black -top-4  ">Category</p>
+         <p class="input-header  absolute text-sm  text-black -top-4  " id="start_category">Category</p>
                 <select id="category" class="select-popup text-sm   text-gray-400  bg-white  w-full">
                     <option value="Buildings">Buildings</option>
                     <option value="Condos">Condos</option>
@@ -415,6 +415,25 @@
 
 <script src="scripts/menu.js"></script>
 <script src="scripts/tabs.js"></script>
-<script src="scripts/range-for-index-file.js"></script>
+<!--<script src="scripts/range-for-index-file.js"></script>-->
+<script type="text/javascript">
+    $("#start_category").on('click touchstart', function() {
+        var target = $("#category"),clone = target.clone().removeAttr('id');
+        clone.val(target.val()).css({
+            overflow: "auto",
+            position: 'absolute',
+            'z-index': 999,
+            left: target.offset().left,
+            top: target.offset().top + target.outerHeight(),
+            width: target.outerWidth()
+        }).attr('size', clone.find('option').length > 10 ? 10 : clone.find('option').length).change(function() {
+            target.val(clone.val());
+        }).on('click blur',function() {
+            $(this).remove();
+        });
+        $('body').append(clone);
+        clone.focus();
+    });
+</script>
 </body>
 </html>
