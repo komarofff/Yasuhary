@@ -14,7 +14,7 @@ firstlevel.forEach((val)=>{
     //     }
     // }
     val.ontouchstart = () =>{
-        alert('touthstart')
+        //alert('touthstart')
         lastlevel = val.parentNode.querySelector('.select-popup')
         lastlevel.size = lastlevel.length
         lastlevel.focus()
