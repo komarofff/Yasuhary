@@ -76,14 +76,14 @@ main {
 .input-header{
     z-index:9;
 }
-/*.input-header::after{*/
-/*    z-index:9;*/
-/*    cursor:pointer;*/
-/*    position:absolute;*/
-/*    top: -2px;*/
-/*    right:-20px;*/
-/*    content: url("../images/arrow-bottom.svg");*/
-/*}*/
+.input-header::after{
+    z-index:9;
+    cursor:pointer;
+    position:absolute;
+    top: -2px;
+    right:-20px;
+    content: url("../images/arrow-bottom.svg");
+}
 .fon-color{
     background: #F5FAFF;
 }
