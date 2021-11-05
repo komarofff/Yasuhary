@@ -132,14 +132,25 @@ main {
 .arrow-gray{
     cursor: pointer;
     position: relative;
+
 }
 .arrow-gray::after{
     content: url("../images/arrow-bottom-gray.svg");
     position: absolute;
     top:-2px;
     right:-20px;
+    -webkit-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+    -ms-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
+    transition:all .3s ease-in-out;
 }
 .arrow-rotate.arrow-gray::after {
+    -webkit-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+    -ms-transition:all .3s ease-in-out;
+    -o-transition:all .3s ease-in-out;
+    transition:all .3s ease-in-out;
     top: 2px;
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
