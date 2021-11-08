@@ -57,7 +57,7 @@ function  desktopSearch() {
 
                 data.parentNode.parentNode.querySelector('.text-area').innerHTML = data.dataset.title
                 data.parentNode.classList.add('hidden')
-                console.log(data.parentNode.parentNode.querySelector('.arrow-gray'),data.dataset.title)
+                console.log('Name of parent ='+data.parentNode.parentNode.querySelector('.arrow-gray').dataset.name ,' | Selected item ='+data.dataset.title)
                 // rotate arrows on tabs selects
                 let isArrow2 = data.parentNode.parentNode.querySelector('.arrow-gray')
                 if(isArrow2){
