@@ -20,7 +20,10 @@ function getHeights() {
         document.querySelector('.filters-block').style.cssText = ``
         document.querySelector('.properties-list-block').classList.remove('overflow-style')
         document.querySelector('.filters-block').classList.remove('overflow-style')
-        document.querySelector('.fix-mobile').style.cssText = `padding-top: ${headerHeight}px`
+        const fixPopups = document.querySelectorAll('.fix-mobile')
+        fixPopups.forEach((ele)=>{
+            ele.style.cssText = `padding-top: ${headerHeight}px`
+        })
         let result2 = headerHeight+50
         document.querySelector('main').style.cssText = `padding-top: ${result2}px`
     }

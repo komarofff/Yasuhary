@@ -45,26 +45,36 @@
         </div>
     </div>
 </header>
-<div class="fix-mobile w-screen bg-gray-50 text-xs text-black block md:hidden  px-4 prop-header ">
+<div class="all-popup fix-mobile w-screen bg-gray-50 text-xs text-black block md:hidden  px-4 prop-header ">
    <div class="border-t border-gray-100 ">
     <div class="container mx-auto flex md:hidden justify-between items-center">
         <p>
-            <img src="images/filter.svg" alt="filter">
+            <img class="filter-switcher cursor-pointer" src="images/filter.svg" alt="filter">
         </p>
         <p class="text-base text-black py-3 ">123 results</p>
         <p>
-            <img src="images/map-mobile.svg" alt="map">
+            <img class="map-list-switcher cursor-pointer map-off" src="images/map-mobile.svg" alt="map">
         </p>
     </div>
    </div>
 </div>
-<main class="h-screen md:h-full">
+<div class="filters-popup fix-mobile w-screen bg-gray-50 text-xs text-black hidden  px-4 prop-header ">
+    <div class="border-t border-gray-100 ">
+        <div class="container mx-auto flex md:hidden justify-between items-center">
+            <p class="text-base font-bold text-black py-3 ">Filters</p>
+            <p>
+                <img class="close-filters-popup cursor-pointer" src="images/close.svg" alt="close">
+            </p>
+        </div>
+    </div>
+</div>
+<main >
 
     <section class="container mx-auto my-4 ">
 
         <div class="w-full flex flex-wrap md:flex-nowrap">
 
-            <div class="hidden md:block  filters-block  overflow-style w-full md:w-2/12 px-2">
+            <div class="filters-block hidden md:block    overflow-style w-full md:w-2/12 px-2 inner-blocks-mobile ">
                 <div class="relative  md:pb-2 border-b border-b-gray-400  ">
                     <div class="popup-switcher text-lg md:text-xs text-gray-400 "><span
                             class="arrow-gray " data-name="Category">Category</span></div>
@@ -197,13 +207,13 @@
 
             </div>
 
-            <div class="w-full hidden md:block  md:w-5/12 md:ml-2">
+            <div class="map-block w-full hidden md:block  md:w-5/12 md:ml-2 inner-blocks-mobile ">
                 <div class="min-h-full w-full border border-gray-200">
                     <img class="object-cover min-w-full min-h-full" src="./images/map.jpg" alt="">
                 </div>
             </div>
 
-            <div class="w-full  md:w-5/12 relative md:ml-2">
+            <div class="list-block active-block-here w-full  md:w-5/12 relative md:ml-2 inner-blocks-mobile ">
                 <div class=" h-9 w-full bg-gray-50 text-xs text-black hidden md:flex justify-between items-center px-2 prop-header">
                     <p>123 results</p>
                     <select class="text-lg md:text-xs text-gray-400 bg-gray-50 outline-none border-0">
@@ -331,5 +341,53 @@
 
 <script src="scripts/range-for-filters-file.js"></script>
 <script src="scripts/filters-page-size-of-blocks.js">  </script>
+<script>
+    document.querySelector('.filter-switcher').addEventListener('click',(e)=>{
+        //filters-block
+        const blocks = document.querySelectorAll('.inner-blocks-mobile')
+        blocks.forEach((el)=>{
+            el.classList.add('hidden')
+        })
+       document.querySelector('.filters-block').classList.remove('hidden')
+
+       document.querySelector('.filters-popup').classList.remove('hidden')
+       document.querySelector('.all-popup').classList.add('hidden')
+    })
+    //close-filters-popup
+    document.querySelector('.close-filters-popup').addEventListener('click',()=>{
+        document.querySelector('.filters-popup').classList.add('hidden')
+        document.querySelector('.all-popup').classList.remove('hidden')
+
+        document.querySelector('.filters-block').classList.add('hidden')
+        if(document.querySelector('.list-block').classList.contains('active-block-here')){document.querySelector('.list-block').classList.remove('hidden')}
+        if(document.querySelector('.map-block').classList.contains('active-block-here')){document.querySelector('.map-block').classList.remove('hidden')}
+    })
+
+    document.querySelector('.map-list-switcher').addEventListener('click',(e)=>{
+        if(e.target.classList.contains('map-off')) {
+           e.target.classList.add('map-on')
+            e.target.classList.remove('map-off')
+            e.target.src = 'images/list.svg'
+            //
+            document.querySelector('.list-block').classList.remove('active-block-here')
+            document.querySelector('.list-block').classList.add('hidden')
+            document.querySelector('.map-block').classList.add('active-block-here')
+            document.querySelector('.map-block').classList.remove('hidden')
+        }
+        else{
+            e.target.classList.add('map-off')
+            e.target.classList.remove('map-on')
+            e.target.src = 'images/map-mobile.svg'
+            document.querySelector('.list-block').classList.add('active-block-here')
+            document.querySelector('.list-block').classList.remove('hidden')
+            document.querySelector('.map-block').classList.remove('active-block-here')
+            document.querySelector('.map-block').classList.add('hidden')
+        }
+    })
+
+
+
+
+</script>
 </body>
 </html>
