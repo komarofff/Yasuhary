@@ -52,7 +52,7 @@ function  desktopSearch() {
                 }
                 data.classList.add('text-blue-500')
 
-
+                data.parentNode.parentNode.querySelector('.text-area').innerHTML = data.dataset.title
                 data.parentNode.classList.add('hidden')
                 console.log('Name of parent ='+data.parentNode.parentNode.querySelector('.arrow-gray').dataset.name ,' | Selected item ='+data.dataset.title)
                 // rotate arrows on tabs selects

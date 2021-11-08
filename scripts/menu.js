@@ -75,3 +75,17 @@ window.onresize = () => {
         right: 0;`
     }
 }
+//// language-switcher
+ const lanqSwitchers = document.querySelectorAll('.language-switcher')
+ lanqSwitchers.forEach((val)=>{
+    const innerData = val.parentNode.querySelectorAll('.w-full.py-2.px-4.text-xs.cursor-pointer')
+    innerData.forEach((elem)=>{
+        elem.addEventListener('click',()=>{
+            for(let i=0;i<innerData.length;i++){
+                innerData[i].classList.remove('text-blue-500')
+            }
+
+            elem.classList.toggle('text-blue-500')
+        })
+    })
+})
