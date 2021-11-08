@@ -223,6 +223,10 @@ main {
 .prop-description-block {
     min-height: 200px;
 }
+.prop-description-block-list {
+    min-height: 150px;
+}
+
 
 .prop-title {
     line-height: 120% !important;
@@ -390,17 +394,20 @@ footer {
 
 @media (max-width: 1280px) {
     html {
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
 }
 
 @media (max-width: 1024px) {
     html {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     .prop-description-block {
         min-height: 170px;
+    }
+    .prop-description-block-list {
+        min-height: 100px;
     }
 }
 
