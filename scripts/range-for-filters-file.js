@@ -16,24 +16,24 @@ function prettify(num) {
     var n = num.toString();
     return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
 }
-
+//price range
 $( function() {
-    $( "#slider-range1" ).slider({
+    $( "#price-range" ).slider({
         step: 1000,
         range: true,
         min: 1000,
         max: 100000000,
         values: [ 25000, 32000000 ],
         slide: function( event, ui ) {
-            $( "#amount1" ).html( "<p class='text-xxs'>¥ " + prettify(ui.values[ 0 ]) + "</p><p class='text-xxs'> ¥ " + prettify(ui.values[ 1 ]) +"</p>" );
+            $( "#amount1" ).html( "<p class='text-xs'>¥ " + prettify(ui.values[ 0 ]) + "</p><p class='text-xs'> ¥ " + prettify(ui.values[ 1 ]) +"</p>" );
             propertyPriceMin = prettify(ui.values[ 0 ])
             propertyPriceMax = prettify(ui.values[ 1 ])
         }
     });
-    $( "#amount1" ).html( "<p class='text-xxs'>¥ " + prettify($( "#slider-range1" ).slider( "values", 0 )) +
-        "</p><p class='text-xxs'> ¥ " + prettify($( "#slider-range1" ).slider( "values", 1 )) +"</p>");
-    propertyPriceMin =$( "#slider-range1" ).slider( "values", 0 )
-    propertyPriceMax =$( "#slider-range1" ).slider( "values", 1 )
+    $( "#amount1" ).html( "<p class='text-xs'>¥ " + prettify($( "#price-range" ).slider( "values", 0 )) +
+        "</p><p class='text-xs'> ¥ " + prettify($( "#price-range" ).slider( "values", 1 )) +"</p>");
+    propertyPriceMin =$( "#price-range" ).slider( "values", 0 )
+    propertyPriceMax =$( "#price-range" ).slider( "values", 1 )
 
 } );
 
