@@ -403,6 +403,10 @@ footer {
 }
 
 @media (max-width: 1024px) {
+    .container{
+        max-width: 1024px;
+        min-width: 100vw;
+    }
     html {
         font-size: 1em;
     }
@@ -429,6 +433,10 @@ footer {
 }
 
 @media (max-width: 769px) {
+    .container{
+        max-width: unset;
+        min-width: unset;
+    }
     .footer-box {
         max-width: 93vw;
     }
