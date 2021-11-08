@@ -53,19 +53,27 @@ function  desktopSearch() {
                 data.classList.add('text-blue-500')
 
 
-                locationProperty = val.parentNode.querySelector('.arrow-gray').innerHTML
+                data.parentNode.classList.add('hidden')
+                console.log('Name of parent ='+data.parentNode.parentNode.querySelector('.arrow-gray').dataset.name ,' | Selected item ='+data.dataset.title)
+                // rotate arrows on tabs selects
+                let isArrow2 = data.parentNode.parentNode.querySelector('.arrow-gray')
+                if(isArrow2){
+                    isArrow2.classList.toggle('arrow-rotate')
+                }
+
+                locationProperty = val.parentNode.querySelector('.arrow-gray').dataset.name
                 if (locationProperty === 'Location') {
-                    propertyLocation = data.innerHTML
+                    propertyLocation = data.dataset.title
                     propertyLocation = propertyLocation.trim()
                     //propertyLocation = propertyLocation.replace(/\s/g, '');
                 }
                 if (locationProperty === 'Age') {
-                    propertyAge = data.innerHTML
+                    propertyAge = data.dataset.title
                     propertyAge = propertyAge.trim()
                     //propertyAge = propertyAge.replace(/\s/g, '');
                 }
                 if (locationProperty === 'ROI') {
-                    propertyRoi = data.innerHTML
+                    propertyRoi = data.dataset.title
                     propertyRoi = propertyRoi.trim()
                     //propertyRoi = propertyRoi.replace(/\s/g, '');
                 }
@@ -126,6 +134,7 @@ var size_of_screen2 = document.documentElement.clientWidth
 if (size_of_screen2 <= 768) {
 mobileSearch()
     document.querySelector('.search-mobile').addEventListener('click', () => {
+
         console.log('mobile category=', categoryProperty)
         console.log('propertyLocation=', propertyLocation)
         console.log('propertyAge=', propertyAge)

@@ -50,61 +50,154 @@
 
     <section class="container mx-auto my-4 ">
 
-        <div class="w-full flex flex-nowrap">
-            <div class="w-3/12">
+        <div class="w-full flex flex-wrap md:flex-nowrap">
+            <div class="w-full md:w-3/12 px-2">
                 <div class="relative  md:pb-2 border-b border-b-gray-400  ">
                     <div class="popup-switcher text-lg md:text-xs text-gray-400 "><span
                             class="arrow-gray " data-name="Category">Category</span></div>
                     <div class="animation-popup tab-popup  absolute   mb-0 md:mb-16 text-black right-1  bg-white rounded-lg shadow-md flex flex-col justify-start items-start  z-10 hidden">
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 " data-title="Buildings">Buildings</p>
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 " data-title="Hotels">Hotels</p>
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 " data-title="Condos">Condos</p>
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg" data-title="Other">
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 "
+                           data-title="Buildings">Buildings</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 "
+                           data-title="Hotels">Hotels</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 "
+                           data-title="Condos">Condos</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg"
+                           data-title="Other">
                             Other</p>
                     </div>
-                    <p  class="text-area text-xs"></p>
+                    <p class="text-area text-xs"></p>
                 </div>
                 <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  ">
                     <div class="popup-switcher text-lg md:text-xs text-gray-400 "><span
                             class="arrow-gray " data-name="Location">Location</span></div>
                     <div class="animation-popup tab-popup  absolute   mb-0 md:mb-16 text-black right-1  bg-white rounded-lg shadow-md flex flex-col justify-start items-start  z-10 hidden">
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 " data-title="Hiroshima">Hiroshima</p>
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 " data-title="Tokyo">Tokyo</p>
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg" data-title="Osaka">
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 "
+                           data-title="Hiroshima">Hiroshima</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 "
+                           data-title="Tokyo">Tokyo</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg"
+                           data-title="Osaka">
                             Osaka</p>
                     </div>
-                    <p  class="text-area text-xs"></p>
+                    <p class="text-area text-xs"></p>
                 </div>
 
                 <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  ">
                     <div class="popup-switcher text-lg md:text-xs text-gray-400 "><span
                             class="arrow-gray " data-name="Type">Property type</span></div>
                     <div class="animation-popup tab-popup  absolute   mb-0 md:mb-16 text-black right-1  bg-white rounded-lg shadow-md flex flex-col justify-start items-start  z-10 hidden">
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 " data-title="Residential">Residential</p>
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 " data-title="Residential2">Residential2</p>
-                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg" data-title="Residential3">
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 "
+                           data-title="Residential">Residential</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 "
+                           data-title="Residential2">Residential2</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg"
+                           data-title="Residential3">
                             Residential3</p>
                     </div>
-                    <p  class="text-area text-xs"></p>
+                    <p class="text-area text-xs"></p>
                 </div>
 
                 <div class="relative mt-2 ">
                     <p class=" text-lg md:text-xs text-gray-400"><span
                             class=mt-2">Price range</span></p>
-                       <div class="w-full mt-2 text-xs cursor-pointer   rounded-b-lg">
-                            <p id="slider-range1"></p>
-                            <p class="mt-2 ">
-                                <!--  md:pb-2 border-b border-b-gray-400                              <input type="text" id="amount" readonly style="border:0; color:#000; font-weight:bold;">-->
-                                <div id="amount1" class="font-bold  text-xs flex justify-between"></div>
-                            </p>
-                        </div>
+                    <div class="w-full mt-2 text-xs cursor-pointer   rounded-b-lg">
+                        <p id="slider-range1"></p>
+                        <p class="mt-2 ">
+                            <!--  md:pb-2 border-b border-b-gray-400                              <input type="text" id="amount" readonly style="border:0; color:#000; font-weight:bold;">-->
+                        <div id="amount1" class="font-bold  text-xs flex justify-between"></div>
+                        </p>
+                    </div>
 
                 </div>
             </div>
 
 
-            <div class="w-4/12"> map </div>
-            <div class="w-5/12"> properties </div>
+            <div class="w-full md:w-4/12">
+                <div class="min-h-full w-full border border-gray-200">map</div>
+            </div>
+            <div class="w-full md:w-5/12 relative">
+                <div class=" h-9 w-full bg-gray-50 text-xs text-black flex justify-between items-center px-2 prop-header">
+                    <p>123 results</p>
+                    <select class="text-lg md:text-xs text-gray-400 bg-gray-50 outline-none border-0">
+                        <option value="">Latest</option>
+                        <option value="">Tokyo</option>
+                        <option value="">Osaka</option>
+                    </select>
+
+                </div>
+                <div class="overflow-style mx-3" >
+                <div class="flex justify-between flex-wrap mb-4 ">
+
+                    <div class="my-4 md:my-0 w-full md:w-6/12  p-2 property-box h-full ">
+                        <a href="#" class="flex flex-col justify-between items-start">
+                            <div class="w-full h-1/2"><img class="w-full rounded-lg" src="./images/property-1.jpg"
+                                                           alt="property"></div>
+                            <div class="h-1/2 flex flex-col items-start justify-between prop-description-block">
+                                <p class="text-xl md:text-base font-bold text-black leading-4 mt-2 prop-title">Sophia
+                                    Court
+                                    Riverside
+                                    Tenma</p>
+                                <p class="text-lg md:text-xs text-gray-400 mt-1">342-1148, Higashitoyonakacho,
+                                    Izumiotsu-shi,
+                                    Osaka</p>
+                                <p class="text-lg md:text-xs text-gray-400 mt-1">3 floors</p>
+                                <p class="text-xl md:text-base text-black font-bold mt-2">¥ 649 000 </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="my-4 md:my-0 w-full md:w-6/12  p-2 property-box h-full ">
+                        <a href="#" class="flex flex-col justify-between items-start">
+                            <div class="w-full h-1/2"><img class="w-full rounded-lg" src="./images/property-2.jpg"
+                                                           alt="property"></div>
+                            <div class="h-1/2 flex flex-col items-start justify-between prop-description-block">
+                                <p class="text-xl md:text-base font-bold text-black leading-4 mt-2 prop-title">Grand
+                                    Polestone
+                                    Tsurumi</p>
+                                <p class="text-lg md:text-xs text-gray-400 mt-1">342-1148, Higashitoyonakacho,
+                                    Izumiotsu-shi,
+                                    Osaka</p>
+                                <p class="text-lg md:text-xs text-gray-400 mt-1">3 floors</p>
+                                <p class="text-xl md:text-base text-black font-bold mt-2">¥ 870 000 </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="my-4 md:my-0 w-full md:w-6/12  p-2 property-box h-full ">
+                        <a href="#" class="flex flex-col justify-between items-start">
+                            <div class="w-full h-1/2"><img class="w-full rounded-lg" src="./images/property-3.jpg"
+                                                           alt="property"></div>
+                            <div class="h-1/2 flex flex-col items-start justify-between prop-description-block">
+                                <p class="text-xl md:text-base font-bold text-black leading-4 mt-2 prop-title">Downtown
+                                    Living</p>
+                                <p class="text-lg md:text-xs text-gray-400 mt-1">342-1148, Higashitoyonakacho,
+                                    Izumiotsu-shi,
+                                    Osaka</p>
+                                <p class="text-lg md:text-xs text-gray-400 mt-1">3 floors</p>
+                                <p class="text-xl md:text-base text-black font-bold mt-2">¥ 705 000 </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="my-4 md:my-0 w-full md:w-6/12  p-2 property-box h-full ">
+                        <a href="#" class="flex flex-col justify-between items-start">
+                            <div class="w-full h-1/2"><img class="w-full rounded-lg" src="./images/property-4.jpg"
+                                                           alt="property"></div>
+                            <div class="h-1/2 flex flex-col items-start justify-between prop-description-block">
+                                <p class="text-xl md:text-base font-bold text-black leading-4 mt-2 prop-title">Crown
+                                    Apartment</p>
+                                <p class="text-lg md:text-xs text-gray-400 mt-1">342-1148, Higashitoyonakacho,
+                                    Izumiotsu-shi,
+                                    Osaka</p>
+                                <p class="text-lg md:text-xs text-gray-400 mt-1">3 floors</p>
+                                <p class="text-xl md:text-base text-black font-bold mt-2">¥ 980 000 </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
 
         </div>
     </section>
