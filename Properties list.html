@@ -71,7 +71,7 @@
 <main>
     <section class="container mx-auto my-4 ">
         <div class="w-full flex flex-wrap md:flex-nowrap">
-            <div class="filters-block hidden md:block    overflow-style  lg:w-2/12  px-2 md:px-2 lg:px-2 inner-blocks-mobile ">
+            <div class="filters-block hidden md:block  w-full  md:w-2/12 overflow-style  lg:w-2/12  px-2 md:px-2 lg:px-2 inner-blocks-mobile ">
                 <div class="relative  md:pb-2 border-b border-b-gray-400  ">
                     <div class="popup-switcher text-lg md:text-xs text-gray-400 "><span
                             class="arrow-gray " data-name="Category">Category</span></div>
@@ -210,8 +210,8 @@
             <div class="map-block w-full hidden md:block  md:w-5/12 lg:w-5/12 md:ml-2 inner-blocks-mobile ">
                 <div class="min-h-full w-full border border-gray-200 relative map-place">
                     <img class="object-cover min-w-full min-h-full" src="./images/map.jpg" alt="">
-                    <p class="absolute left-0 top-1/2 transform -translate-y-1/2">
-                        <img class="on-off-filter-block" src="images/chevron-left.png" alt="">
+                    <p class="hidden md:block md:absolute lg:hidden left-0 top-1/2 transform -translate-y-1/2">
+                        <img class="on-off-filter-block block-on" src="images/chevron-left.png" alt="">
                     </p>
                 </div>
 
@@ -387,6 +387,40 @@
         }
     })
 
+
+    //// filter block show-hide to left
+    document.querySelector('.on-off-filter-block').addEventListener('click',(e)=>{
+        if (e.target.classList.contains('block-on')) {
+            e.target.classList.add('block-off')
+            e.target.classList.remove('block-on')
+            e.target.src = 'images/chevron-right.png'
+            //
+            document.querySelector('.list-block').classList.remove('md:w-5/12')
+            document.querySelector('.list-block').classList.add('md:w-6/12')
+            document.querySelector('.map-block').classList.remove('md:w-5/12')
+            document.querySelector('.map-block').classList.add('md:w-6/12')
+            document.querySelector('.filters-block ').classList.remove('md:w-2/12')
+            document.querySelector('.filters-block ').classList.add('md:w-0')
+            document.querySelector('.filters-block ').classList.remove('md:px-2')
+            document.querySelector('.filters-block ').classList.add('md:px-0')
+
+        }
+        else{
+            e.target.classList.add('block-on')
+            e.target.classList.remove('block-off')
+            e.target.src = 'images/chevron-left.png'
+            //
+            document.querySelector('.list-block').classList.remove('md:w-6/12')
+            document.querySelector('.list-block').classList.add('md:w-5/12')
+            document.querySelector('.map-block').classList.remove('md:w-6/12')
+            document.querySelector('.map-block').classList.add('md:w-5/12')
+            document.querySelector('.filters-block ').classList.remove('md:w-0')
+            document.querySelector('.filters-block ').classList.add('md:w-2/12')
+            document.querySelector('.filters-block ').classList.remove('md:px-0')
+            document.querySelector('.filters-block ').classList.add('md:px-2')
+
+        }
+    })
 
 </script>
 </body>
