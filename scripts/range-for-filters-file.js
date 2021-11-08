@@ -100,6 +100,46 @@ $( function() {
     propertyPriceMax =$( "#number-of-rooms" ).slider( "values", 1 )
 
 } );
+//building-size
+$( function() {
+    $( "#building-size" ).slider({
+        step: 1,
+        range: true,
+        min: 1,
+        max: 10000,
+        values: [ 0, 10000 ],
+        slide: function( event, ui ) {
+            $( "#building-size-amount" ).html( "<p class='text-xs'> " + prettify(ui.values[ 0 ]) + " m<sup>2</sup></p><p class='text-xs'>  " + prettify(ui.values[ 1 ]) +" m<sup>2</sup></p>" );
+            propertyPriceMin = prettify(ui.values[ 0 ])
+            propertyPriceMax = prettify(ui.values[ 1 ])
+        }
+    });
+    $( "#building-size-amount" ).html( "<p class='text-xs'> " + prettify($( "#building-size" ).slider( "values", 0 )) +
+        " m<sup>2</sup></p><p class='text-xs'>  " + prettify($( "#building-size" ).slider( "values", 1 )) +" m<sup>2</sup></p>");
+    propertyPriceMin =$( "#building-size" ).slider( "values", 0 )
+    propertyPriceMax =$( "#building-size" ).slider( "values", 1 )
+
+} );
+//land-size
+$( function() {
+    $( "#land-size" ).slider({
+        step: 1,
+        range: true,
+        min: 1,
+        max: 100000,
+        values: [ 0, 100000 ],
+        slide: function( event, ui ) {
+            $( "#land-size-amount" ).html( "<p class='text-xs'> " + prettify(ui.values[ 0 ]) + " m<sup>2</sup></p><p class='text-xs'>  " + prettify(ui.values[ 1 ]) +" m<sup>2</sup></p>" );
+            propertyPriceMin = prettify(ui.values[ 0 ])
+            propertyPriceMax = prettify(ui.values[ 1 ])
+        }
+    });
+    $( "#land-size-amount" ).html( "<p class='text-xs'> " + prettify($( "#land-size" ).slider( "values", 0 )) +
+        " m<sup>2</sup></p><p class='text-xs'>  " + prettify($( "#land-size" ).slider( "values", 1 )) +" m<sup>2</sup></p>");
+    propertyPriceMin =$( "#land-size" ).slider( "values", 0 )
+    propertyPriceMax =$( "#bland-size" ).slider( "values", 1 )
+
+} );
 
 
 
