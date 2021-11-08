@@ -37,7 +37,7 @@
 
 html {
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 1.5em;
+    font-size: 20px;
     background: #F5FAFF;
     overflow-x: hidden;
 }
@@ -145,14 +145,12 @@ main {
     width: 3px;
     /*background: darkred;*/
 }
-
 .overflow-style::-webkit-scrollbar-track {
-    box-shadow: inset 0px 0 6px rgba(86, 85, 85, 0.1);
+    box-shadow: inset 0px 0 6px rgba(110, 109, 109, 0.1);
 
 }
-
 .overflow-style::-webkit-scrollbar-thumb {
-    background-color: #6a6c6c;
+    background-color: #e5dddd;
 }
 
 
@@ -391,10 +389,16 @@ footer {
 .text-xxs {
     font-size: 12px;
 }
+.fix-mobile{
+    z-index:9;
+    position: fixed;
+    left:0;
+    right:0;
+}
 
 @media (max-width: 1280px) {
     html {
-        font-size: 1.1em;
+        font-size: 16px;
     }
 }
 
