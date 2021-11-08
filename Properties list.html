@@ -53,15 +53,16 @@
         <div class="w-full flex flex-nowrap">
             <div class="w-3/12">
                 <div class="relative  ">
-                 <label class="text-lg md:text-xs text-gray-400 "><p
-                            class="">Category</p></label>
-                    <select class="text-black bg-opacity-0 outline-none border-0 fon-color" >
-                        <option class="">Buildings</option>
-                        <option class="">Condos</option>
-                        <option class=" ">Hotels</option>
-                        <option class="">
-                            Others</option>
-                    </select>
+                    <div class="popup-switcher text-lg md:text-xs text-gray-400 "><span
+                            class="arrow-gray " data-name="Category">Category</span></div>
+                    <div class="animation-popup tab-popup  absolute   mb-0 md:mb-16 text-black right-1  bg-white rounded-lg shadow-md flex flex-col justify-start items-start  z-10 hidden">
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 " data-title="Buildings">Buildings</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 " data-title="Hotels">Hotels</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 " data-title="Condos">Condos</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg" data-title="Other">
+                            Other</p>
+                    </div>
+                    <p  class="text-area text-xs"></p>
                 </div>
                 <div class="relative mt-2 ">
                     <div class="popup-switcher text-lg md:text-xs text-gray-400 "><span
