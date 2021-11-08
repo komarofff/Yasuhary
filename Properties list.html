@@ -98,6 +98,19 @@
                     <p class="text-area text-xs"></p>
                 </div>
 
+
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  ">
+                    <p class=" text-lg md:text-xs text-gray-400"><span
+                            class=mt-2">Number of floors</span></p>
+                    <div class="w-full mt-2 text-xs cursor-pointer   rounded-b-lg">
+                        <p id="number-of-floors"></p>
+                        <p class="mt-2 ">
+                            <!--  md:pb-2 border-b border-b-gray-400                              <input type="text" id="amount" readonly style="border:0; color:#000; font-weight:bold;">-->
+                        <div id="number-of-floors-amount" class=" text-xs flex justify-between"></div>
+                        </p>
+                    </div>
+                </div>
+
                 <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  ">
                     <p class=" text-lg md:text-xs text-gray-400"><span
                             class=mt-2">Price range</span></p>
@@ -105,11 +118,35 @@
                         <p id="price-range"></p>
                         <p class="mt-2 ">
                             <!--  md:pb-2 border-b border-b-gray-400                              <input type="text" id="amount" readonly style="border:0; color:#000; font-weight:bold;">-->
-                        <div id="amount1" class=" text-xs flex justify-between"></div>
+                        <div id="price-range-amount" class=" text-xs flex justify-between"></div>
                         </p>
                     </div>
-
                 </div>
+
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  ">
+                    <p class=" text-lg md:text-xs text-gray-400"><span
+                            class=mt-2">Build date range</span></p>
+                    <div class="w-full mt-2 text-xs cursor-pointer   rounded-b-lg">
+                        <p id="build-date-range"></p>
+                        <p class="mt-2 ">
+                            <!--  md:pb-2 border-b border-b-gray-400                              <input type="text" id="amount" readonly style="border:0; color:#000; font-weight:bold;">-->
+                        <div id="build-date-range-amount" class=" text-xs flex justify-between"></div>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  ">
+                    <p class=" text-lg md:text-xs text-gray-400"><span
+                            class=mt-2">Number of rooms</span></p>
+                    <div class="w-full mt-2 text-xs cursor-pointer   rounded-b-lg">
+                        <p id="number-of-rooms"></p>
+                        <p class="mt-2 ">
+                            <!--  md:pb-2 border-b border-b-gray-400                              <input type="text" id="amount" readonly style="border:0; color:#000; font-weight:bold;">-->
+                        <div id="number-of-rooms-amount" class=" text-xs flex justify-between"></div>
+                        </p>
+                    </div>
+                </div>
+
             </div>
 
 
@@ -127,76 +164,78 @@
                     </select>
 
                 </div>
-                <div class="overflow-style px-3" >
-                <div class="flex justify-between flex-wrap mb-4 ">
+                <div class="overflow-style px-3">
+                    <div class="flex justify-between flex-wrap mb-4 ">
 
-                    <div class="my-4 md:my-0 w-full md:w-6/12  p-2 property-box h-full ">
-                        <a href="#" class="flex flex-col justify-between items-start">
-                            <div class="w-full h-1/2"><img class="w-full rounded-lg" src="./images/property-1.jpg"
-                                                           alt="property"></div>
-                            <div class="h-1/2 flex flex-col items-start justify-between prop-description-block">
-                                <p class="text-xl md:text-base font-bold text-black leading-4 mt-2 prop-title">Sophia
-                                    Court
-                                    Riverside
-                                    Tenma</p>
-                                <p class="text-lg md:text-xs text-gray-400 mt-1">342-1148, Higashitoyonakacho,
-                                    Izumiotsu-shi,
-                                    Osaka</p>
-                                <p class="text-lg md:text-xs text-gray-400 mt-1">3 floors</p>
-                                <p class="text-xl md:text-base text-black font-bold mt-2">¥ 649 000 </p>
-                            </div>
-                        </a>
-                    </div>
+                        <div class="my-4 md:my-0 w-full md:w-6/12  p-2 property-box h-full ">
+                            <a href="#" class="flex flex-col justify-between items-start">
+                                <div class="w-full h-1/2"><img class="w-full rounded-lg" src="./images/property-1.jpg"
+                                                               alt="property"></div>
+                                <div class="h-1/2 flex flex-col items-start justify-between prop-description-block">
+                                    <p class="text-xl md:text-base font-bold text-black leading-4 mt-2 prop-title">
+                                        Sophia
+                                        Court
+                                        Riverside
+                                        Tenma</p>
+                                    <p class="text-lg md:text-xs text-gray-400 mt-1">342-1148, Higashitoyonakacho,
+                                        Izumiotsu-shi,
+                                        Osaka</p>
+                                    <p class="text-lg md:text-xs text-gray-400 mt-1">3 floors</p>
+                                    <p class="text-xl md:text-base text-black font-bold mt-2">¥ 649 000 </p>
+                                </div>
+                            </a>
+                        </div>
 
-                    <div class="my-4 md:my-0 w-full md:w-6/12  p-2 property-box h-full ">
-                        <a href="#" class="flex flex-col justify-between items-start">
-                            <div class="w-full h-1/2"><img class="w-full rounded-lg" src="./images/property-2.jpg"
-                                                           alt="property"></div>
-                            <div class="h-1/2 flex flex-col items-start justify-between prop-description-block">
-                                <p class="text-xl md:text-base font-bold text-black leading-4 mt-2 prop-title">Grand
-                                    Polestone
-                                    Tsurumi</p>
-                                <p class="text-lg md:text-xs text-gray-400 mt-1">342-1148, Higashitoyonakacho,
-                                    Izumiotsu-shi,
-                                    Osaka</p>
-                                <p class="text-lg md:text-xs text-gray-400 mt-1">3 floors</p>
-                                <p class="text-xl md:text-base text-black font-bold mt-2">¥ 870 000 </p>
-                            </div>
-                        </a>
-                    </div>
+                        <div class="my-4 md:my-0 w-full md:w-6/12  p-2 property-box h-full ">
+                            <a href="#" class="flex flex-col justify-between items-start">
+                                <div class="w-full h-1/2"><img class="w-full rounded-lg" src="./images/property-2.jpg"
+                                                               alt="property"></div>
+                                <div class="h-1/2 flex flex-col items-start justify-between prop-description-block">
+                                    <p class="text-xl md:text-base font-bold text-black leading-4 mt-2 prop-title">Grand
+                                        Polestone
+                                        Tsurumi</p>
+                                    <p class="text-lg md:text-xs text-gray-400 mt-1">342-1148, Higashitoyonakacho,
+                                        Izumiotsu-shi,
+                                        Osaka</p>
+                                    <p class="text-lg md:text-xs text-gray-400 mt-1">3 floors</p>
+                                    <p class="text-xl md:text-base text-black font-bold mt-2">¥ 870 000 </p>
+                                </div>
+                            </a>
+                        </div>
 
-                    <div class="my-4 md:my-0 w-full md:w-6/12  p-2 property-box h-full ">
-                        <a href="#" class="flex flex-col justify-between items-start">
-                            <div class="w-full h-1/2"><img class="w-full rounded-lg" src="./images/property-3.jpg"
-                                                           alt="property"></div>
-                            <div class="h-1/2 flex flex-col items-start justify-between prop-description-block">
-                                <p class="text-xl md:text-base font-bold text-black leading-4 mt-2 prop-title">Downtown
-                                    Living</p>
-                                <p class="text-lg md:text-xs text-gray-400 mt-1">342-1148, Higashitoyonakacho,
-                                    Izumiotsu-shi,
-                                    Osaka</p>
-                                <p class="text-lg md:text-xs text-gray-400 mt-1">3 floors</p>
-                                <p class="text-xl md:text-base text-black font-bold mt-2">¥ 705 000 </p>
-                            </div>
-                        </a>
-                    </div>
+                        <div class="my-4 md:my-0 w-full md:w-6/12  p-2 property-box h-full ">
+                            <a href="#" class="flex flex-col justify-between items-start">
+                                <div class="w-full h-1/2"><img class="w-full rounded-lg" src="./images/property-3.jpg"
+                                                               alt="property"></div>
+                                <div class="h-1/2 flex flex-col items-start justify-between prop-description-block">
+                                    <p class="text-xl md:text-base font-bold text-black leading-4 mt-2 prop-title">
+                                        Downtown
+                                        Living</p>
+                                    <p class="text-lg md:text-xs text-gray-400 mt-1">342-1148, Higashitoyonakacho,
+                                        Izumiotsu-shi,
+                                        Osaka</p>
+                                    <p class="text-lg md:text-xs text-gray-400 mt-1">3 floors</p>
+                                    <p class="text-xl md:text-base text-black font-bold mt-2">¥ 705 000 </p>
+                                </div>
+                            </a>
+                        </div>
 
-                    <div class="my-4 md:my-0 w-full md:w-6/12  p-2 property-box h-full ">
-                        <a href="#" class="flex flex-col justify-between items-start">
-                            <div class="w-full h-1/2"><img class="w-full rounded-lg" src="./images/property-4.jpg"
-                                                           alt="property"></div>
-                            <div class="h-1/2 flex flex-col items-start justify-between prop-description-block">
-                                <p class="text-xl md:text-base font-bold text-black leading-4 mt-2 prop-title">Crown
-                                    Apartment</p>
-                                <p class="text-lg md:text-xs text-gray-400 mt-1">342-1148, Higashitoyonakacho,
-                                    Izumiotsu-shi,
-                                    Osaka</p>
-                                <p class="text-lg md:text-xs text-gray-400 mt-1">3 floors</p>
-                                <p class="text-xl md:text-base text-black font-bold mt-2">¥ 980 000 </p>
-                            </div>
-                        </a>
+                        <div class="my-4 md:my-0 w-full md:w-6/12  p-2 property-box h-full ">
+                            <a href="#" class="flex flex-col justify-between items-start">
+                                <div class="w-full h-1/2"><img class="w-full rounded-lg" src="./images/property-4.jpg"
+                                                               alt="property"></div>
+                                <div class="h-1/2 flex flex-col items-start justify-between prop-description-block">
+                                    <p class="text-xl md:text-base font-bold text-black leading-4 mt-2 prop-title">Crown
+                                        Apartment</p>
+                                    <p class="text-lg md:text-xs text-gray-400 mt-1">342-1148, Higashitoyonakacho,
+                                        Izumiotsu-shi,
+                                        Osaka</p>
+                                    <p class="text-lg md:text-xs text-gray-400 mt-1">3 floors</p>
+                                    <p class="text-xl md:text-base text-black font-bold mt-2">¥ 980 000 </p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
 
