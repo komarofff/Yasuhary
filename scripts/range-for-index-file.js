@@ -28,12 +28,15 @@ $( function() {
             $( "#amount1" ).html( "¥ " + prettify(ui.values[ 0 ]) + " - ¥ " + prettify(ui.values[ 1 ]) );
             propertyPriceMin = prettify(ui.values[ 0 ])
             propertyPriceMax = prettify(ui.values[ 1 ])
+            $("#range-area").html( "<p class='text-xxs'>¥ " + prettify(ui.values[ 0 ]) + "</p><p class='text-xxs'> ¥ " + prettify(ui.values[ 1 ]) +"</p>" );
         }
     });
     $( "#amount1" ).html( "¥ " + prettify($( "#slider-range1" ).slider( "values", 0 )) +
         " - ¥ " + prettify($( "#slider-range1" ).slider( "values", 1 )) );
     propertyPriceMin =$( "#slider-range1" ).slider( "values", 0 )
     propertyPriceMax =$( "#slider-range1" ).slider( "values", 1 )
+    $("#range-area").html( "<p class='text-xxs'>¥ " + prettify($( "#slider-range1" ).slider( "values", 0 )) +
+        "</p><p class='text-xxs'> ¥ " + prettify($( "#slider-range1" ).slider( "values", 1 )) +"</p>");
 
 } );
 
