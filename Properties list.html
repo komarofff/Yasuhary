@@ -6,6 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Properties list</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -47,24 +50,49 @@
 
     <section class="container mx-auto my-4 ">
 
-        <div class="w-full  md:bg-white p-6 ">
-            <h1 class="text-xl font-bold text-black  mb-3">Get in touch</h1>
-            <div class="flex justify-start items-center mb-4 w-full">
-                <button class="tabs-active contact-button py-2 px-4 text-black text-center w-28 md:w-28 bg-white md:bg-blue-50 hover:text-blue-500  rounded-l-lg     transition ease-in-out duration-300">
-                    Individual
-                </button>
-                <button class=" contact-button py-2 px-4 text-black text-center w-28 md:w-28 bg-white md:bg-blue-50  hover:text-blue-500 rounded-r-lg   transition ease-in-out duration-300">
-                    Corporate
-                </button>
+        <div class="w-full flex flex-nowrap">
+            <div class="w-3/12">
+                <div class="relative  ">
+                 <label class="text-lg md:text-xs text-gray-400 "><p
+                            class="">Category</p></label>
+                    <select class="text-black bg-opacity-0 outline-none border-0 fon-color" >
+                        <option class="">Buildings</option>
+                        <option class="">Condos</option>
+                        <option class=" ">Hotels</option>
+                        <option class="">
+                            Others</option>
+                    </select>
+                </div>
+                <div class="relative mt-2 ">
+                    <div class="popup-switcher text-lg md:text-xs text-gray-400 "><span
+                            class="arrow-gray " data-name="location">Location</span></div>
+                    <div class="animation-popup tab-popup  absolute   mb-0 md:mb-16 text-black right-1  bg-white rounded-lg shadow-md flex flex-col justify-start items-start  z-10 hidden">
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 " data-title="Hiroshima">Hiroshima</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 " data-title="Tokyo">Tokyo</p>
+                        <p class="popup-data w-full py-2 px-4 text-xs cursor-pointer  hover:bg-blue-50 rounded-b-lg" data-title="Osaka">
+                            Osaka</p>
+                    </div>
+                    <p id="locations-area" class="text-xs"></p>
+                </div>
+
+                <div class="relative mt-2 ">
+                    <p class=" text-lg md:text-xs text-gray-400"><span
+                            class=mt-2">Price range</span></p>
+                       <div class="w-full mt-2 text-xs cursor-pointer   rounded-b-lg">
+                            <p id="slider-range1"></p>
+                            <p class="mt-2 ">
+                                <!--  md:pb-2 border-b border-b-gray-400                              <input type="text" id="amount" readonly style="border:0; color:#000; font-weight:bold;">-->
+                                <div id="amount1" class="font-bold  text-xs flex justify-between"></div>
+                            </p>
+                        </div>
+
+                </div>
             </div>
-            <div class="contact-inner-tab transition ease-in-out duration-300">
 
 
+            <div class="w-4/12"> map </div>
+            <div class="w-5/12"> properties </div>
 
-                <a class="  my-4 text-white text-base text-center " href="#">
-                    <p class="py-2 w-full md:w-28 bg-blue-500 rounded-lg transition ease-in-out duration-300 bg-blue-500 hover:bg-blue-50 hover:text-black hover:shadow-lg">Send</p>
-                </a>
-            </div>
         </div>
     </section>
 
@@ -105,5 +133,7 @@
 </footer>
 
 <script src="scripts/menu.js"></script>
+
+<script src="scripts/range-for-filters-file.js"></script>
 </body>
 </html>

@@ -67,7 +67,9 @@ main {
     padding: 0;
 
 }
-
+.back-none{
+    background: none;
+}
 .select-popup{
     display: block;
     appearance: none;
