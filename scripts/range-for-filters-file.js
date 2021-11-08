@@ -44,6 +44,10 @@ function  desktopSearch() {
     const popupBlocks = document.querySelectorAll('.tab-popup')
     popupBlocks.forEach((val) => {
         const popupDatas = val.querySelectorAll('.popup-data')
+        for(let i=0; i<popupBlocks.length;i++){
+            popupBlocks[i].parentNode.querySelector('.text-area').innerHTML =  popupBlocks[i].querySelectorAll('.popup-data')[0].dataset.title
+        }
+
         popupDatas.forEach((data) => {
             data.addEventListener('click', () => {
                 for (let i = 0; i < popupDatas.length; i++) {
@@ -51,7 +55,7 @@ function  desktopSearch() {
                 }
                 data.classList.add('text-blue-500')
 
-                data.parentNode.parentNode.querySelector('#locations-area').innerHTML = data.dataset.title
+                data.parentNode.parentNode.querySelector('.text-area').innerHTML = data.dataset.title
                 data.parentNode.classList.add('hidden')
                 console.log(data.parentNode.parentNode.querySelector('.arrow-gray'),data.dataset.title)
                 // rotate arrows on tabs selects
