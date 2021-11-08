@@ -46,14 +46,14 @@ $( function() {
         values: [ 0, 200 ],
         slide: function( event, ui ) {
             $( "#number-of-floors-amount" ).html( "<p class='text-xs'> " + prettify(ui.values[ 0 ]) + "</p><p class='text-xs'>  " + prettify(ui.values[ 1 ]) +"</p>" );
-            propertyPriceMin = prettify(ui.values[ 0 ])
-            propertyPriceMax = prettify(ui.values[ 1 ])
+            propertyFloorsMin = prettify(ui.values[ 0 ])
+            propertyFloorsMax = prettify(ui.values[ 1 ])
         }
     });
     $( "#number-of-floors-amount" ).html( "<p class='text-xs'> " + prettify($( "#number-of-floors" ).slider( "values", 0 )) +
         "</p><p class='text-xs'>  " + prettify($( "#number-of-floors" ).slider( "values", 1 )) +"</p>");
-    propertyPriceMin =$( "#number-of-floors" ).slider( "values", 0 )
-    propertyPriceMax =$( "#number-of-floors" ).slider( "values", 1 )
+    propertyFloorsMin =$( "#number-of-floors" ).slider( "values", 0 )
+    propertyFloorsMax =$( "#number-of-floors" ).slider( "values", 1 )
 
 } );
 
@@ -69,14 +69,14 @@ $( function() {
         values: [ 0, year ],
         slide: function( event, ui ) {
             $( "#build-date-range-amount" ).html( "<p class='text-xs'> " + ui.values[ 0 ] + "</p><p class='text-xs'>  " + ui.values[ 1 ] +"</p>" );
-            propertyPriceMin = prettify(ui.values[ 0 ])
-            propertyPriceMax = prettify(ui.values[ 1 ])
+            propertyBuildDateMin = prettify(ui.values[ 0 ])
+            propertyBuildDateMax = prettify(ui.values[ 1 ])
         }
     });
     $( "#build-date-range-amount" ).html( "<p class='text-xs'> " + $( "#build-date-range" ).slider( "values", 0 ) +
         "</p><p class='text-xs'>  " + $( "#build-date-range" ).slider( "values", 1 ) +"</p>");
-    propertyPriceMin =$( "#build-date-range" ).slider( "values", 0 )
-    propertyPriceMax =$( "#build-date-range" ).slider( "values", 1 )
+     propertyBuildDateMin =$( "#build-date-range" ).slider( "values", 0 )
+    propertyBuildDateMax =$( "#build-date-range" ).slider( "values", 1 )
 
 } );
 
@@ -90,14 +90,14 @@ $( function() {
         values: [ 0, 100 ],
         slide: function( event, ui ) {
             $( "#number-of-rooms-amount" ).html( "<p class='text-xs'> " + ui.values[ 0 ] + "</p><p class='text-xs'>  " + ui.values[ 1 ] +"</p>" );
-            propertyPriceMin = prettify(ui.values[ 0 ])
-            propertyPriceMax = prettify(ui.values[ 1 ])
+            propertyRoomsMin = prettify(ui.values[ 0 ])
+            ropertyRoomsMax = prettify(ui.values[ 1 ])
         }
     });
     $( "#number-of-rooms-amount" ).html( "<p class='text-xs'> " + $( "#number-of-rooms" ).slider( "values", 0 ) +
         "</p><p class='text-xs'>  " + $( "#number-of-rooms" ).slider( "values", 1 ) +"</p>");
-    propertyPriceMin =$( "#number-of-rooms" ).slider( "values", 0 )
-    propertyPriceMax =$( "#number-of-rooms" ).slider( "values", 1 )
+    propertyRoomsMin =$( "#number-of-rooms" ).slider( "values", 0 )
+    propertyRoomsMax =$( "#number-of-rooms" ).slider( "values", 1 )
 
 } );
 //building-size
@@ -110,14 +110,14 @@ $( function() {
         values: [ 0, 10000 ],
         slide: function( event, ui ) {
             $( "#building-size-amount" ).html( "<p class='text-xs'> " + prettify(ui.values[ 0 ]) + " m<sup>2</sup></p><p class='text-xs'>  " + prettify(ui.values[ 1 ]) +" m<sup>2</sup></p>" );
-            propertyPriceMin = prettify(ui.values[ 0 ])
-            propertyPriceMax = prettify(ui.values[ 1 ])
+            propertyBuildingSizeMin = prettify(ui.values[ 0 ])
+            propertyBuildingSizeMax = prettify(ui.values[ 1 ])
         }
     });
     $( "#building-size-amount" ).html( "<p class='text-xs'> " + prettify($( "#building-size" ).slider( "values", 0 )) +
         " m<sup>2</sup></p><p class='text-xs'>  " + prettify($( "#building-size" ).slider( "values", 1 )) +" m<sup>2</sup></p>");
-    propertyPriceMin =$( "#building-size" ).slider( "values", 0 )
-    propertyPriceMax =$( "#building-size" ).slider( "values", 1 )
+    propertyBuildingSizeMin =$( "#building-size" ).slider( "values", 0 )
+    propertyBuildingSizeMax =$( "#building-size" ).slider( "values", 1 )
 
 } );
 //land-size
@@ -130,14 +130,14 @@ $( function() {
         values: [ 0, 100000 ],
         slide: function( event, ui ) {
             $( "#land-size-amount" ).html( "<p class='text-xs'> " + prettify(ui.values[ 0 ]) + " m<sup>2</sup></p><p class='text-xs'>  " + prettify(ui.values[ 1 ]) +" m<sup>2</sup></p>" );
-            propertyPriceMin = prettify(ui.values[ 0 ])
-            propertyPriceMax = prettify(ui.values[ 1 ])
+            propertyLandSizeMin = prettify(ui.values[ 0 ])
+            propertyLandSizeMax = prettify(ui.values[ 1 ])
         }
     });
     $( "#land-size-amount" ).html( "<p class='text-xs'> " + prettify($( "#land-size" ).slider( "values", 0 )) +
         " m<sup>2</sup></p><p class='text-xs'>  " + prettify($( "#land-size" ).slider( "values", 1 )) +" m<sup>2</sup></p>");
-    propertyPriceMin =$( "#land-size" ).slider( "values", 0 )
-    propertyPriceMax =$( "#bland-size" ).slider( "values", 1 )
+    propertyLandSizeMin =$( "#land-size" ).slider( "values", 0 )
+    propertyLandSizeMax  =$( "#bland-size" ).slider( "values", 1 )
 
 } );
 
@@ -174,12 +174,12 @@ function  desktopSearch() {
                     propertyLocation = propertyLocation.trim()
                     //propertyLocation = propertyLocation.replace(/\s/g, '');
                 }
-                if (locationProperty === 'Age') {
+                if (locationProperty === 'Category') {
                     propertyAge = data.innerHTML
                     propertyAge = propertyAge.trim()
                     //propertyAge = propertyAge.replace(/\s/g, '');
                 }
-                if (locationProperty === 'ROI') {
+                if (locationProperty === 'Type') {
                     propertyRoi = data.innerHTML
                     propertyRoi = propertyRoi.trim()
                     //propertyRoi = propertyRoi.replace(/\s/g, '');
