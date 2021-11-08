@@ -10,7 +10,7 @@ function getHeights() {
     let headerHeight = document.querySelector('header').getBoundingClientRect().height
     let footerHeight = document.querySelector('footer').getBoundingClientRect().height
     let resultHeight = screenHeight - headerHeight - 80
-    let resultHeightFoot = screenHeight - headerHeight 
+    let resultHeightFoot = screenHeight - headerHeight
     let result2 = headerHeight
     if(screenWidth>767) {
         document.querySelector('.properties-list-block').classList.add('overflow-style')
