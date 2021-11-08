@@ -34,3 +34,84 @@ function getHeights() {
     }
 }
 
+
+document.querySelector('.filter-switcher').addEventListener('click', (e) => {
+    //filters-block
+    const blocks = document.querySelectorAll('.inner-blocks-mobile')
+    blocks.forEach((el) => {
+        el.classList.add('hidden')
+    })
+    document.querySelector('.filters-block').classList.remove('hidden')
+
+    document.querySelector('.filters-popup').classList.remove('hidden')
+    document.querySelector('.all-popup').classList.add('hidden')
+})
+//close-filters-popup
+document.querySelector('.close-filters-popup').addEventListener('click', () => {
+    document.querySelector('.filters-popup').classList.add('hidden')
+    document.querySelector('.all-popup').classList.remove('hidden')
+
+    document.querySelector('.filters-block').classList.add('hidden')
+    if (document.querySelector('.list-block').classList.contains('active-block-here')) {
+        document.querySelector('.list-block').classList.remove('hidden')
+    }
+    if (document.querySelector('.map-block').classList.contains('active-block-here')) {
+        document.querySelector('.map-block').classList.remove('hidden')
+    }
+})
+
+document.querySelector('.map-list-switcher').addEventListener('click', (e) => {
+    if (e.target.classList.contains('map-off')) {
+        e.target.classList.add('map-on')
+        e.target.classList.remove('map-off')
+        e.target.src = 'images/list.svg'
+        //
+        document.querySelector('.list-block').classList.remove('active-block-here')
+        document.querySelector('.list-block').classList.add('hidden')
+        document.querySelector('.map-block').classList.add('active-block-here')
+        document.querySelector('.map-block').classList.remove('hidden')
+    } else {
+        e.target.classList.add('map-off')
+        e.target.classList.remove('map-on')
+        e.target.src = 'images/map-mobile.svg'
+        document.querySelector('.list-block').classList.add('active-block-here')
+        document.querySelector('.list-block').classList.remove('hidden')
+        document.querySelector('.map-block').classList.remove('active-block-here')
+        document.querySelector('.map-block').classList.add('hidden')
+    }
+})
+
+
+//// filter block show-hide to left
+document.querySelector('.on-off-filter-block').addEventListener('click',(e)=>{
+    if (e.target.classList.contains('block-on')) {
+        e.target.classList.add('block-off')
+        e.target.classList.remove('block-on')
+        e.target.src = 'images/chevron-right.png'
+        //
+        document.querySelector('.list-block').classList.remove('md:w-4/12')
+        document.querySelector('.list-block').classList.add('md:w-6/12')
+        document.querySelector('.map-block').classList.remove('md:w-4/12')
+        document.querySelector('.map-block').classList.add('md:w-6/12')
+        document.querySelector('.filters-block ').classList.remove('md:w-4/12')
+        document.querySelector('.filters-block ').classList.add('md:w-0')
+        document.querySelector('.filters-block ').classList.remove('md:px-2')
+        document.querySelector('.filters-block ').classList.add('md:px-0')
+
+    }
+    else{
+        e.target.classList.add('block-on')
+        e.target.classList.remove('block-off')
+        e.target.src = 'images/chevron-left.png'
+        //
+        document.querySelector('.list-block').classList.remove('md:w-6/12')
+        document.querySelector('.list-block').classList.add('md:w-4/12')
+        document.querySelector('.map-block').classList.remove('md:w-6/12')
+        document.querySelector('.map-block').classList.add('md:w-4/12')
+        document.querySelector('.filters-block ').classList.remove('md:w-0')
+        document.querySelector('.filters-block ').classList.add('md:w-4/12')
+        document.querySelector('.filters-block ').classList.remove('md:px-0')
+        document.querySelector('.filters-block ').classList.add('md:px-2')
+
+    }
+})
