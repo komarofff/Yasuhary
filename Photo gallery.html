@@ -97,7 +97,7 @@
     allPhotos = gallery.querySelectorAll('.gallery-photo')
     allPhotos.forEach((elem) => {
         elem.addEventListener('click', (e) => {
-            for(let i=0;i<allPhotos.length;i++){
+            for (let i = 0; i < allPhotos.length; i++) {
                 allPhotos[i].classList.remove('top-photo')
             }
             e.target.classList.add('top-photo')
@@ -109,8 +109,11 @@
 
         if (gallery.querySelector('.top-photo')) {
             const topPhoto = gallery.querySelector('.top-photo')
+            //let pk = topPhoto.cloneNode()
+            //console.log(pk)
             const newPhoto = topPhoto.src
             document.getElementById('top-photo').innerHTML = `<img src="${newPhoto}">`
+            //document.getElementById('top-photo').appendChild(pk)
         }
 
 
