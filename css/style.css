@@ -468,17 +468,17 @@ footer {
     }
 
     .menu-links-top > ul > li {
-        margin: 15px;
+        margin: 2vh;
     }
 
     .top-switcher {
-        margin-top: 75px;
+        margin-top: 5vh;
         margin-left: 15px;
     }
 
     .padding-mobile-big {
         display: block;
-        margin: 32px 5px 28px 5px;
+        margin: 4vh 5px 3vh 5px;
         background: #9FA3A8;
         height: 2px;
         width: 100%;
@@ -513,7 +513,9 @@ footer {
         z-index: 999 !important;
         top: 0;
         width: 100vw;
-        height: 600px;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
         background: #F5FAFF;
         position: fixed;
         -webkit-transform: translateX(-110vw);

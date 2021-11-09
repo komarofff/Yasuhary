@@ -25,13 +25,13 @@ $( function() {
         max: 100000000,
         values: [ 25000, 32000000 ],
         slide: function( event, ui ) {
-            $( "#price-range-amount" ).html( "<p class='text-xs'>¥ " + prettify(ui.values[ 0 ]) + "</p><p class='text-xs'> ¥ " + prettify(ui.values[ 1 ]) +"</p>" );
+            $( "#price-range-amount" ).html( "<p class='text-xs font-bold'>¥ " + prettify(ui.values[ 0 ]) + "</p><p class='text-xs font-bold'> ¥ " + prettify(ui.values[ 1 ]) +"</p>" );
             propertyPriceMin = prettify(ui.values[ 0 ])
             propertyPriceMax = prettify(ui.values[ 1 ])
         }
     });
-    $( "#price-range-amount" ).html( "<p class='text-xs'>¥ " + prettify($( "#price-range" ).slider( "values", 0 )) +
-        "</p><p class='text-xs'> ¥ " + prettify($( "#price-range" ).slider( "values", 1 )) +"</p>");
+    $( "#price-range-amount" ).html( "<p class='text-xs font-bold'>¥ " + prettify($( "#price-range" ).slider( "values", 0 )) +
+        "</p><p class='text-xs font-bold'> ¥ " + prettify($( "#price-range" ).slider( "values", 1 )) +"</p>");
     propertyPriceMin =$( "#price-range" ).slider( "values", 0 )
     propertyPriceMax =$( "#price-range" ).slider( "values", 1 )
 
@@ -45,13 +45,13 @@ $( function() {
         max: 200,
         values: [ 0, 200 ],
         slide: function( event, ui ) {
-            $( "#number-of-floors-amount" ).html( "<p class='text-xs'> " + prettify(ui.values[ 0 ]) + "</p><p class='text-xs'>  " + prettify(ui.values[ 1 ]) +"</p>" );
+            $( "#number-of-floors-amount" ).html( "<p class='text-xs font-bold'> " + prettify(ui.values[ 0 ]) + "</p><p class='text-xs font-bold'>  " + prettify(ui.values[ 1 ]) +"</p>" );
             propertyFloorsMin = prettify(ui.values[ 0 ])
             propertyFloorsMax = prettify(ui.values[ 1 ])
         }
     });
-    $( "#number-of-floors-amount" ).html( "<p class='text-xs'> " + prettify($( "#number-of-floors" ).slider( "values", 0 )) +
-        "</p><p class='text-xs'>  " + prettify($( "#number-of-floors" ).slider( "values", 1 )) +"</p>");
+    $( "#number-of-floors-amount" ).html( "<p class='text-xs font-bold'> " + prettify($( "#number-of-floors" ).slider( "values", 0 )) +
+        "</p><p class='text-xs font-bold'>  " + prettify($( "#number-of-floors" ).slider( "values", 1 )) +"</p>");
     propertyFloorsMin =$( "#number-of-floors" ).slider( "values", 0 )
     propertyFloorsMax =$( "#number-of-floors" ).slider( "values", 1 )
 
@@ -68,13 +68,13 @@ $( function() {
         max: year,
         values: [ 0, year ],
         slide: function( event, ui ) {
-            $( "#build-date-range-amount" ).html( "<p class='text-xs'> " + ui.values[ 0 ] + "</p><p class='text-xs'>  " + ui.values[ 1 ] +"</p>" );
+            $( "#build-date-range-amount" ).html( "<p class='text-xs font-bold'> " + ui.values[ 0 ] + "</p><p class='text-xs font-bold'>  " + ui.values[ 1 ] +"</p>" );
             propertyBuildDateMin = prettify(ui.values[ 0 ])
             propertyBuildDateMax = prettify(ui.values[ 1 ])
         }
     });
-    $( "#build-date-range-amount" ).html( "<p class='text-xs'> " + $( "#build-date-range" ).slider( "values", 0 ) +
-        "</p><p class='text-xs'>  " + $( "#build-date-range" ).slider( "values", 1 ) +"</p>");
+    $( "#build-date-range-amount" ).html( "<p class='text-xs font-bold'> " + $( "#build-date-range" ).slider( "values", 0 ) +
+        "</p><p class='text-xs font-bold'>  " + $( "#build-date-range" ).slider( "values", 1 ) +"</p>");
      propertyBuildDateMin =$( "#build-date-range" ).slider( "values", 0 )
     propertyBuildDateMax =$( "#build-date-range" ).slider( "values", 1 )
 
@@ -89,13 +89,13 @@ $( function() {
         max: 100,
         values: [ 0, 100 ],
         slide: function( event, ui ) {
-            $( "#number-of-rooms-amount" ).html( "<p class='text-xs'> " + ui.values[ 0 ] + "</p><p class='text-xs'>  " + ui.values[ 1 ] +"</p>" );
+            $( "#number-of-rooms-amount" ).html( "<p class='text-xs font-bold'> " + ui.values[ 0 ] + "</p><p class='text-xs font-bold'>  " + ui.values[ 1 ] +"</p>" );
             propertyRoomsMin = prettify(ui.values[ 0 ])
             ropertyRoomsMax = prettify(ui.values[ 1 ])
         }
     });
-    $( "#number-of-rooms-amount" ).html( "<p class='text-xs'> " + $( "#number-of-rooms" ).slider( "values", 0 ) +
-        "</p><p class='text-xs'>  " + $( "#number-of-rooms" ).slider( "values", 1 ) +"</p>");
+    $( "#number-of-rooms-amount" ).html( "<p class='text-xs font-bold'> " + $( "#number-of-rooms" ).slider( "values", 0 ) +
+        "</p><p class='text-xs font-bold'>  " + $( "#number-of-rooms" ).slider( "values", 1 ) +"</p>");
     propertyRoomsMin =$( "#number-of-rooms" ).slider( "values", 0 )
     propertyRoomsMax =$( "#number-of-rooms" ).slider( "values", 1 )
 
@@ -109,13 +109,13 @@ $( function() {
         max: 10000,
         values: [ 0, 10000 ],
         slide: function( event, ui ) {
-            $( "#building-size-amount" ).html( "<p class='text-xs'> " + prettify(ui.values[ 0 ]) + " m<sup>2</sup></p><p class='text-xs'>  " + prettify(ui.values[ 1 ]) +" m<sup>2</sup></p>" );
+            $( "#building-size-amount" ).html( "<p class='text-xs font-bold'> " + prettify(ui.values[ 0 ]) + " m<sup>2</sup></p><p class='text-xs font-bold'>  " + prettify(ui.values[ 1 ]) +" m<sup>2</sup></p>" );
             propertyBuildingSizeMin = prettify(ui.values[ 0 ])
             propertyBuildingSizeMax = prettify(ui.values[ 1 ])
         }
     });
-    $( "#building-size-amount" ).html( "<p class='text-xs'> " + prettify($( "#building-size" ).slider( "values", 0 )) +
-        " m<sup>2</sup></p><p class='text-xs'>  " + prettify($( "#building-size" ).slider( "values", 1 )) +" m<sup>2</sup></p>");
+    $( "#building-size-amount" ).html( "<p class='text-xs font-bold'> " + prettify($( "#building-size" ).slider( "values", 0 )) +
+        " m<sup>2</sup></p><p class='text-xs font-bold'>  " + prettify($( "#building-size" ).slider( "values", 1 )) +" m<sup>2</sup></p>");
     propertyBuildingSizeMin =$( "#building-size" ).slider( "values", 0 )
     propertyBuildingSizeMax =$( "#building-size" ).slider( "values", 1 )
 
@@ -129,13 +129,13 @@ $( function() {
         max: 100000,
         values: [ 0, 100000 ],
         slide: function( event, ui ) {
-            $( "#land-size-amount" ).html( "<p class='text-xs'> " + prettify(ui.values[ 0 ]) + " m<sup>2</sup></p><p class='text-xs'>  " + prettify(ui.values[ 1 ]) +" m<sup>2</sup></p>" );
+            $( "#land-size-amount" ).html( "<p class='text-xs font-bold'> " + prettify(ui.values[ 0 ]) + " m<sup>2</sup></p><p class='text-xs font-bold'>  " + prettify(ui.values[ 1 ]) +" m<sup>2</sup></p>" );
             propertyLandSizeMin = prettify(ui.values[ 0 ])
             propertyLandSizeMax = prettify(ui.values[ 1 ])
         }
     });
-    $( "#land-size-amount" ).html( "<p class='text-xs'> " + prettify($( "#land-size" ).slider( "values", 0 )) +
-        " m<sup>2</sup></p><p class='text-xs'>  " + prettify($( "#land-size" ).slider( "values", 1 )) +" m<sup>2</sup></p>");
+    $( "#land-size-amount" ).html( "<p class='text-xs font-bold'> " + prettify($( "#land-size" ).slider( "values", 0 )) +
+        " m<sup>2</sup></p><p class='text-xs font-bold'>  " + prettify($( "#land-size" ).slider( "values", 1 )) +" m<sup>2</sup></p>");
     propertyLandSizeMin =$( "#land-size" ).slider( "values", 0 )
     propertyLandSizeMax  =$( "#bland-size" ).slider( "values", 1 )
 
