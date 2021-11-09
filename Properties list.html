@@ -119,7 +119,7 @@
                 </div>
 
 
-                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  ">
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  hidden md:block">
                     <p class=" text-lg md:text-xs text-gray-400"><span
                             class=mt-2">Number of floors</span></p>
                     <div class="w-full mt-2 text-xs cursor-pointer   rounded-b-lg">
@@ -130,8 +130,17 @@
                         </p>
                     </div>
                 </div>
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  block md:hidden">
+                    <p class=" text-lg md:text-xs text-gray-400"><span
+                            class=mt-2">Number of floors(from/to)</span></p>
+                    <div class="w-full flex justify-between items-center">
+                        <input type="number" id="floorsMin" value="0" class="w-4/12 fon-color text-black text-sm">
+                        <input type="number" id="floorsMax" value="0"  class="w-4/12  fon-color  text-black text-sm">
+                    </div>
+                </div>
 
-                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  ">
+
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  hidden md:block">
                     <p class=" text-lg md:text-xs text-gray-400"><span
                             class=mt-2">Price range</span></p>
                     <div class="w-full mt-2 text-xs cursor-pointer   rounded-b-lg">
@@ -142,8 +151,16 @@
                         </p>
                     </div>
                 </div>
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  block md:hidden">
+                <p class=" text-lg md:text-xs text-gray-400"><span
+                        class=mt-2">Price range(from/to)</span></p>
+                <div class="w-full flex justify-between items-center">
+                    <input type="number" id="priceMin" value="0" class="w-4/12 fon-color text-black text-sm">
+                    <input type="number" id="priceMax" value="0"  class="w-4/12  fon-color  text-black text-sm">
+                </div>
+            </div>
 
-                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  ">
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  hidden md:block">
                     <p class=" text-lg md:text-xs text-gray-400"><span
                             class=mt-2">Build date range</span></p>
                     <div class="w-full mt-2 text-xs cursor-pointer   rounded-b-lg">
@@ -154,8 +171,16 @@
                         </p>
                     </div>
                 </div>
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  block md:hidden">
+                    <p class=" text-lg md:text-xs text-gray-400"><span
+                            class=mt-2">Build date range(from/to)</span></p>
+                    <div class="w-full flex justify-between items-center">
+                        <input type="number" id="buildDateMin" value="1500"  class="w-4/12 fon-color text-black text-sm">
+                        <input type="number" id="buildDateMax" value="2021"  class="w-4/12  fon-color  text-black text-sm">
+                    </div>
+                </div>
 
-                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  ">
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400   hidden md:block">
                     <p class=" text-lg md:text-xs text-gray-400"><span
                             class=mt-2">Number of rooms</span></p>
                     <div class="w-full mt-2 text-xs cursor-pointer   rounded-b-lg">
@@ -166,8 +191,16 @@
                         </p>
                     </div>
                 </div>
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  block md:hidden">
+                    <p class=" text-lg md:text-xs text-gray-400"><span
+                            class=mt-2">Number of rooms(from/to)</span></p>
+                    <div class="w-full flex justify-between items-center">
+                        <input type="number" id="roomsMin" value="1"  class="w-4/12 fon-color text-black text-sm">
+                        <input type="number" id="roomsMax" value="17"  class="w-4/12  fon-color  text-black text-sm">
+                    </div>
+                </div>
 
-                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  ">
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400   hidden md:block">
                     <p class=" text-lg md:text-xs text-gray-400"><span
                             class=mt-2">Building size</span></p>
                     <div class="w-full mt-2 text-xs cursor-pointer   rounded-b-lg">
@@ -178,8 +211,16 @@
                         </p>
                     </div>
                 </div>
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  block md:hidden">
+                    <p class=" text-lg md:text-xs text-gray-400"><span
+                            class=mt-2">Building size m<sup>2</sup>(from/to)</span></p>
+                    <div class="w-full flex justify-between items-center">
+                        <input type="number" id="buildingSizeMin" value="100"  class="w-4/12 fon-color text-black text-sm">
+                        <input type="number" id="buildingSizeMax" value="1700"  class="w-4/12  fon-color  text-black text-sm">
+                    </div>
+                </div>
 
-                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  ">
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  hidden md:block">
                     <p class=" text-lg md:text-xs text-gray-400"><span
                             class=mt-2">Land size</span></p>
                     <div class="w-full mt-2 text-xs cursor-pointer   rounded-b-lg">
@@ -188,6 +229,14 @@
                             <!--  md:pb-2 border-b border-b-gray-400                              <input type="text" id="amount" readonly style="border:0; color:#000; font-weight:bold;">-->
                         <div id="land-size-amount" class=" text-xs flex justify-between"></div>
                         </p>
+                    </div>
+                </div>
+                <div class="relative mt-2 md:pb-2 border-b border-b-gray-400  block md:hidden">
+                    <p class=" text-lg md:text-xs text-gray-400"><span
+                            class=mt-2">Land size m<sup>2</sup>(from/to)</span></p>
+                    <div class="w-full flex justify-between items-center">
+                        <input type="number" id="landSizeMin" value="1000"  class="w-4/12 fon-color text-black text-sm">
+                        <input type="number" id="landSizeMax" value="21000"  class="w-4/12  fon-color  text-black text-sm">
                     </div>
                 </div>
 
