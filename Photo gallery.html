@@ -4,17 +4,7 @@
     <meta charset="UTF-8">
     <title>Photo gallery</title>
     <style>
-        #gallery-block{
-            background: #444444;
-        }
-        #gallery{
-            height:100px;
-        }
-        #top-photo img{
-            max-width:90vw;
-            max-height: 80vh;
-            border-radius: 20px;
-        }
+
         .gallery-photo{
             cursor: pointer;
             width:150px;
@@ -30,6 +20,25 @@
             filter: brightness(40%);
         }
         .gallery-photo:hover{
+            -webkit-filter: brightness(100%);
+            -moz-filter: brightness(100%);
+            -ms-filter: brightness(100%);
+            -o-filter: brightness(100%);
+            filter: brightness(100%);
+        }
+        #gallery-block{
+            background: #444444;
+        }
+        #gallery{
+            height:100px;
+        }
+        #top-photo img{
+            max-width:90vw;
+            max-height: 80vh;
+            border-radius: 20px;
+
+        }
+        .top-photo{
             -webkit-filter: brightness(100%);
             -moz-filter: brightness(100%);
             -ms-filter: brightness(100%);
@@ -68,6 +77,11 @@
 </div>
 
 <script>
+    // сколько фоток в экране -считать
+    // по нажатию менять яркость
+    // сколько фоток в экране
+    // сколько фоток в экране
+
 document.addEventListener('DOMContentLoaded',()=>{
     getTopPhoto()
 })
