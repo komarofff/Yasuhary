@@ -5,10 +5,10 @@
     <title>Photo gallery</title>
     <style>
 
-        .gallery-photo{
+        .gallery-photo {
             cursor: pointer;
-            width:150px;
-            height:auto;
+            width: 150px;
+            height: auto;
             object-fit: cover;
             object-position: center;
             border-radius: 10px;
@@ -19,26 +19,33 @@
             -o-filter: brightness(40%);
             filter: brightness(40%);
         }
-        .gallery-photo:hover{
+
+        .gallery-photo:hover {
             -webkit-filter: brightness(100%);
             -moz-filter: brightness(100%);
             -ms-filter: brightness(100%);
             -o-filter: brightness(100%);
             filter: brightness(100%);
         }
-        #gallery-block{
+
+        #gallery-block {
             background: #444444;
         }
-        #gallery{
-            height:100px;
+
+        #gallery {
+            height: 100px;
         }
-        #top-photo img{
-            max-width:90vw;
-            max-height: 80vh;
+
+        #top-photo img {
+            max-width: 90vw;
+            height: 80vh;
             border-radius: 20px;
+            object-fit: cover;
+            object-position: center;
 
         }
-        .top-photo{
+
+        .top-photo {
             -webkit-filter: brightness(100%);
             -moz-filter: brightness(100%);
             -ms-filter: brightness(100%);
@@ -52,17 +59,17 @@
 <div id="gallery-block" class="w-screen h-screen relative overflow-hidden">
     <p id="top-photo" class=" absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/4"></p>
     <div id="gallery" class="flex flex-nowrap w-screen absolute bottom-0 justify-start">
-    <img class="gallery-photo top-photo" src="images/proba.jpg" alt="">
-    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo top-photo" src="images/proba.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/proba2.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
         <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
         <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
         <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
@@ -82,19 +89,32 @@
     // сколько фоток в экране
     // сколько фоток в экране
 
-document.addEventListener('DOMContentLoaded',()=>{
-    getTopPhoto()
-})
-function getTopPhoto(){
-    const gallery = document.getElementById('gallery')
-    if(gallery.querySelector('.top-photo')) {
-        const topPhoto = gallery.querySelector('.top-photo')
-        const newPhoto = topPhoto.src
-        document.getElementById('top-photo').innerHTML = `<img src="${newPhoto}">`
+    document.addEventListener('DOMContentLoaded', () => {
+        getTopPhoto()
+    })
+
+    gallery = document.getElementById('gallery')
+    allPhotos = gallery.querySelectorAll('.gallery-photo')
+    allPhotos.forEach((elem) => {
+        elem.addEventListener('click', (e) => {
+            for(let i=0;i<allPhotos.length;i++){
+                allPhotos[i].classList.remove('top-photo')
+            }
+            e.target.classList.add('top-photo')
+            getTopPhoto()
+        })
+    })
+
+    function getTopPhoto() {
+
+        if (gallery.querySelector('.top-photo')) {
+            const topPhoto = gallery.querySelector('.top-photo')
+            const newPhoto = topPhoto.src
+            document.getElementById('top-photo').innerHTML = `<img src="${newPhoto}">`
+        }
+
+
     }
-
-
-}
 </script>
 </body>
 </html>
