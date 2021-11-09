@@ -145,7 +145,7 @@
     <section class="container mx-auto my-4 md:my-8 xl:my-12">
         <div class="md:w-8/12 lg:w-6/12 md:bg-white p-4 md:p-8 rounded-lg text-black">
             <h2 class="font-bold text black text-lg">Description</h2>
-            <div class="w-full  text black text-sm my-4">
+            <div class="w-full  text black text-sm my-4 description-blocks">
                 <p>Featuring a 4 bedroom, 3 bathroom home in a quiet neighborhood of Porter Ranch. This 2 story home
                     sits
                     on a massive lot of over 11,700 sqft, has a gated front yard and an attached 3 car garage. The
@@ -168,7 +168,43 @@
                     in the hall that has double sinks and a shower over tub. </p>
                 <p>The entertainers backyard has a large pool with
                     a diving board to keep cool in the summer and lots of space to host guests!</p>
+
+                <div class="read-more hidden text-blue-500 mt-6 cursor-pointer">Read more</div>
             </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto my-4 md:my-8 xl:my-12">
+        <div class="rounded-lg w-full my-4 md:my-8">
+            <iframe class="rounded-lg w-full " width="100%" height="745"
+                    src="https://www.youtube.com/embed/sMnrjQQQjc8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <!--        <video controls width="100%" height="100%" class="rounded-lg">-->
+            <!--            <source src="./images/video.mp4" type="video/mp4">&lt;!&ndash; MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 &ndash;&gt;-->
+            <!--            <source src="video.webm" type="video/webm">&lt;!&ndash; WebM/VP8 для Firefox4, Opera, и Chrome &ndash;&gt;-->
+            <!--            <source src="video.ogv" type="video/ogg">&lt;!&ndash; Ogg/Vorbis для старых версий браузеров Firefox и Opera &ndash;&gt;-->
+            <!--            <object data="video.swf" type="application/x-shockwave-flash">&lt;!&ndash; добавляем видеоконтент для устаревших браузеров, в которых нет поддержки элемента video &ndash;&gt;-->
+            <!--                <param name="movie" value="video.swf">-->
+            <!--            </object>-->
+            <!--        </video>-->
+        </div>
+    </section>
+
+    <section class="container mx-auto my-4 md:my-8 xl:my-12">
+        <div class="w-full md:bg-white p-4 md:p-8 rounded-lg text-black">
+            <h2 class="font-bold text black text-lg">Location</h2>
+            <p class="flex items-start md:items-center justify-start">
+                <img class="mr-2" src="images/location-gray.svg" alt="location">
+                <span class="text-xs text-gray-400">342-1148, Higashitoyonakacho, Izumiotsu-shi, Osaka</span>
+            </p>
+            <p class="w-full rounded-lg mt-4">
+                <img class="w-full" src="images/map-single-page.jpg" alt="map">
+            </p>
+
+
+
         </div>
     </section>
 
@@ -211,6 +247,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         changeSection()
+        showDescription()
     })
     window.onresize = () => {
         changeSection()
@@ -224,6 +261,30 @@
             document.querySelector('.photos-block').classList.add('container', 'md:mx-auto')
         }
     }
+
+    function showDescription() {
+        const descriptionBlocks = document.querySelector('.description-blocks').querySelectorAll('p')
+        if (descriptionBlocks.length > 0) {
+            document.querySelector('.read-more').classList.remove('hidden')
+            for (let i = 0; i < descriptionBlocks.length; i++) {
+                if (i > 0) {
+                    descriptionBlocks[i].classList.add('hidden')
+                }
+            }
+        }
+
+        const readMore = document.querySelector('.read-more')
+        readMore.addEventListener('click', (e) => {
+            e.target.classList.add('hidden')
+            for (let i = 0; i < descriptionBlocks.length; i++) {
+                if (i > 0) {
+                    descriptionBlocks[i].classList.remove('hidden')
+                }
+            }
+
+        })
+    }
+
 
 </script>
 </body>
