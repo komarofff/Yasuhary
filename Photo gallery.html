@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo gallery</title>
+    <style>
+        #gallery-block{
+            background: #444444;
+        }
+        #gallery{
+            height:100px;
+        }
+        #top-photo img{
+            max-width:80vw;
+            max-height: 70vh;
+        }
+        .gallery-photo{
+            cursor: pointer;
+            width:150px;
+            height:auto;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            margin: 5px;
+            -webkit-filter: brightness(40%);
+            -moz-filter: brightness(40%);
+            -ms-filter: brightness(40%);
+            -o-filter: brightness(40%);
+            filter: brightness(40%);
+        }
+        .gallery-photo:hover{
+            -webkit-filter: brightness(100%);
+            -moz-filter: brightness(100%);
+            -ms-filter: brightness(100%);
+            -o-filter: brightness(100%);
+            filter: brightness(100%);
+        }
+    </style>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="gallery-block" class="w-screen h-screen relative overflow-hidden">
+    <p id="top-photo" class=" absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/3"></p>
+    <div id="gallery" class="flex flex-nowrap w-screen absolute bottom-0 justify-start">
+    <img class="gallery-photo top-photo" src="images/proba.jpg" alt="">
+    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+    getTopPhoto()
+})
+function getTopPhoto(){
+    const gallery = document.getElementById('gallery')
+    if(gallery.querySelector('.top-photo')) {
+        const topPhoto = gallery.querySelector('.top-photo')
+        const newPhoto = topPhoto.src
+        document.getElementById('top-photo').innerHTML = `<img src="${newPhoto}">`
+    }
+
+
+}
+</script>
+</body>
+</html>
