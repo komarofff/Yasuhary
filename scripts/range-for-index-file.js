@@ -46,8 +46,14 @@ propertyRoi = '1%'
 function  desktopSearch() {
 
     const popupBlocks = document.querySelectorAll('.tab-popup')
+    const popupBlocks2 = document.querySelectorAll('.tab-popup')
     popupBlocks.forEach((val) => {
         const popupDatas = val.querySelectorAll('.popup-data')
+        for(let i=0; i<popupBlocks2.length;i++){
+           if(!popupBlocks2[i].classList.contains('tabs-range-popup')) {
+               popupBlocks2[i].parentNode.querySelector('.text-area').innerHTML = popupBlocks2[i].querySelectorAll('.popup-data')[0].dataset.title
+           }
+        }
         popupDatas.forEach((data) => {
             data.addEventListener('click', () => {
                 for (let i = 0; i < popupDatas.length; i++) {

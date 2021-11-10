@@ -175,13 +175,13 @@ function  desktopSearch() {
                     //propertyLocation = propertyLocation.replace(/\s/g, '');
                 }
                 if (locationProperty === 'Category') {
-                    propertyAge = data.innerHTML
-                    propertyAge = propertyAge.trim()
+                    propertyCategory = data.innerHTML
+                    propertyCategory = propertyCategory.trim()
                     //propertyAge = propertyAge.replace(/\s/g, '');
                 }
                 if (locationProperty === 'Type') {
-                    propertyRoi = data.innerHTML
-                    propertyRoi = propertyRoi.trim()
+                    propertyType = data.innerHTML
+                    propertyType = propertyType.trim()
                     //propertyRoi = propertyRoi.replace(/\s/g, '');
                 }
 
