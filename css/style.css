@@ -73,10 +73,17 @@ main {
 }
 
 .select-popup {
+    position: relative;
     display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
     appearance: none;
+    background: #fff;
     outline: none;
 }
+
 
 .prop-header {
     background: #F5FAFF;
