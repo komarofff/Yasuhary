@@ -558,6 +558,10 @@ footer {
         bottom: -140px;
         width: 130px;
     }
+}@media (max-width: 768px) {
+    main {
+        padding-top: 60px;
+    }
 }
 
 @media (max-width: 639px) {
