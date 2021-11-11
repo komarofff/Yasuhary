@@ -83,6 +83,17 @@ main {
     background: #fff;
     outline: none;
 }
+.filter-popup {
+    position: relative;
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background: none;
+    outline: none;
+}
 
 
 .prop-header {
