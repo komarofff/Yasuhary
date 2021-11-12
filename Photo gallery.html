@@ -35,13 +35,18 @@
         #gallery {
             height: 100px;
         }
+@keyframes fade-in {
+    0%{opacity: 0;}
+    110%{opacity: 1;}
 
+}
         #top-photo img {
             max-width: 90vw;
             height: 80vh;
             border-radius: 20px;
             object-fit: cover;
             object-position: center;
+            animation: fade-in .5s ease-in-out;
 
         }
 
