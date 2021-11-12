@@ -6,7 +6,7 @@
     <style>
 
         .gallery-photo {
-            display:inline-block;
+            display: inline-block;
             cursor: pointer;
             width: 200px;
             height: 100px;
@@ -35,18 +35,39 @@
 
         #gallery {
             height: auto;
-            width: calc(100vw*1000);
+            width: calc(100vw * 1000);
             overflow-x: hidden;
         }
-@keyframes fade-in {
-    0%{opacity: 0;}
-    110%{opacity: 1;}
 
-}
-        #top-photo img {
-            max-width: 90vw;
-            height: 80vh;
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            110% {
+                opacity: 1;
+            }
+
+        }
+
+        #top-photo {
+            border:1px solid red;
+            min-width: 90vw;
+            max-height: 80vh;
+            overflow: hidden;
+            position: absolute;
+            top: 25%;
+            left: 50%;
             border-radius: 20px;
+            -webkit-transform: translate(-50%, -25%);
+            -moz-transform: translate(-50%, -25%);
+            -ms-transform: translate(-50%, -25%);
+            -o-transform: translate(-50%, -25%);
+            transform: translate(-50%, -25%);
+        }
+
+        #top-photo img {
+            border-radius: 20px;
+            width: 100%;
             object-fit: cover;
             object-position: center;
             animation: fade-in .5s ease-in-out;
@@ -65,7 +86,7 @@
 </head>
 <body>
 <div id="gallery-block" class="w-screen h-screen relative overflow-hidden">
-    <p id="top-photo" class=" absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/4"></p>
+    <p id="top-photo"></p>
     <div id="gallery" class="block  absolute bottom-1 ">
         <img class="gallery-photo top-photo" src="images/proba.jpg" alt="">
         <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
@@ -105,27 +126,29 @@
         calcData()
         getTopPhoto()
     })
-    window.onresize = ()=>{
+    window.onresize = () => {
         calcData()
     }
 
-    allPhotos.forEach((elem,index) => {
+    allPhotos.forEach((elem, index) => {
         elem.addEventListener('click', (e) => {
-            var currentTargetNumber = index+1
+            var currentTargetNumber = index + 1
             for (let i = 0; i < allPhotos.length; i++) {
                 allPhotos[i].classList.remove('top-photo')
             }
             e.target.classList.add('top-photo')
-            console.log('currentTargetNumber ='+currentTargetNumber )
+            console.log('currentTargetNumber =' + currentTargetNumber)
             getTopPhoto()
         })
     })
-function calcData(){
-    const screenWidth = document.documentElement.clientWidth
-    const singlePhotoWidth = allPhotos[0].getBoundingClientRect().width+10
-    const amountPhotosInScreen = Math.floor(screenWidth/singlePhotoWidth)
-    console.log('amountPhotosInScreen ='+amountPhotosInScreen ,'singlePhotoWidth='+singlePhotoWidth, 'screenWidth='+screenWidth)
-}
+
+    function calcData() {
+        const screenWidth = document.documentElement.clientWidth
+        const singlePhotoWidth = allPhotos[0].getBoundingClientRect().width + 10
+        const amountPhotosInScreen = Math.floor(screenWidth / singlePhotoWidth)
+        console.log('amountPhotosInScreen =' + amountPhotosInScreen, 'singlePhotoWidth=' + singlePhotoWidth, 'screenWidth=' + screenWidth)
+    }
+
     function getTopPhoto() {
 
         if (gallery.querySelector('.top-photo')) {
