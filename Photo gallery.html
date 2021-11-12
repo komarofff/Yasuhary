@@ -6,9 +6,10 @@
     <style>
 
         .gallery-photo {
+            display:inline-block;
             cursor: pointer;
-            width: 150px;
-            height: auto;
+            width: 200px;
+            height: 100px;
             object-fit: cover;
             object-position: center;
             border-radius: 10px;
@@ -33,7 +34,9 @@
         }
 
         #gallery {
-            height: 100px;
+            height: auto;
+            width: calc(100vw*1000);
+            overflow-x: hidden;
         }
 @keyframes fade-in {
     0%{opacity: 0;}
@@ -63,7 +66,7 @@
 <body>
 <div id="gallery-block" class="w-screen h-screen relative overflow-hidden">
     <p id="top-photo" class=" absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/4"></p>
-    <div id="gallery" class="flex flex-nowrap w-screen absolute bottom-0 justify-start">
+    <div id="gallery" class="block  absolute bottom-1 ">
         <img class="gallery-photo top-photo" src="images/proba.jpg" alt="">
         <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
         <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
@@ -94,22 +97,35 @@
     // сколько фоток в экране
     // сколько фоток в экране
 
+
+    let gallery = document.getElementById('gallery')
+    const allPhotos = gallery.querySelectorAll('.gallery-photo')
+
     document.addEventListener('DOMContentLoaded', () => {
+        calcData()
         getTopPhoto()
     })
+    window.onresize = ()=>{
+        calcData()
+    }
 
-    gallery = document.getElementById('gallery')
-    allPhotos = gallery.querySelectorAll('.gallery-photo')
-    allPhotos.forEach((elem) => {
+    allPhotos.forEach((elem,index) => {
         elem.addEventListener('click', (e) => {
+            var currentTargetNumber = index+1
             for (let i = 0; i < allPhotos.length; i++) {
                 allPhotos[i].classList.remove('top-photo')
             }
             e.target.classList.add('top-photo')
+            console.log('currentTargetNumber ='+currentTargetNumber )
             getTopPhoto()
         })
     })
-
+function calcData(){
+    const screenWidth = document.documentElement.clientWidth
+    const singlePhotoWidth = allPhotos[0].getBoundingClientRect().width+10
+    const amountPhotosInScreen = Math.floor(screenWidth/singlePhotoWidth)
+    console.log('amountPhotosInScreen ='+amountPhotosInScreen ,'singlePhotoWidth='+singlePhotoWidth, 'screenWidth='+screenWidth)
+}
     function getTopPhoto() {
 
         if (gallery.querySelector('.top-photo')) {
