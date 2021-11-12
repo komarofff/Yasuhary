@@ -48,6 +48,7 @@
             }
 
         }
+
         @keyframes slide {
             0% {
                 -webkit-transform: translateX(100vw);
@@ -67,7 +68,7 @@
         }
 
         #top-photo {
-            border:1px solid red;
+            border: 1px solid red;
             min-width: 90vw;
             max-height: 80vh;
             overflow: hidden;
@@ -139,9 +140,10 @@
 
     let gallery = document.getElementById('gallery')
     const allPhotos = gallery.querySelectorAll('.gallery-photo')
-
+    const allPhotosAmount = allPhotos.length
+    let currentTargetNumber = 1
     document.addEventListener('DOMContentLoaded', () => {
-        calcData()
+
         getTopPhoto()
     })
     window.onresize = () => {
@@ -150,10 +152,9 @@
 
     allPhotos.forEach((elem, index) => {
         elem.addEventListener('click', (e) => {
-            var currentTargetNumber = index + 1
+             currentTargetNumber = index + 1
             console.log('currentTargetNumber =' + currentTargetNumber)
             for (let i = 0; i < allPhotos.length; i++) {
-
                 allPhotos[i].classList.remove('top-photo')
             }
             e.target.classList.add('top-photo')
@@ -165,11 +166,14 @@
         const screenWidth = document.documentElement.clientWidth
         const singlePhotoWidth = allPhotos[0].getBoundingClientRect().width + 10
         const amountPhotosInScreen = Math.floor(screenWidth / singlePhotoWidth)
-        console.log('amountPhotosInScreen =' + amountPhotosInScreen, 'singlePhotoWidth=' + singlePhotoWidth, 'screenWidth=' + screenWidth)
+        console.log('singlePhotoWidth=' + singlePhotoWidth, 'screenWidth=' + screenWidth)
+        console.log('allPhotosAmount ='+allPhotosAmount )
+        console.log('amountPhotosInScreen =' + amountPhotosInScreen )
+        console.log('currentTargetNumber =' + currentTargetNumber )
     }
 
     function getTopPhoto() {
-
+        calcData()
         if (gallery.querySelector('.top-photo')) {
             const topPhoto = gallery.querySelector('.top-photo')
             //let pk = topPhoto.cloneNode()
