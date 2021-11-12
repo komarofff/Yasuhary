@@ -43,8 +43,25 @@
             0% {
                 opacity: 0;
             }
-            110% {
+            100% {
                 opacity: 1;
+            }
+
+        }
+        @keyframes slide {
+            0% {
+                -webkit-transform: translateX(100vw);
+                -moz-transform: translateX(100vw);
+                -ms-transform: translateX(100vw);
+                -o-transform: translateX(100vw);
+                transform: translateX(100vw);
+            }
+            100% {
+                -webkit-transform: translateX(0);
+                -moz-transform: translateX(0);
+                -ms-transform: translateX(0);
+                -o-transform: translateX(0);
+                transform: translateX(0);
             }
 
         }
@@ -70,7 +87,8 @@
             width: 100%;
             object-fit: cover;
             object-position: center;
-            animation: fade-in .5s ease-in-out;
+            /*animation: fade-in .5s ease-in-out;*/
+            animation: slide .3s ease-in-out;
 
         }
 
