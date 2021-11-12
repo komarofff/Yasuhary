@@ -151,11 +151,12 @@
     allPhotos.forEach((elem, index) => {
         elem.addEventListener('click', (e) => {
             var currentTargetNumber = index + 1
+            console.log('currentTargetNumber =' + currentTargetNumber)
             for (let i = 0; i < allPhotos.length; i++) {
+
                 allPhotos[i].classList.remove('top-photo')
             }
             e.target.classList.add('top-photo')
-            console.log('currentTargetNumber =' + currentTargetNumber)
             getTopPhoto()
         })
     })
