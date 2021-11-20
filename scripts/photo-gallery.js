@@ -168,6 +168,7 @@ function sliderGallery() {
         jQuery(document).ready(function ($) {
 
             $('#top-photo').slick({
+                infinite: false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: true,
@@ -184,7 +185,7 @@ function sliderGallery() {
                 slidesToScroll: 1,
                 asNavFor: '#top-photo',
                 dots: false,
-                centerMode: false,
+                centerMode: false, //?????????????????????????
                 focusOnSelect: true,
                 arrows: false
 
