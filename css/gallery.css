@@ -87,6 +87,11 @@
     animation: slide .3s ease-in-out;
 
 }
+#top-photo div {
+   
+    animation: slide .3s ease-in-out;
+
+}
 
 .top-photo {
     -webkit-filter: brightness(100%);
