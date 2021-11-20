@@ -123,11 +123,11 @@
 //open gallery block
 const galSwitchers = document.querySelectorAll('.gallery-switchers')
 let counterButtons = 0
-galSwitchers.forEach((val)=>{
-    val.addEventListener('click',(e)=>{
-        if(val.classList.contains('button-3d')){
+galSwitchers.forEach((val) => {
+    val.addEventListener('click', (e) => {
+        if (val.classList.contains('button-3d')) {
             start3D()
-        }else{
+        } else {
             startGallery()
         }
     })
@@ -138,6 +138,7 @@ document.querySelector('.play-3d').addEventListener('click', () => {
 })
 document.querySelector('.open-gallery').addEventListener('click', () => {
     startGallery()
+    sliderGallery()
 })
 // close gallery block
 document.querySelector('.close-gallery-container').addEventListener('click', () => {
@@ -146,7 +147,7 @@ document.querySelector('.close-gallery-container').addEventListener('click', () 
     document.getElementById('video-block').classList.add('hidden')
 })
 
-function start3D(){
+function start3D() {
     document.getElementById('gallery-block').classList.remove('hidden')
     document.getElementById('video-block').classList.remove('hidden')
     document.getElementById('photo-block').classList.add('hidden')
@@ -154,10 +155,76 @@ function start3D(){
     document.querySelector('.gallery-button').classList.remove('tabs-active')
 }
 
-function  startGallery(){
+function startGallery() {
     document.getElementById('gallery-block').classList.remove('hidden')
     document.getElementById('photo-block').classList.remove('hidden')
     document.getElementById('video-block').classList.add('hidden')
     document.querySelector('.gallery-button').classList.add('tabs-active')
     document.querySelector('.button-3d').classList.remove('tabs-active')
+}
+
+function sliderGallery() {
+    if (document.documentElement.clientWidth > 768) {
+        jQuery(document).ready(function ($) {
+
+            $('#top-photo').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                prevArrow: `<span class="arrow-prev"></span>`,
+        nextArrow: `<span class="arrow-next"> </span>`,
+        fade: false,
+        asNavFor: '#gallery55'
+
+        })
+            ;
+            $('#gallery55').slick({
+                infinite: true,
+                slidesToShow: 8,
+                slidesToScroll: 1,
+                asNavFor: '#top-photo',
+                dots: false,
+                centerMode: true,
+                focusOnSelect: true,
+                arrows: false
+
+            });
+            document.querySelector('.slick-track').style.cssText = 'transform: translate3d(0px, 0px, 0px);'
+            var currentSlide = $('#gallery55').slick('slickCurrentSlide') + 1;
+            var lastSlide = $("#gallery55").slick("getSlick").slideCount
+            document.getElementById('amount-of-photos').innerHTML = `${currentSlide} of ${lastSlide}`
+
+            $("#gallery55").on("afterChange", function (event, slick) {
+                let currentSlide = $('#gallery55').slick('slickCurrentSlide') + 1;
+                let lastSlide = $("#gallery55").slick("getSlick").slideCount
+                document.getElementById('amount-of-photos').innerHTML = `${currentSlide} of ${lastSlide}`
+            });
+
+        })
+    } else {
+        jQuery(document).ready(function ($) {
+            $('#top-photo').slick({
+                infinite: false,
+                dots: false,
+                arrows: false,
+                slidesToShow: 1.1,
+                slidesToScroll: 1,
+                touchMove: true,
+                swipeToSlide: true,
+                // centerMode: true,
+                // centerPadding: '20px'
+
+            });
+            var currentSlide = $('#top-photo').slick('slickCurrentSlide') + 1;
+            var lastSlide = $("#top-photo").slick("getSlick").slideCount
+            document.getElementById('amount-of-photos').innerHTML = `${currentSlide} of ${lastSlide}`
+
+            $("#top-photo").on("afterChange", function (event, slick) {
+                let currentSlide = $('#top-photo').slick('slickCurrentSlide') + 1;
+                let lastSlide = $("#top-photo").slick("getSlick").slideCount
+                document.getElementById('amount-of-photos').innerHTML = `${currentSlide} of ${lastSlide}`
+            });
+
+        })
+    }
 }
