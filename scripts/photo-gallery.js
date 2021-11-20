@@ -27,6 +27,33 @@ allPhotos.forEach((elem, index) => {
         getTopPhoto()
     })
 })
+// go left
+document.querySelector('.arrow-gallery-left').addEventListener('click',()=>{
+    if(currentTargetNumber>1) {
+    for (let i = 0; i < allPhotos.length; i++) {
+        allPhotos[i].classList.remove('top-photo')
+    }
+
+        currentTargetNumber--
+        allPhotos[currentTargetNumber - 1].classList.add('top-photo')
+        getTopPhoto()
+    }
+})
+// go right
+document.querySelector('.arrow-gallery-right').addEventListener('click',()=>{
+    if(currentTargetNumber<allPhotos.length) {
+        for (let i = 0; i < allPhotos.length; i++) {
+            allPhotos[i].classList.remove('top-photo')
+        }
+
+        currentTargetNumber++
+        allPhotos[currentTargetNumber - 1].classList.add('top-photo')
+        getTopPhoto()
+    }
+})
+
+
+
 
 function calcData() {
     const screenWidth = document.documentElement.clientWidth
