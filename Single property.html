@@ -19,7 +19,8 @@
             <nav class="order-2 md:order-none menu-links menu-links-top flex justify-start items-center">
                 <ul class="md:justify-between justify-start items-start md:items-center flex flex-col md:flex-row flex-768">
                     <li class="ml-5"><a class="hover:text-blue-500" href="./">Home</a></li>
-                    <li class="ml-5"><a class=" text-blue-500 font-bold" href="./Properties%20list.html">Properties</a></li>
+                    <li class="ml-5"><a class=" text-blue-500 font-bold" href="./Properties%20list.html">Properties</a>
+                    </li>
                     <li class="ml-5"><a class="hover:text-blue-500  " href="./Contact%20Us.html">Contact</a></li>
                 </ul>
                 <div class="md:hidden mt-4 flex items-center justify-center  w-full social-top">
@@ -58,7 +59,7 @@
                 <div class="min-w-screen md:w-8/12 mr-0 md:mr-4 self-stretch relative">
                     <img class="md:rounded-lg w-screen md:w-full h-full" src="images/single-big-photo.jpg"
                          alt="big photo">
-                    <span class="py-2 px-4 bg-black bg-opacity-25 text-white text-sm rounded-md absolute left-6 top-4 hover:text-black hover:bg-white hover:bg-opacity-100 cursor-pointer">
+                    <span class="open-gallery py-2 px-4 bg-black bg-opacity-25 text-white text-sm rounded-md absolute left-6 top-4 hover:text-black hover:bg-white hover:bg-opacity-100 cursor-pointer">
                     32 photos</span>
                     <p class="block lg:hidden absolute bottom-0 left-0 right-0 bg-blue-500 text-white text-base font-semibold p-3 text-left md:rounded-b-lg">
                         ¥ 120 000</p>
@@ -126,7 +127,8 @@
 
             <div class="rounded-lg w-full my-4 md:my-8 overflow-hidden relative">
                 <img class="w-full" src="images/3d.jpg" alt="3d">
-                <img class="play-3d cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2" src="images/play-video.svg" alt="play 3d">
+                <img class="play-3d cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2"
+                     src="images/play-video.svg" alt="play 3d">
             </div>
 
         </div>
@@ -195,7 +197,6 @@
             </p>
 
 
-
         </div>
     </section>
 
@@ -234,56 +235,68 @@
     </div>
 </footer>
 
-<section id="gallery-block" class=" w-screen h-screen fixed inset-0 overflow-hidden z-40">
-<div class="mt-4 container mx-auto flex justify-between items-center">
-    <div> buttons</div>
-    <div><img class="close-gallery-container cursor-pointer" src="images/close-gray.svg" alt="close"></div>
-</div>
-<div class="container mx-auto relative ">
-    <div id="photo-block" class="hidden ">
-        <p id="top-photo"></p>
-        <div id="gallery" class="block  absolute bottom-1 ">
-            <img class="gallery-photo top-photo" src="images/proba.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/proba2.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+<section id="gallery-block" class="hidden w-screen h-screen fixed inset-0 overflow-hidden " style="z-index: 99999;">
+    <div class="mt-4 container mx-auto flex justify-between items-center">
+        <div class="flex items-center justify-start">
+            <p class="gallery-switchers cursor-pointer fon-color py-1 px-3  hover:bg-blue-500 hover:text-white rounded-lg text-sm mr-4 tabs-active">
+                3D Walkthrough</p>
+            <p class="gallery-switchers cursor-pointer fon-color py-1 px-3  hover:bg-blue-500 hover:text-white rounded-lg text-sm">
+                32 photos</p>
         </div>
+        <div><img class="close-gallery-container cursor-pointer" src="images/close-gray.svg" alt="close"></div>
     </div>
 
-    <div id="video-block" class="mt-8 w-full h-full absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2">
-        <div class="rounded-lg w-full overflow-hidden ">
-            <iframe  width="100%" height="745" src="https://www.youtube.com/embed/sMnrjQQQjc8"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            <!--        <video controls width="100%" height="100%" class="rounded-lg">-->
-            <!--            <source src="./images/video.mp4" type="video/mp4">&lt;!&ndash; MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 &ndash;&gt;-->
-            <!--            <source src="video.webm" type="video/webm">&lt;!&ndash; WebM/VP8 для Firefox4, Opera, и Chrome &ndash;&gt;-->
-            <!--            <source src="video.ogv" type="video/ogg">&lt;!&ndash; Ogg/Vorbis для старых версий браузеров Firefox и Opera &ndash;&gt;-->
-            <!--            <object data="video.swf" type="application/x-shockwave-flash">&lt;!&ndash; добавляем видеоконтент для устаревших браузеров, в которых нет поддержки элемента video &ndash;&gt;-->
-            <!--                <param name="movie" value="video.swf">-->
-            <!--            </object>-->
-            <!--        </video>-->
+    <div class="container mx-auto relative ">
+
+        <div id="photo-block"
+             class="hidden w-full h-screen fixed top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 p-2 border-8 border-red-500 ">
+            <div class="container" id="top-photo"></div>
+            <div class="w-full h-full relative ">
+                <div id="gallery" class="block  absolute bottom-1 ">
+                    <img class="gallery-photo top-photo" src="images/proba.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/proba2.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                </div>
+            </div>
         </div>
+
+        <div id="video-block"
+             class="hidden mt-8 w-full h-full absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 p-2 md:p-0">
+            <div class="rounded-lg w-full overflow-hidden ">
+                <iframe width="100%" height="745" src="https://www.youtube.com/embed/sMnrjQQQjc8"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                <!--        <video controls width="100%" height="100%" class="rounded-lg">-->
+                <!--            <source src="./images/video.mp4" type="video/mp4">&lt;!&ndash; MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 &ndash;&gt;-->
+                <!--            <source src="video.webm" type="video/webm">&lt;!&ndash; WebM/VP8 для Firefox4, Opera, и Chrome &ndash;&gt;-->
+                <!--            <source src="video.ogv" type="video/ogg">&lt;!&ndash; Ogg/Vorbis для старых версий браузеров Firefox и Opera &ndash;&gt;-->
+                <!--            <object data="video.swf" type="application/x-shockwave-flash">&lt;!&ndash; добавляем видеоконтент для устаревших браузеров, в которых нет поддержки элемента video &ndash;&gt;-->
+                <!--                <param name="movie" value="video.swf">-->
+                <!--            </object>-->
+                <!--        </video>-->
+            </div>
+        </div>
+
     </div>
-</div>
 </section>
 
 
@@ -292,5 +305,23 @@
 
 <script src="scripts/single-property-description.js"></script>
 <script src="scripts/photo-gallery.js"></script>
+<script>
+    //open gallery block
+    document.querySelector('.play-3d').addEventListener('click', () => {
+        document.getElementById('gallery-block').classList.remove('hidden')
+        document.getElementById('video-block').classList.remove('hidden')
+    })
 
+    document.querySelector('.open-gallery').addEventListener('click', () => {
+        document.getElementById('gallery-block').classList.remove('hidden')
+        document.getElementById('photo-block').classList.remove('hidden')
+    })
+    // close gallery block
+    document.querySelector('.close-gallery-container').addEventListener('click', () => {
+        document.getElementById('gallery-block').classList.add('hidden')
+        document.getElementById('photo-block').classList.add('hidden')
+        document.getElementById('video-block').classList.add('hidden')
+    })
+
+</script>
 </html>
