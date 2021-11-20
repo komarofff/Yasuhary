@@ -182,7 +182,7 @@ function sliderGallery() {
             $('#gallery55').slick({
                 infinite: false,
                 slidesToShow: 8,
-                slidesToScroll: 1,
+                slidesToScroll: 8,
                 asNavFor: '#top-photo',
                 dots: false,
                 centerMode: false, //?????????????????????????

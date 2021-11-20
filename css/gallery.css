@@ -129,7 +129,7 @@
 }
 .arrow-prev{
     position: absolute;
-    left:-50px;
+    left:-6vw;
     top:48%;
     display: flex;
     justify-content: center;
@@ -142,7 +142,7 @@
 }
 .arrow-next{
     position: absolute;
-    right:-50px;
+    right:-6vw;
     top:48%;
     display: flex;
     justify-content: center;
