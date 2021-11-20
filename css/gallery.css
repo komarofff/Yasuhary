@@ -124,7 +124,7 @@
     }
     #top-photo img {
 
-        min-height: 40vh;
+        min-height: 50vh;
         max-height: unset;
     }
 }

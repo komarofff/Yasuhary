@@ -358,6 +358,16 @@
                 focusOnSelect: true
 
             });
+            var currentSlide = $('#gallery55').slick('slickCurrentSlide') + 1;
+           var lastSlide = $("#gallery55").slick("getSlick").slideCount
+            document.getElementById('amount-of-photos').innerHTML = `${currentSlide} of ${lastSlide}`
+
+            $("#gallery55").on("afterChange", function(event, slick){
+                let currentSlide = $('#gallery55').slick('slickCurrentSlide') + 1;
+                let lastSlide = $("#gallery55").slick("getSlick").slideCount
+                document.getElementById('amount-of-photos').innerHTML = `${currentSlide} of ${lastSlide}`
+            });
+
         })
     }
     else{
@@ -373,6 +383,15 @@
                 // centerMode: true,
                 // centerPadding: '20px'
 
+            });
+            var currentSlide = $('#top-photo').slick('slickCurrentSlide') + 1;
+            var lastSlide = $("#top-photo").slick("getSlick").slideCount
+            document.getElementById('amount-of-photos').innerHTML = `${currentSlide} of ${lastSlide}`
+
+            $("#top-photo").on("afterChange", function(event, slick){
+                let currentSlide = $('#top-photo').slick('slickCurrentSlide') + 1;
+                let lastSlide = $("#top-photo").slick("getSlick").slideCount
+                document.getElementById('amount-of-photos').innerHTML = `${currentSlide} of ${lastSlide}`
             });
 
     })
