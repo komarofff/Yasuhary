@@ -238,9 +238,9 @@
 <section id="gallery-block" class="hidden w-screen h-screen fixed inset-0 overflow-hidden " style="z-index: 99999;">
     <div class="mt-4 container mx-auto flex justify-between items-center">
         <div class="flex items-center justify-start">
-            <p class="gallery-switchers cursor-pointer fon-color py-1 px-3  hover:bg-blue-500 hover:text-white rounded-lg text-sm mr-4 tabs-active">
+            <p class="gallery-switchers button-3d cursor-pointer fon-color py-1 px-3   hover:text-blue-500 rounded-lg text-sm mr-4 ">
                 3D Walkthrough</p>
-            <p class="gallery-switchers cursor-pointer fon-color py-1 px-3  hover:bg-blue-500 hover:text-white rounded-lg text-sm">
+            <p class="gallery-switchers gallery-button cursor-pointer fon-color py-1 px-3    hover:text-blue-500 rounded-lg text-sm">
                 32 photos</p>
         </div>
         <div><img class="close-gallery-container cursor-pointer" src="images/close-gray.svg" alt="close"></div>
@@ -249,14 +249,17 @@
     <div class="container mx-auto relative ">
 
         <div id="photo-block"
-             class="hidden w-full h-screen fixed top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 p-2  mt-8">
-            <div class="container  ">
-                <div class="rounded-lg overflow-hidden">
-                    <div id="top-photo" class="container  w-10/12"></div>
-                </div>
+             class="hidden w-full h-screen fixed top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 p-2  mt-10">
 
-            </div>
-            <div class="w-full h-full relative ">
+            <div class="w-full h-full relative  pt-4">
+                <div class="container mx-auto  relative">
+                    <div class="mx-auto rounded-lg overflow-hidden relative border border-red-500 w-full md:w-10/12">
+                        <div id="top-photo" class="w-full"></div>
+                        <div id="amount-of-photos" class="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-xs text-white bg-black bg-opacity-25 py-1 px-2"></div>
+                    </div>
+
+
+                </div>
                 <div id="gallery" class="block  absolute bottom-12 ">
                     <img class="gallery-photo top-photo" src="images/proba.jpg" alt="">
                     <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
@@ -312,14 +315,23 @@
 <script src="scripts/photo-gallery.js"></script>
 <script>
     //open gallery block
-    document.querySelector('.play-3d').addEventListener('click', () => {
-        document.getElementById('gallery-block').classList.remove('hidden')
-        document.getElementById('video-block').classList.remove('hidden')
+    const galSwitchers = document.querySelectorAll('.gallery-switchers')
+    let counterButtons = 0
+    galSwitchers.forEach((val)=>{
+        val.addEventListener('click',(e)=>{
+            if(val.classList.contains('button-3d')){
+                start3D()
+            }else{
+                startGallery()
+            }
+        })
     })
 
-    document.querySelector('.open-gallery').addEventListener('click', () => {
-        document.getElementById('gallery-block').classList.remove('hidden')
-        document.getElementById('photo-block').classList.remove('hidden')
+    document.querySelector('.play-3d').addEventListener('click', () => {
+        start3D()
+    })
+      document.querySelector('.open-gallery').addEventListener('click', () => {
+     startGallery()
     })
     // close gallery block
     document.querySelector('.close-gallery-container').addEventListener('click', () => {
@@ -327,6 +339,22 @@
         document.getElementById('photo-block').classList.add('hidden')
         document.getElementById('video-block').classList.add('hidden')
     })
+
+    function start3D(){
+        document.getElementById('gallery-block').classList.remove('hidden')
+        document.getElementById('video-block').classList.remove('hidden')
+        document.getElementById('photo-block').classList.add('hidden')
+        document.querySelector('.button-3d').classList.add('tabs-active')
+        document.querySelector('.gallery-button').classList.remove('tabs-active')
+    }
+
+    function  startGallery(){
+        document.getElementById('gallery-block').classList.remove('hidden')
+        document.getElementById('photo-block').classList.remove('hidden')
+        document.getElementById('video-block').classList.add('hidden')
+        document.querySelector('.gallery-button').classList.add('tabs-active')
+        document.querySelector('.button-3d').classList.remove('tabs-active')
+    }
 
 </script>
 </html>

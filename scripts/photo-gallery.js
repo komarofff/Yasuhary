@@ -36,6 +36,7 @@ function calcData() {
     console.log('allPhotosAmount ='+allPhotosAmount )
     console.log('amountPhotosInScreen =' + amountPhotosInScreen )
     console.log('currentTargetNumber =' + currentTargetNumber )
+    document.getElementById('amount-of-photos').innerHTML = `${currentTargetNumber} of ${allPhotosAmount}`
 }
 
 function getTopPhoto() {

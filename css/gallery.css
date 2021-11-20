@@ -65,21 +65,21 @@
    /*width: 100%;*/
    /*max-height: 70vh;*/
     /*overflow: hidden;*/
-    position: fixed;
-    top: 25%;
-    left: 50%;
-    /*border-radius: 20px;*/
-    -webkit-transform: translate(-50%, -25%);
-    -moz-transform: translate(-50%, -25%);
-    -ms-transform: translate(-50%, -25%);
-    -o-transform: translate(-50%, -25%);
-    transform: translate(-50%, -25%);
+    /*position: absolute;*/
+    /*top: 25%;*/
+    /*left: 50%;*/
+    /*!*border-radius: 20px;*!*/
+    /*-webkit-transform: translate(-50%, -25%);*/
+    /*-moz-transform: translate(-50%, -25%);*/
+    /*-ms-transform: translate(-50%, -25%);*/
+    /*-o-transform: translate(-50%, -25%);*/
+    /*transform: translate(-50%, -25%);*/
 }
 
 #top-photo img {
     border-radius: 20px;
     width: 100%;
-    max-height: 70vh;
+    mim-height: 70vh;
     object-fit: cover;
     object-position: center;
     /*animation: fade-in .5s ease-in-out;*/
