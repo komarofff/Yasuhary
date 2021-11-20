@@ -172,19 +172,19 @@ function sliderGallery() {
                 slidesToScroll: 1,
                 arrows: true,
                 prevArrow: `<span class="arrow-prev"></span>`,
-        nextArrow: `<span class="arrow-next"> </span>`,
-        fade: false,
-        asNavFor: '#gallery55'
+                nextArrow: `<span class="arrow-next"> </span>`,
+                fade: false,
+                asNavFor: '#gallery55'
 
-        })
+            })
             ;
             $('#gallery55').slick({
-                infinite: true,
+                infinite: false,
                 slidesToShow: 8,
                 slidesToScroll: 1,
                 asNavFor: '#top-photo',
                 dots: false,
-                centerMode: true,
+                centerMode: false,
                 focusOnSelect: true,
                 arrows: false
 
