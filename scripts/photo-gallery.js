@@ -8,6 +8,7 @@ let gallery = document.getElementById('gallery')
 const allPhotos = gallery.querySelectorAll('.gallery-photo')
 const allPhotosAmount = allPhotos.length
 let currentTargetNumber = 1
+let startPosition = 0
 document.addEventListener('DOMContentLoaded', () => {
 
     getTopPhoto()
@@ -18,6 +19,17 @@ window.onresize = () => {
 
 allPhotos.forEach((elem, index) => {
     elem.addEventListener('click', (e) => {
+        currentTargetNumber = index + 1
+        console.log('currentTargetNumber =' + currentTargetNumber)
+        for (let i = 0; i < allPhotos.length; i++) {
+            allPhotos[i].classList.remove('top-photo')
+        }
+        e.target.classList.add('top-photo')
+        getTopPhoto()
+    })
+})
+allPhotos.forEach((elem, index) => {
+    elem.addEventListener('touchstart', (e) => {
         currentTargetNumber = index + 1
         console.log('currentTargetNumber =' + currentTargetNumber)
         for (let i = 0; i < allPhotos.length; i++) {
@@ -75,9 +87,9 @@ document.querySelector('.arrow-gallery-right').addEventListener('touchstart',()=
 
 
 function calcData() {
-    const screenWidth = document.documentElement.clientWidth
-    const singlePhotoWidth = allPhotos[0].getBoundingClientRect().width + 10
-    const amountPhotosInScreen = Math.floor(screenWidth / singlePhotoWidth)
+     screenWidth = document.documentElement.clientWidth
+     singlePhotoWidth = allPhotos[0].getBoundingClientRect().width + 10
+     amountPhotosInScreen = Math.floor(screenWidth / singlePhotoWidth)
     console.log('singlePhotoWidth=' + singlePhotoWidth, 'screenWidth=' + screenWidth)
     console.log('allPhotosAmount =' + allPhotosAmount)
     console.log('amountPhotosInScreen =' + amountPhotosInScreen)
@@ -95,7 +107,15 @@ function getTopPhoto() {
         document.getElementById('top-photo').innerHTML = `<img src="${newPhoto}">`
         //document.getElementById('top-photo').appendChild(pk)
     }
+//// ?????????
+    if( currentTargetNumber>(amountPhotosInScreen/2) ){
+        startPosition+=2
+        console.log('startPosition='+startPosition)
+        let moveBlock = startPosition*singlePhotoWidth+10
+        document.getElementById('gallery').style.cssText = `transform: translateX(-${moveBlock}px);`
 
+        console.log("надо двигать")
+    }
 
 }
 
