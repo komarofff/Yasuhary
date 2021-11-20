@@ -39,19 +39,38 @@ document.querySelector('.arrow-gallery-left').addEventListener('click',()=>{
         getTopPhoto()
     }
 })
+document.querySelector('.arrow-gallery-left').addEventListener('touchstart',()=>{
+    if(currentTargetNumber>1) {
+        for (let i = 0; i < allPhotos.length; i++) {
+            allPhotos[i].classList.remove('top-photo')
+        }
+
+        currentTargetNumber--
+        allPhotos[currentTargetNumber - 1].classList.add('top-photo')
+        getTopPhoto()
+    }
+})
 // go right
 document.querySelector('.arrow-gallery-right').addEventListener('click',()=>{
     if(currentTargetNumber<allPhotos.length) {
         for (let i = 0; i < allPhotos.length; i++) {
             allPhotos[i].classList.remove('top-photo')
         }
-
         currentTargetNumber++
         allPhotos[currentTargetNumber - 1].classList.add('top-photo')
         getTopPhoto()
     }
 })
-
+document.querySelector('.arrow-gallery-right').addEventListener('touchstart',()=>{
+    if(currentTargetNumber<allPhotos.length) {
+        for (let i = 0; i < allPhotos.length; i++) {
+            allPhotos[i].classList.remove('top-photo')
+        }
+        currentTargetNumber++
+        allPhotos[currentTargetNumber - 1].classList.add('top-photo')
+        getTopPhoto()
+    }
+})
 
 
 
