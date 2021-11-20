@@ -79,7 +79,8 @@
 #top-photo img {
     border-radius: 20px;
     width: 100%;
-    mim-height: 70vh;
+    min-height: 75vh;
+    max-height: 75vh;
     object-fit: cover;
     object-position: center;
     /*animation: fade-in .5s ease-in-out;*/
