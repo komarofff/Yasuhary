@@ -124,20 +124,9 @@
                 the house as if you were there in person!
             </p>
 
-            <div class="rounded-lg w-full my-4 md:my-8 ">
-                <iframe class="rounded-lg w-full " width="100%" height="745"
-                        src="https://www.youtube.com/embed/sMnrjQQQjc8"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                <!--        <video controls width="100%" height="100%" class="rounded-lg">-->
-                <!--            <source src="./images/video.mp4" type="video/mp4">&lt;!&ndash; MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 &ndash;&gt;-->
-                <!--            <source src="video.webm" type="video/webm">&lt;!&ndash; WebM/VP8 для Firefox4, Opera, и Chrome &ndash;&gt;-->
-                <!--            <source src="video.ogv" type="video/ogg">&lt;!&ndash; Ogg/Vorbis для старых версий браузеров Firefox и Opera &ndash;&gt;-->
-                <!--            <object data="video.swf" type="application/x-shockwave-flash">&lt;!&ndash; добавляем видеоконтент для устаревших браузеров, в которых нет поддержки элемента video &ndash;&gt;-->
-                <!--                <param name="movie" value="video.swf">-->
-                <!--            </object>-->
-                <!--        </video>-->
+            <div class="rounded-lg w-full my-4 md:my-8 overflow-hidden relative">
+                <img class="w-full" src="images/3d.jpg" alt="3d">
+                <img class="play-3d cursor-pointer absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2" src="images/play-video.svg" alt="play 3d">
             </div>
 
         </div>
@@ -244,8 +233,59 @@
             Rights Reserved</p>
     </div>
 </footer>
+
+<section id="gallery-block" class=" w-screen h-screen fixed inset-0 overflow-hidden z-40">
+
+    <div id="photo-block" class="hidden ">
+        <p id="top-photo"></p>
+        <div id="gallery" class="block  absolute bottom-1 ">
+            <img class="gallery-photo top-photo" src="images/proba.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/proba2.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+            <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+        </div>
+    </div>
+
+    <div id="sd-video-block" class="w-full fixed top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2">
+        <div class="rounded-lg w-full md:w-10/12 m-2 md:m-0 mx-auto ">
+            <iframe class="rounded-lg w-full " width="100%" height="745" src="https://www.youtube.com/embed/sMnrjQQQjc8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            <!--        <video controls width="100%" height="100%" class="rounded-lg">-->
+            <!--            <source src="./images/video.mp4" type="video/mp4">&lt;!&ndash; MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 &ndash;&gt;-->
+            <!--            <source src="video.webm" type="video/webm">&lt;!&ndash; WebM/VP8 для Firefox4, Opera, и Chrome &ndash;&gt;-->
+            <!--            <source src="video.ogv" type="video/ogg">&lt;!&ndash; Ogg/Vorbis для старых версий браузеров Firefox и Opera &ndash;&gt;-->
+            <!--            <object data="video.swf" type="application/x-shockwave-flash">&lt;!&ndash; добавляем видеоконтент для устаревших браузеров, в которых нет поддержки элемента video &ndash;&gt;-->
+            <!--                <param name="movie" value="video.swf">-->
+            <!--            </object>-->
+            <!--        </video>-->
+        </div>
+    </div>
+</section>
+
+
+</body>
 <script src="scripts/menu.js"></script>
 
 <script src="scripts/single-property-description.js"></script>
-</body>
+<script src="scripts/photo-gallery.js"></script>
+
 </html>
