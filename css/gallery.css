@@ -93,3 +93,22 @@
     -o-filter: brightness(100%);
     filter: brightness(100%);
 }
+
+.play-3d:hover{
+    -ms-filter: invert(0.2);
+    filter: invert(0.2);
+}
+.close-gallery-container{
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.close-gallery-container:hover{
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+    transform: scale(0.7);
+}
