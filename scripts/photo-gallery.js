@@ -33,9 +33,9 @@ function calcData() {
     const singlePhotoWidth = allPhotos[0].getBoundingClientRect().width + 10
     const amountPhotosInScreen = Math.floor(screenWidth / singlePhotoWidth)
     console.log('singlePhotoWidth=' + singlePhotoWidth, 'screenWidth=' + screenWidth)
-    console.log('allPhotosAmount ='+allPhotosAmount )
-    console.log('amountPhotosInScreen =' + amountPhotosInScreen )
-    console.log('currentTargetNumber =' + currentTargetNumber )
+    console.log('allPhotosAmount =' + allPhotosAmount)
+    console.log('amountPhotosInScreen =' + amountPhotosInScreen)
+    console.log('currentTargetNumber =' + currentTargetNumber)
     document.getElementById('amount-of-photos').innerHTML = `${currentTargetNumber} of ${allPhotosAmount}`
 }
 
