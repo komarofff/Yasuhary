@@ -114,3 +114,17 @@
     -o-transform: scale(0.7);
     transform: scale(0.7);
 }
+
+@media(max-width: 768px){
+    #top-photo{
+        min-width: 100vw;
+    }
+    #top-photo div{
+        margin: 0 10px;
+    }
+    #top-photo img {
+
+        min-height: 40vh;
+        max-height: unset;
+    }
+}

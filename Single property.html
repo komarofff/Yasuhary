@@ -7,6 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Single property</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <script src="scripts/jquery-1.11.0.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -249,40 +255,49 @@
     <div class="container mx-auto relative ">
 
         <div id="photo-block"
-             class="hidden w-full h-screen fixed top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 p-2  mt-10">
+             class="hidden w-full h-screen fixed top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 md:p-2  mt-10">
 
             <div class="w-full h-full relative  pt-4">
-                <div class="container mx-auto  relative">
+                <div class="md:container md:mx-auto  relative">
                     <div class="mx-auto rounded-lg overflow-hidden relative  w-full md:w-10/12">
-                        <div id="top-photo" class="w-full"></div>
-                        <div id="amount-of-photos" class="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-xs text-white bg-black bg-opacity-25 py-1 px-2"></div>
+                        <div id="top-photo" class="w-full">
+                            <div><img  src="images/proba.jpg" alt=""></div>
+                            <div><img src="images/single-big-photo.jpg" alt=""></div>
+                            <div><img src="images/single-big-photo.jpg" alt=""></div>
+                            <div><img  src="images/proba2.jpg" alt=""></div>
+                            <div><img  src="images/single-big-photo.jpg" alt=""></div>
+                            <div><img src="images/single-big-photo.jpg" alt=""></div>
+                            <div><img  src="images/single-big-photo.jpg" alt=""></div>
+                            <div><img  src="images/proba.jpg" alt=""></div>
+                            <div><img src="images/single-big-photo.jpg" alt=""></div>
+                            <div><img  src="images/single-big-photo.jpg" alt=""></div>
+                            <div><img  src="images/proba2.jpg" alt=""></div>
+                            <div><img  src="images/single-big-photo.jpg" alt=""></div>
+                            <div><img  src="images/single-big-photo.jpg" alt=""></div>
+                            <div><img  src="images/single-big-photo.jpg" alt=""></div>
+                        </div>
+                        <div id="amount-of-photos"
+                             class="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-xs text-white bg-black bg-opacity-25 py-1 px-2"></div>
                     </div>
-                    <img class="arrow-gallery-left absolute left-0  py-2 px-3 bg-gray-500 bg-opacity-50 hover:bg-white cursor-pointer top-1/2 transform -translate-y-1/2 rounded-md" src="images/left-black.svg" alt="left">
-                    <img class="arrow-gallery-right absolute right-0 py-2 px-3 bg-gray-500 bg-opacity-50 hover:bg-white cursor-pointer top-1/2 transform -translate-y-1/2 rounded-md" src="images/right-black.svg" alt="left">
+
 
                 </div>
-                <div id="gallery" class="block  absolute bottom-12 ">
-                    <img class="gallery-photo top-photo" src="images/proba.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/proba2.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
-                    <img class="gallery-photo" src="images/single-big-photo.jpg" alt="">
+                <div id="gallery55" class="hidden md:block   ">
+                    <div><img class="gallery-photo top-photo" src="images/proba.jpg" alt=""></div>
+                    <div><img class="gallery-photo" src="images/single-big-photo.jpg" alt=""></div>
+                    <div><img class="gallery-photo" src="images/single-big-photo.jpg" alt=""></div>
+                    <div><img class="gallery-photo" src="images/proba2.jpg" alt=""></div>
+                    <div><img class="gallery-photo" src="images/single-big-photo.jpg" alt=""></div>
+                    <div><img class="gallery-photo" src="images/single-big-photo.jpg" alt=""></div>
+                    <div><img class="gallery-photo" src="images/single-big-photo.jpg" alt=""></div>
+                    <div><img class="gallery-photo " src="images/proba.jpg" alt=""></div>
+                    <div><img class="gallery-photo" src="images/single-big-photo.jpg" alt=""></div>
+                    <div><img class="gallery-photo" src="images/single-big-photo.jpg" alt=""></div>
+                    <div><img class="gallery-photo" src="images/proba2.jpg" alt=""></div>
+                    <div><img class="gallery-photo" src="images/single-big-photo.jpg" alt=""></div>
+                    <div><img class="gallery-photo" src="images/single-big-photo.jpg" alt=""></div>
+                    <div><img class="gallery-photo" src="images/single-big-photo.jpg" alt=""></div>
+
                 </div>
             </div>
         </div>
@@ -290,10 +305,10 @@
         <div id="video-block"
              class="hidden mt-8 w-full h-full absolute top-1/2 left-1/2 transform -translate-x-1/2  -translate-y-1/2 p-2 md:p-0">
             <div class="rounded-lg w-full overflow-hidden ">
-                <iframe width="100%" height="745" src="https://www.youtube.com/embed/sMnrjQQQjc8"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+<!--                <iframe width="100%" height="745" src="https://www.youtube.com/embed/sMnrjQQQjc8"-->
+<!--                        title="YouTube video player" frameborder="0"-->
+<!--                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"-->
+<!--                        allowfullscreen></iframe>-->
                 <!--        <video controls width="100%" height="100%" class="rounded-lg">-->
                 <!--            <source src="./images/video.mp4" type="video/mp4">&lt;!&ndash; MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 &ndash;&gt;-->
                 <!--            <source src="video.webm" type="video/webm">&lt;!&ndash; WebM/VP8 для Firefox4, Opera, и Chrome &ndash;&gt;-->
@@ -316,4 +331,83 @@
 
 <script src="scripts/photo-gallery.js"></script>
 
+<script>
+    if(document.documentElement.clientWidth>768) {
+        jQuery(document).ready(function ($) {
+            $('#top-photo').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                prevArrow: '<span class="arrow-prev"> <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                    '<path d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM17 3.5L1 3.5V4.5L17 4.5V3.5Z" fill="black"/>\n' +
+                    '</svg>\n </span>',
+                nextArrow: '<span class="arrow-next"> <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+                    '<path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464466C12.9763 0.269204 12.6597 0.269204 12.4645 0.464466C12.2692 0.659728 12.2692 0.976311 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.7308 12.9763 7.7308 13.1716 7.53553L16.3536 4.35355ZM0 4.5H16V3.5H0V4.5Z" fill="black"/>\n' +
+                    '</svg>\n </span>',
+                fade: true,
+                asNavFor: '#gallery55'
+
+            });
+            $('#gallery55').slick({
+                infinite: true,
+                slidesToShow: 8,
+                slidesToScroll: 1,
+                asNavFor: '#top-photo',
+                dots: false,
+                centerMode: true,
+                focusOnSelect: true
+
+            });
+        })
+    }
+    else{
+        jQuery(document).ready(function ($) {
+            $('#top-photo').slick({
+                infinite: false,
+                dots: false,
+                arrows: false,
+                slidesToShow: 1.1,
+                slidesToScroll: 1,
+                touchMove: true,
+                swipeToSlide: true,
+                // centerMode: true,
+                // centerPadding: '20px'
+
+            });
+
+    })
+    }
+
+    // $('#gallery').slick({
+    //     // infinite: true,
+    //     // dots: true,
+    //     // slidesToShow: 1,
+    //     // slidesToScroll: 1
+    //
+    //     infinite: true,
+    //     dots: true,
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     touchMove: true,
+    //     swipeToSlide: true,
+    //     arrows: true,
+    //     prevArrow: '<span class="arrow-prev"> <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+    //         '<path d="M0.646446 3.64645C0.451185 3.84171 0.451185 4.15829 0.646446 4.35355L3.82843 7.53553C4.02369 7.7308 4.34027 7.7308 4.53553 7.53553C4.7308 7.34027 4.7308 7.02369 4.53553 6.82843L1.70711 4L4.53553 1.17157C4.7308 0.976311 4.7308 0.659728 4.53553 0.464466C4.34027 0.269204 4.02369 0.269204 3.82843 0.464466L0.646446 3.64645ZM17 3.5L1 3.5V4.5L17 4.5V3.5Z" fill="black"/>\n' +
+    //         '</svg>\n </span>',
+    //     nextArrow: '<span class="arrow-next"> <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+    //         '<path d="M16.3536 4.35355C16.5488 4.15829 16.5488 3.84171 16.3536 3.64645L13.1716 0.464466C12.9763 0.269204 12.6597 0.269204 12.4645 0.464466C12.2692 0.659728 12.2692 0.976311 12.4645 1.17157L15.2929 4L12.4645 6.82843C12.2692 7.02369 12.2692 7.34027 12.4645 7.53553C12.6597 7.7308 12.9763 7.7308 13.1716 7.53553L16.3536 4.35355ZM0 4.5H16V3.5H0V4.5Z" fill="black"/>\n' +
+    //         '</svg>\n </span>',
+    //     responsive: [{
+    //         breakpoint: 768,
+    //         settings: {
+    //             //  centerMode: true,
+    //             // infinite: false,
+    //             slidesToShow: 1.08,
+    //             slidesToScroll: 1,
+    //             arrows: false,
+    //             dots: false
+    //         }
+    //     }]
+    // });
+</script>
 </html>
