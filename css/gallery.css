@@ -153,12 +153,18 @@
 .arrow-next:hover{
     background: #fff;
 }
-
+#video-block iframe {
+    min-height: 80vh;
+}
 
 @media(max-width: 768px){
+    #video-block iframe {
+        min-height: unset;
+        height: 60vh;
+    }
     #top-photo{
         min-width: 100vw;
-        margin-top:30%;
+        margin-top:15%;
     }
     #top-photo div{
         margin: 0 10px;
@@ -167,5 +173,20 @@
 
         min-height: 50vh;
         max-height: unset;
+    }
+    .buttons-on-gallery-block {
+        z-index: 999999;
+        position: fixed;
+        bottom: 20vh;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    .close-gallery-container {
+        right: 20px;
+        position: fixed;
     }
 }

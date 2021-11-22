@@ -119,6 +119,23 @@
 //
 // }
 //
+const allPhotos = document.querySelectorAll('.gallery-photo')
+// allPhotos.forEach((elem, index) => {
+//     elem.addEventListener('click', (e) => {
+//         for (let i = 0; i < allPhotos.length; i++) {
+//             allPhotos[i].classList.remove('top-photo')
+//         }
+//         e.target.classList.add('top-photo')
+//     })
+// })
+// allPhotos.forEach((elem, index) => {
+//     elem.addEventListener('touchstart', (e) => {
+//         for (let i = 0; i < allPhotos.length; i++) {
+//             allPhotos[i].classList.remove('top-photo')
+//         }
+//         e.target.classList.add('top-photo')
+//     })
+// })
 
 //open gallery block
 const galSwitchers = document.querySelectorAll('.gallery-switchers')
@@ -199,6 +216,12 @@ function sliderGallery() {
                 let currentSlide = $('#gallery55').slick('slickCurrentSlide') + 1;
                 let lastSlide = $("#gallery55").slick("getSlick").slideCount
                 document.getElementById('amount-of-photos').innerHTML = `${currentSlide} of ${lastSlide}`
+
+                for (let i = 0; i < allPhotos.length; i++) {
+                    allPhotos[i].classList.remove('top-photo')
+                }
+                allPhotos[currentSlide-1].classList.add('top-photo')
+
             });
 
         })
@@ -224,6 +247,11 @@ function sliderGallery() {
                 let currentSlide = $('#top-photo').slick('slickCurrentSlide') + 1;
                 let lastSlide = $("#top-photo").slick("getSlick").slideCount
                 document.getElementById('amount-of-photos').innerHTML = `${currentSlide} of ${lastSlide}`
+
+                for (let i = 0; i < allPhotos.length; i++) {
+                    allPhotos[i].classList.remove('top-photo')
+                }
+                allPhotos[currentSlide-1].classList.add('top-photo')
             });
 
         })
