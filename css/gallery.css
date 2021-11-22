@@ -158,6 +158,7 @@
 @media(max-width: 768px){
     #top-photo{
         min-width: 100vw;
+        margin-top:30%;
     }
     #top-photo div{
         margin: 0 10px;
