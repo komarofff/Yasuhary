@@ -54,7 +54,8 @@ document.addEventListener('scroll', () => {
     }
 })
 
-window.onresize = () => {
+window.addEventListener('resize', function(event) {
+    console.log('resize')
     let size_of_screen = document.documentElement.clientWidth
     if( size_of_screen >768){
 
@@ -74,7 +75,8 @@ window.onresize = () => {
         transform: translateX(-110vw);
         right: 0;`
     }
-}
+
+})
 //// language-switcher
  const lanqSwitchers = document.querySelectorAll('.language-switcher')
  lanqSwitchers.forEach((val)=>{

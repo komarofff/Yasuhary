@@ -138,6 +138,8 @@ const allPhotos = document.querySelectorAll('.gallery-photo')
 // })
 
 //open gallery block
+
+
 const galSwitchers = document.querySelectorAll('.gallery-switchers')
 let counterButtons = 0
 galSwitchers.forEach((val) => {
@@ -152,6 +154,7 @@ galSwitchers.forEach((val) => {
 
 document.querySelector('.play-3d').addEventListener('click', () => {
     start3D()
+
 })
 document.querySelector('.open-gallery').addEventListener('click', () => {
     startGallery()
