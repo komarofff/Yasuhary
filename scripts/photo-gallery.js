@@ -182,9 +182,9 @@ function startGallery() {
     document.querySelector('.gallery-button').classList.add('tabs-active')
     document.querySelector('.button-3d').classList.remove('tabs-active')
 }
-document.addEventListener('DOMContentLoaded',()=>{
-    sliderGallery()
-})
+// document.addEventListener('DOMContentLoaded',()=>{
+//     sliderGallery()
+// })
 function sliderGallery() {
     if (document.documentElement.clientWidth > 768) {
         jQuery(document).ready(function ($) {
