@@ -148,6 +148,7 @@ galSwitchers.forEach((val) => {
             start3D()
         } else {
             startGallery()
+            sliderGallery()
         }
     })
 })
