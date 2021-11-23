@@ -177,7 +177,7 @@
     .buttons-on-gallery-block {
         z-index: 999999;
         position: fixed;
-        bottom: 20vh;
+        bottom: 10vh;
         left: 50%;
         -webkit-transform: translateX(-50%);
         -moz-transform: translateX(-50%);
