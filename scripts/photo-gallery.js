@@ -182,7 +182,9 @@ function startGallery() {
     document.querySelector('.gallery-button').classList.add('tabs-active')
     document.querySelector('.button-3d').classList.remove('tabs-active')
 }
-
+document.addEventListener('DOMContentLoaded',()=>{
+    sliderGallery()
+})
 function sliderGallery() {
     if (document.documentElement.clientWidth > 768) {
         jQuery(document).ready(function ($) {
@@ -202,15 +204,16 @@ function sliderGallery() {
             $('#gallery55').slick({
                 infinite: false,
                 slidesToShow: 8,
-                slidesToScroll: 8,
+                slidesToScroll: 1,
                 asNavFor: '#top-photo',
                 dots: false,
                 centerMode: false, //?????????????????????????
                 focusOnSelect: true,
-                arrows: false
+                arrows: false,
+                centerPadding: '20px'
 
             });
-            document.querySelector('.slick-track').style.cssText = 'transform: translate3d(0px, 0px, 0px);'
+            // document.querySelector('.slick-track').style.cssText = 'transform: translate3d(0px, 0px, 0px);'
             var currentSlide = $('#gallery55').slick('slickCurrentSlide') + 1;
             var lastSlide = $("#gallery55").slick("getSlick").slideCount
             document.getElementById('amount-of-photos').innerHTML = `${currentSlide} of ${lastSlide}`

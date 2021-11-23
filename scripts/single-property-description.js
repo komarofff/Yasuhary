@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     changeSection()
     showDescription()
 })
-window.onresize = () => {
+window.addEventListener('resize',()=> {
     changeSection()
-}
+})
 
 function changeSection() {
     let sizeScreen = document.documentElement.clientWidth
