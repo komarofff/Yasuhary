@@ -1,8 +1,9 @@
 .gallery-photo {
     display: inline-block;
     cursor: pointer;
-    width: 200px;
-    height: 100px;
+    width: calc(90vw/8);
+    height: calc(90vw/12);
+    max-height: 100px;
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
